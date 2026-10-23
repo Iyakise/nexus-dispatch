@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  "darkMode": "class",
+  "theme": {
+    "extend": {
+      "colors": {
+        "surface-container-high": "#dce9ff",
+        "on-error": "#ffffff",
+        "surface-dim": "#cbdbf5",
+        "on-surface-variant": "#464555",
+        "surface-container": "#e5eeff",
+        "primary-fixed": "#e2dfff",
+        "on-tertiary-fixed": "#002113",
+        "primary-fixed-dim": "#c3c0ff",
+        "surface-tint": "#4d44e3",
+        "on-secondary": "#ffffff",
+        "on-primary-container": "#dad7ff",
+        "primary": "#3525cd",
+        "error": "#ba1a1a",
+        "outline": "#777587",
+        "on-secondary-fixed": "#131b2e",
+        "tertiary-fixed": "#6ffbbe",
+        "on-tertiary-fixed-variant": "#005236",
+        "on-secondary-container": "#5c647a",
+        "tertiary-fixed-dim": "#4edea3",
+        "on-background": "#0b1c30",
+        "background": "#f8f9ff",
+        "on-tertiary": "#ffffff",
+        "surface-container-low": "#eff4ff",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#3f465c",
+        "inverse-primary": "#c3c0ff",
+        "surface-container-highest": "#d3e4fe",
+        "on-tertiary-container": "#67f4b7",
+        "surface": "#f8f9ff",
+        "secondary-fixed-dim": "#bec6e0",
+        "surface-bright": "#f8f9ff",
+        "inverse-surface": "#213145",
+        "surface-variant": "#d3e4fe",
+        "primary-container": "#4f46e5",
+        "secondary-container": "#dae2fd",
+        "on-primary-fixed-variant": "#3323cc",
+        "on-primary-fixed": "#0f0069",
+        "secondary-fixed": "#dae2fd",
+        "on-surface": "#0b1c30",
+        "secondary": "#565e74",
+        "tertiary-container": "#006e4b",
+        "on-primary": "#ffffff",
+        "on-error-container": "#93000a",
+        "tertiary": "#005338",
+        "outline-variant": "#c7c4d8",
+        "surface-container-lowest": "#ffffff",
+        "inverse-on-surface": "#eaf1ff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-lg": "1rem",
+        "margin": "1.5rem",
+        "space-sm": "0.5rem",
+        "space-xs": "0.25rem",
+        "gutter-lg": "1.5rem",
+        "margin-sm": "1rem",
+        "gutter": "1rem",
+        "space-md": "0.75rem",
+        "gutter-sm": "0.5rem",
+        "margin-lg": "2rem",
+        "space-xl": "1.5rem"
+      },
+      "fontFamily": {
+        "headline-lg-mobile": [
+          "IBM Plex Sans"
+        ],
+        "label-sm": [
+          "IBM Plex Sans"
+        ],
+        "headline-md": [
+          "IBM Plex Sans"
+        ],
+        "headline-lg": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-lg": [
+          "JetBrains Mono"
+        ],
+        "label-md": [
+          "IBM Plex Sans"
+        ],
+        "body-sm": [
+          "IBM Plex Sans"
+        ],
+        "body-lg": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-sm": [
+          "JetBrains Mono"
+        ],
+        "title-md": [
+          "IBM Plex Sans"
+        ],
+        "body-md": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-md": [
+          "JetBrains Mono"
+        ],
+        "display-lg": [
+          "IBM Plex Sans"
+        ],
+        "headline-sm": [
+          "IBM Plex Sans"
+        ]
+      },
+      "fontSize": {
+        "headline-lg-mobile": [
+          "22px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "label-sm": [
+          "11px",
+          {
+            "lineHeight": "14px",
+            "letterSpacing": "0.04em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-md": [
+          "20px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-lg": [
+          "28px",
+          {
+            "lineHeight": "36px",
+            "letterSpacing": "-0.015em",
+            "fontWeight": "600"
+          }
+        ],
+        "telemetry-lg": [
+          "24px",
+          {
+            "lineHeight": "32px",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "500"
+          }
+        ],
+        "label-md": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "letterSpacing": "0.02em",
+            "fontWeight": "500"
+          }
+        ],
+        "body-sm": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "400"
+          }
+        ],
+        "body-lg": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        ],
+        "telemetry-sm": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "400"
+          }
+        ],
+        "title-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "600"
+          }
+        ],
+        "body-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "400"
+          }
+        ],
+        "telemetry-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        ],
+        "display-lg": [
+          "36px",
+          {
+            "lineHeight": "44px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-sm": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "600"
+          }
+        ]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 h-14 bg-inverse-surface border-b border-secondary/30 flex items-center justify-between px-margin select-none"><div class="flex items-center gap-space-md"><img alt="Nexus Dispatch Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Udw6rXgFOs0ubB2-XHArhHip8K4eCz4rj_mJ0q4L6_a_Mbxh-t16V7ti2yjiJmiA95cuTuSpXhAogOP9zg75PWce9yR_RGlUuUQIC8cu02CpSNewBXwL7fgUMgXQ_Yr4MHATr3lzDkBxg9IWhZLlIUhTR74d-Po4WH6o5fMamenJZb41RdWFub5EKT0m8T2kYWsoTh_WG9aRqmdDzKY5A_MkSkaidj0XzdsYN_QR4HYolph3k6KV0SzMk"/><span class="font-headline-sm text-headline-sm text-inverse-on-surface tracking-tight">Nexus Dispatch</span><div class="h-4 w-px bg-secondary/40 mx-space-xs"></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface/10 hover:bg-surface/15 transition-colors cursor-pointer"><span class="font-title-md text-title-md text-inverse-on-surface">Acme Cold-Chain Logistics</span><span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-primary/30 text-primary-fixed">Enterprise</span><span class="material-symbols-outlined text-inverse-on-surface text-base">expand_more</span></div></div><div class="flex-1 max-w-xl mx-margin"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-lg pointer-events-none">search</span><input class="w-full h-9 pl-9 pr-24 bg-surface/10 rounded-lg text-body-sm font-body-sm text-inverse-on-surface placeholder:text-secondary focus:outline-none focus:ring-1 focus:ring-primary border border-secondary/20" placeholder="Search shipment ID, driver, destination..." type="text"/><div class="absolute right-2 px-1.5 py-0.5 rounded bg-surface/10 border border-secondary/30 text-[11px] font-telemetry-sm text-secondary pointer-events-none">Cmd + K</div></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-tertiary/20 border border-tertiary/40"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span><span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed">All Systems Operational • 18ms</span></div><button class="relative p-1.5 text-secondary hover:text-inverse-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-error px-1 text-[10px] font-bold text-on-error">3 Excursions</span></button><div class="h-4 w-px bg-secondary/40"></div><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-secondary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2IOnzpxINF_8DTTWEYW2Eg_Bpzknmu0mFW-6UJ3GZxEIct6FkR_SveEOd9TcNvAfIUR5JJOiV1ObsyaH2j7tS_Pdb5SUAPLWNS-38d6urb1Y5viozxv1nDWlFC5wrnnVeSI3pNI_UOT_pq7Xpm_joskNFjqQHhBHFljSLnE6yVtdF0O1KQtj8OOEnmUby-t_3CfiB2MCXGLElfK-G_ZnJyGRM1YgEP4ZlG7mNR1yWlTU5zYKmqyKz"/><div class="flex flex-col text-left"><span class="font-title-md text-title-md text-inverse-on-surface leading-none">Marcus Chen</span><span class="font-label-sm text-label-sm text-secondary leading-none mt-1">Lead Dispatcher</span></div><span class="material-symbols-outlined text-secondary text-base">arrow_drop_down</span></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-64 bg-inverse-surface border-r border-secondary/20 flex flex-col justify-between z-40"><div class="p-space-md flex-1 overflow-y-auto"><div class="px-space-sm py-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Operations</span></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm ring-1 ring-primary/50"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="cold-chain-dashboard" href="#"><div class="flex items-center gap-space-sm"><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="live-fleet-map" href="#"><div class="flex items-center gap-space-sm"><span>Live Fleet Map</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="active-shipments" href="#"><div class="flex items-center gap-space-sm"><span>Active Shipments</span></div><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-telemetry-sm bg-surface/15 text-inverse-on-surface">88</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="cold-chain-alerts" href="#"><div class="flex items-center gap-space-sm"><span>Cold-Chain Alerts</span></div><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-telemetry-sm bg-error text-on-error font-bold">3</span></a></nav><div class="px-space-sm py-space-xs mt-space-lg mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Administration</span></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm ring-1 ring-primary/50"><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-semibold shadow-sm ring-1 ring-primary/50" data-path="client-portals" href="#"><div class="flex items-center gap-space-sm"><span>Client Portals</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="billing-tariffs" href="#"><div class="flex items-center gap-space-sm"><span>Billing &amp; Tariffs</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="system-settings" href="#"><div class="flex items-center gap-space-sm"><span>System Settings</span></div></a></nav></div><div class="p-space-md border-t border-secondary/20 bg-inverse-surface/80 flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface/5 border border-secondary/20"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-base text-tertiary-fixed-dim">verified_user</span><span class="font-telemetry-sm text-telemetry-sm text-inverse-on-surface font-medium">FDA 21 CFR Part 11</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span></div><button class="flex items-center justify-between w-full px-space-sm py-1.5 rounded-lg text-secondary hover:text-inverse-on-surface hover:bg-surface/10 transition-colors"><span class="font-label-md text-label-md font-medium">Collapse Sidebar</span><span class="material-symbols-outlined text-lg">chevron_left</span></button></div></aside><div class="pl-64"><main class="pt-14 w-full px-margin bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Breadcrumb & Top Executive Bar -->
+<section class="flex flex-col gap-space-sm pb-space-lg">
+<div class="flex items-center gap-space-xs text-secondary font-label-md">
+<span>Administration</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-semibold">Client Portals &amp; Enterprise Pharma Access</span>
+</div>
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Enterprise Client Portals</h1>
+<p class="font-body-md text-body-md text-secondary mt-1">
+          Self-service cold-chain monitoring portals, custom SLAs, white-labeled client visibility, and regulatory audit exports.
+        </p>
+</div>
+<!-- Actions & Client Switcher -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Client Switcher Selector -->
+<div class="relative inline-block text-left" id="clientSwitcherWrapper">
+<button class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-2 rounded-lg shadow-sm hover:bg-surface-container-low transition-colors" id="clientSwitcherBtn">
+<div class="w-7 h-7 rounded bg-primary-container text-on-primary flex items-center justify-center font-telemetry-sm font-semibold">
+              BP
+            </div>
+<div class="flex flex-col text-left">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface">BioPharm Labs Inc.</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed">VIP TIER-1</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Custom GxP Portal Active</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-base ml-1">unfold_more</span>
+</button>
+</div>
+<!-- Secondary Action: Share Live Portal Link -->
+<button class="flex items-center gap-1.5 bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-title-md px-space-md py-2 rounded-lg shadow-sm transition-all active:scale-95" id="copyPortalLinkBtn">
+<span class="material-symbols-outlined text-base text-primary">link</span>
+<span id="copyLinkText">Share Portal Link</span>
+</button>
+<!-- Secondary Action: Generate CoC Batch Dossier -->
+<button class="flex items-center gap-1.5 bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-title-md px-space-md py-2 rounded-lg shadow-sm transition-all">
+<span class="material-symbols-outlined text-base text-error">picture_as_pdf</span>
+<span>Generate CoC Dossier</span>
+</button>
+<!-- Primary Action -->
+<button class="flex items-center gap-1.5 bg-primary hover:bg-primary-container text-on-primary font-title-md px-space-md py-2 rounded-lg shadow-md transition-all shadow-primary/20">
+<span class="material-symbols-outlined text-base">vpn_key</span>
+<span>+ Provision New Portal</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Executive Client Health & SLA Ribbon (4 Stat Cards) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm uppercase tracking-wider text-secondary font-semibold">Active Consignments</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-on-surface">28</span>
+<span class="font-label-md text-secondary">In Transit</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-2.5">
+<div class="flex items-center justify-between text-secondary font-label-sm">
+<span class="text-tertiary font-semibold">18 Reefer (2-8°C)</span>
+<span class="text-primary font-semibold">8 Cryo (-80°C)</span>
+<span>2 CRT</span>
+</div>
+<p class="text-secondary font-label-sm mt-0.5">Across 12 monitored distribution corridors</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm uppercase tracking-wider text-secondary font-semibold">SLA Compliance Rate</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-on-surface">99.92%</span>
+<span class="px-1.5 py-0.5 rounded text-[11px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed">+0.4% Target</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-secondary font-label-sm">
+<span>Target baseline: 99.50%</span>
+</div>
+<!-- Sparkline vector (28 days stability) -->
+<svg class="w-24 h-6 text-tertiary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 96 24">
+<path d="M2 18 L16 16 L30 19 L44 12 L58 13 L72 8 L86 9 L94 4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm uppercase tracking-wider text-secondary font-semibold">Chain-of-Custody Integrity</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-tertiary">100%</span>
+<span class="font-label-md text-secondary">Validated</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl">shield</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-2.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary">342 NIST signed hashes</span>
+</div>
+<span class="font-label-sm text-primary font-semibold">GxP Ledger</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm uppercase tracking-wider text-secondary font-semibold">Client Portal Engagement</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-on-surface">14</span>
+<span class="font-label-md text-secondary">Active Sessions</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">group</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-2.5 flex items-center justify-between text-secondary font-label-sm">
+<div class="flex -space-x-1.5 overflow-hidden">
+<span class="inline-block h-5 w-5 rounded-full ring-2 ring-surface-container-lowest bg-primary-container text-on-primary text-[9px] font-bold text-center leading-5">AT</span>
+<span class="inline-block h-5 w-5 rounded-full ring-2 ring-surface-container-lowest bg-secondary-fixed text-on-secondary-fixed text-[9px] font-bold text-center leading-5">SL</span>
+<span class="inline-block h-5 w-5 rounded-full ring-2 ring-surface-container-lowest bg-surface-dim text-on-surface text-[9px] font-bold text-center leading-5">FD</span>
+</div>
+<span class="font-telemetry-sm text-secondary">Cambridge • Basel • SSF</span>
+</div>
+</div>
+</section>
+<!-- Main Workspace: Split Pane (68% Left, 32% Right) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left Column (68% -> 8 columns out of 12) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Segmented Navigation Tabs & Quick Filter -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-1 w-full sm:w-auto">
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-title-md text-title-md flex items-center gap-1.5 transition-all">
+<span>Live Consignments</span>
+<span class="px-1.5 py-0.2 rounded-full text-[10px] bg-surface-container-lowest text-primary font-bold">28</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container font-title-md text-title-md flex items-center gap-1.5 transition-all">
+<span>Portal Users &amp; Roles</span>
+<span class="px-1.5 py-0.2 rounded-full text-[10px] bg-surface-container text-secondary font-semibold">6</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container font-title-md text-title-md transition-all">
+<span>Thermal SLAs</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container font-title-md text-title-md transition-all">
+<span>Automated CoC Webhooks</span>
+</button>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-auto">
+<span class="font-telemetry-sm text-secondary text-xs">Portal SLA Profile: Bio-Strict GxP</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+</div>
+<!-- Search & Filters Container -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-lg pointer-events-none">search</span>
+<input class="w-full h-9 pl-9 pr-4 bg-surface-container-low rounded-lg text-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search PO number, lot number, batch ID, or destination clinic..." type="text"/>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<!-- Temp Spec Filter -->
+<div class="relative">
+<select class="h-9 px-3 pr-8 bg-surface-container-low rounded-lg font-title-md text-body-sm text-on-surface appearance-none focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>All Thermal Specs</option>
+<option>2°C to 8°C Biologics</option>
+<option>-80°C Ultra-Cold</option>
+<option>Cryo Liquid N2 (-196°C)</option>
+<option>15°C to 25°C Controlled</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-secondary pointer-events-none text-base">expand_more</span>
+</div>
+<!-- Corridor Filter -->
+<div class="relative">
+<select class="h-9 px-3 pr-8 bg-surface-container-low rounded-lg font-title-md text-body-sm text-on-surface appearance-none focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>All Corridors (NE &amp; Mid-Atlantic)</option>
+<option>Boston BioHub ➔ Baltimore</option>
+<option>Cambridge ➔ NYC Mount Sinai</option>
+<option>Logan Cargo ➔ UPenn Perelman</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-secondary pointer-events-none text-base">expand_more</span>
+</div>
+<button class="h-9 w-9 flex items-center justify-center rounded-lg bg-surface-container-low hover:bg-surface-container text-secondary hover:text-on-surface transition-colors" title="Filter Presets">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Enterprise Client Shipment Data Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 text-secondary font-label-sm uppercase tracking-wider text-label-sm select-none">
+<th class="py-3 px-4">Consignment / Lot ID</th>
+<th class="py-3 px-4">Therapeutic Product</th>
+<th class="py-3 px-4">Transit Route &amp; Destination</th>
+<th class="py-3 px-4 text-right">Thermal Telemetry</th>
+<th class="py-3 px-4">Custody / Unit</th>
+<th class="py-3 px-4">ETA / SLA</th>
+<th class="py-3 px-4 text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y-0">
+<!-- Row 1: Selected / Featured Active Shipment -->
+<tr class="bg-surface-container-high/40 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<div>
+<div class="font-telemetry-sm font-bold text-on-surface">#BPL-90422</div>
+<div class="text-[11px] font-telemetry-sm text-secondary">Lot #GLP1-88402 • <span class="text-primary font-semibold">VIP Pri 1</span></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md font-semibold text-on-surface">GLP-1 Auto-Injectors</div>
+<div class="text-[11px] text-secondary">Biologic Solution • 2,400 Doses</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md text-on-surface">Boston BioHub #02 ➔ Baltimore</div>
+<div class="text-[11px] text-secondary">Johns Hopkins Clinical Research</div>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-telemetry-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-xs">thermostat</span> +3.4°C [SAFE]
+                  </span>
+<div class="text-[10px] font-telemetry-sm text-secondary mt-0.5">Spec: +2°C to +8°C</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md text-on-surface">Reefer Unit #04</div>
+<div class="text-[11px] text-secondary">E. Rostova • Seal #LK-9942</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-telemetry-sm font-semibold text-on-surface">11:20 AM</div>
+<div class="text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">timer</span> 42m remaining
+                  </div>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-primary" title="Client View URL">
+<span class="material-symbols-outlined text-lg">open_in_new</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary" title="Download CoC">
+<span class="material-symbols-outlined text-lg">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<div>
+<div class="font-telemetry-sm font-bold text-on-surface">#BPL-90418</div>
+<div class="text-[11px] font-telemetry-sm text-secondary">Lot #INS-4421</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md text-on-surface">Recombinant Human Insulin</div>
+<div class="text-[11px] text-secondary">100 IU/mL Vials (Batch A-4)</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md text-on-surface">Cambridge Depot ➔ NYC</div>
+<div class="text-[11px] text-secondary">Mount Sinai Hospital Dock B</div>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-telemetry-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-xs">thermostat</span> +4.1°C [SAFE]
+                  </span>
+<div class="text-[10px] font-telemetry-sm text-secondary mt-0.5">Spec: +2°C to +8°C</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md text-on-surface">Reefer Unit #07</div>
+<div class="text-[11px] text-secondary">M. Vance • Seal #LK-9938</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-telemetry-sm font-semibold text-on-surface">01:15 PM</div>
+<div class="text-[11px] text-secondary font-semibold">On Schedule</div>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-primary" title="Client View URL">
+<span class="material-symbols-outlined text-lg">open_in_new</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary" title="Download CoC">
+<span class="material-symbols-outlined text-lg">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<div>
+<div class="font-telemetry-sm font-bold text-on-surface">#BPL-90395</div>
+<div class="text-[11px] font-telemetry-sm text-secondary">Lot #CRYO-902</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md text-on-surface">Autologous CAR-T Therapy</div>
+<div class="text-[11px] text-secondary">Cellular Suspension (Dry Shipper)</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md text-on-surface">Logan Cargo ➔ Philadelphia</div>
+<div class="text-[11px] text-secondary">UPenn Perelman Center Lab</div>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-telemetry-sm font-semibold bg-surface-container text-primary">
+<span class="material-symbols-outlined text-xs">ac_unit</span> -78.6°C [CRYO]
+                  </span>
+<div class="text-[10px] font-telemetry-sm text-secondary mt-0.5">Spec: &lt; -70.0°C</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md text-on-surface">Cryo-Van #09</div>
+<div class="text-[11px] text-secondary">S. Jenkins • Dual Dry Shipper</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-telemetry-sm font-semibold text-on-surface">02:45 PM</div>
+<div class="text-[11px] text-secondary font-semibold">On Schedule</div>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-primary" title="Client View URL">
+<span class="material-symbols-outlined text-lg">open_in_new</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary" title="Download CoC">
+<span class="material-symbols-outlined text-lg">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<div>
+<div class="font-telemetry-sm font-bold text-on-surface">#BPL-90380</div>
+<div class="text-[11px] font-telemetry-sm text-secondary">Lot #MAB-1108</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md text-on-surface">Monoclonal Antibody Sol.</div>
+<div class="text-[11px] text-secondary">Phase III Double-Blind Ampoules</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md text-on-surface">Worcester Park ➔ NYC</div>
+<div class="text-[11px] text-secondary">Memorial Sloan Kettering</div>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-telemetry-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-xs">thermostat</span> +2.8°C [SAFE]
+                  </span>
+<div class="text-[10px] font-telemetry-sm text-secondary mt-0.5">Spec: +2°C to +8°C</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-md text-on-surface">Reefer Unit #18</div>
+<div class="text-[11px] text-secondary">K. Lind • Seal #LK-9912</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-telemetry-sm font-semibold text-on-surface">04:10 PM</div>
+<div class="text-[11px] text-secondary font-semibold">On Schedule</div>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-primary" title="Client View URL">
+<span class="material-symbols-outlined text-lg">open_in_new</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary" title="Download CoC">
+<span class="material-symbols-outlined text-lg">description</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="bg-surface-container-low/50 px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
+<div class="font-label-sm text-secondary">
+            Showing <span class="font-semibold text-on-surface">1 - 4</span> of <span class="font-semibold text-on-surface">28</span> active enterprise consignments
+          </div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 text-secondary font-label-sm mr-2">
+<span>Rows per page:</span>
+<select class="bg-surface-container-lowest px-2 py-0.5 rounded text-secondary focus:outline-none">
+<option>4</option>
+<option>10</option>
+<option>25</option>
+</select>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-secondary flex items-center justify-center hover:bg-surface-container disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<span class="font-telemetry-sm text-xs font-semibold px-2 py-0.5 rounded bg-primary text-on-primary">1</span>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-secondary flex items-center justify-center hover:bg-surface-container">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Client Portal Features & Configuration Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Feature 1: White Labeling -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">branding_watermark</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed">Active Domain</span>
+</div>
+<div class="font-title-md font-semibold text-on-surface">Client White-Labeling</div>
+<p class="font-body-sm text-secondary mt-1">
+              Live branded portal mapped to client DNS.
+            </p>
+</div>
+<div class="mt-4 p-2.5 rounded-lg bg-surface-container-low font-telemetry-sm text-[11px] text-secondary flex flex-col gap-1">
+<div class="text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">domain</span>
+              biopharm.dispatch-nexus.com
+            </div>
+<div class="text-secondary">Custom Primary: #0A3D62 (BioNavy)</div>
+</div>
+</div>
+<!-- Feature 2: Automated Thermal Excursion Alerts -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-lg">notifications_active</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-primary-fixed text-on-primary-fixed">Automated SMS &amp; GxP</span>
+</div>
+<div class="font-title-md font-semibold text-on-surface">Excursion Escalations</div>
+<p class="font-body-sm text-secondary mt-1">
+              Instant alerts configured for Quality Leads if variance &gt; 15 min.
+            </p>
+</div>
+<div class="mt-4 p-2.5 rounded-lg bg-surface-container-low font-telemetry-sm text-[11px] text-secondary flex items-center justify-between">
+<span class="text-on-surface">Dr. Aris Thorne + 2 QA</span>
+<span class="text-tertiary font-semibold">Tier 1 Push</span>
+</div>
+</div>
+<!-- Feature 3: FDA 21 CFR Part 11 CoC Delivery -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-lg">history_edu</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed">NIST Compliant</span>
+</div>
+<div class="font-title-md font-semibold text-on-surface">Part 11 Delivery Proof</div>
+<p class="font-body-sm text-secondary mt-1">
+              Auto-generates signed tamper-evident PDF dossier upon geofence arrival.
+            </p>
+</div>
+<div class="mt-4 p-2.5 rounded-lg bg-surface-container-low font-telemetry-sm text-[11px] text-secondary flex items-center justify-between">
+<span class="text-on-surface">SHA-256 Ledger Audit</span>
+<span class="text-primary font-semibold">Active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (32% -> 4 columns out of 12 - Client Telematics Inspector & External Portal Preview) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Live External Client View Box -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="bg-inverse-surface p-space-md text-inverse-on-surface flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-lg">visibility</span>
+<div>
+<div class="font-title-md font-semibold text-inverse-on-surface leading-tight">Customer Portal Live Preview</div>
+<div class="font-label-sm text-secondary leading-none mt-0.5">BioPharm Labs QA Terminal</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider bg-tertiary/20 text-tertiary-fixed">Live Stream</span>
+</div>
+<!-- Real-time Map & Waypoint Corridor Card -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-secondary font-label-sm">
+<span>TRACKING CONSIGNMENT</span>
+<span class="font-telemetry-sm text-on-surface font-bold">#BPL-90422</span>
+</div>
+<!-- Static map simulation container using Google Maps Data format -->
+<div class="w-full h-44 bg-surface-container-high rounded-lg relative overflow-hidden bg-cover bg-center flex flex-col justify-between p-3" data-alt="A clean top-down GPS navigation map showing transit corridor along interstate highway in New Jersey, with cold-chain logistical route overlay lines in electric indigo and waypoint markers in soft green and high-contrast styling." data-location="Trenton, NJ" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQXRgx-4dfyYAW_L-xvriFccB8Gda_ZQJ44AtlkLtlnqh5m2SarLdT8EfOt3VxaHAo_iTTnZbX9YSJQJxoppOAK4cdyvUii7Q_hbea0hsWj_Clz8oFVLbex1M-7rnSSmKKxopTNTjLBCzLhW27fomwb_MUEmwqHJxYbWlJl77mN0OEBG5ddBNSPYbGlxNJCGhPu6wsAEmQy9HgYgyq2rHVx3w1wG-VI6af92hQzE7GPrhSISNDWQsM');">
+<!-- Overlay Info Chip -->
+<div class="self-start px-2.5 py-1 rounded bg-inverse-surface/90 backdrop-blur text-inverse-on-surface font-telemetry-sm text-xs flex items-center gap-1.5 shadow-md">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span>NJ Turnpike Ex. 8 • Milepost 68.4</span>
+</div>
+<!-- Vehicle Telemetry Floating Chip -->
+<div class="self-end px-3 py-1.5 rounded-lg bg-surface-container-lowest/95 backdrop-blur shadow-md font-telemetry-sm text-xs text-on-surface flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">speed</span>
+<span class="font-bold">58 mph</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">lock</span>
+<span class="font-bold">Seal Locked</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">battery_charging_full</span>
+<span class="font-bold">94%</span>
+</div>
+</div>
+</div>
+<!-- Waypoint Progress Timeline -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between text-xs font-title-md">
+<span class="text-secondary">Corridor Transit Progress</span>
+<span class="font-telemetry-sm font-semibold text-primary">78% Completed</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 78%"></div>
+</div>
+<div class="flex items-center justify-between font-telemetry-sm text-[11px] text-secondary mt-1">
+<span>Boston BioHub #02</span>
+<span class="text-tertiary font-bold">Johns Hopkins (ETA 11:20 AM)</span>
+</div>
+</div>
+<!-- Continuous Cold-Chain Temperature Profile Graph -->
+<div class="flex flex-col gap-2 mt-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md font-semibold text-on-surface text-xs uppercase tracking-wider">8-Hour Thermal Profiler</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed">Variance &lt; 0.2°C/hr</span>
+</div>
+<!-- SVG Temperature Chart with Bounds -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between text-[11px] font-telemetry-sm">
+<div class="flex items-center gap-2">
+<span class="text-tertiary font-bold text-sm">+3.4°C</span>
+<span class="text-secondary">Probe 1 (NIST)</span>
+</div>
+<div class="text-secondary text-right">
+<span>Probe 2: </span><span class="text-on-surface font-semibold">+3.3°C</span>
+<span class="mx-1">•</span>
+<span>Ext: </span><span class="text-on-surface font-semibold">+22.4°C</span>
+</div>
+</div>
+<!-- Inline Responsive SVG Chart showing 2°C - 8°C corridor -->
+<div class="relative w-full h-24">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 320 80">
+<!-- Permissible Range Band (2°C to 8°C) -->
+<rect fill="rgba(111, 251, 190, 0.12)" height="56" rx="4" width="320" x="0" y="12"></rect>
+<line stroke="#EF4444" stroke-dasharray="2,2" stroke-width="0.75" x1="0" x2="320" y1="12" y2="12"></line>
+<text fill="#ba1a1a" font-family="JetBrains Mono" font-size="8" x="5" y="10">Max +8.0°C</text>
+<line stroke="#3525cd" stroke-dasharray="2,2" stroke-width="0.75" x1="0" x2="320" y1="68" y2="68"></line>
+<text fill="#3525cd" font-family="JetBrains Mono" font-size="8" x="5" y="77">Min +2.0°C</text>
+<!-- Target Center Line -->
+<line opacity="0.4" stroke="#777587" stroke-dasharray="4,4" stroke-width="0.5" x1="0" x2="320" y1="40" y2="40"></line>
+<!-- Actual Continuous Telemetry Wave -->
+<path d="M0,45 Q40,42 80,44 T160,42 T240,43 T290,41 T320,41" fill="none" stroke="#006e4b" stroke-linecap="round" stroke-width="2"></path>
+<!-- Redundant Sensor Line (Dotted) -->
+<path d="M0,46 Q40,43 80,45 T160,43 T240,44 T290,42 T320,42" fill="none" opacity="0.7" stroke="#3525cd" stroke-dasharray="3,3" stroke-width="1"></path>
+<!-- Current Data Point Pulsing -->
+<circle cx="320" cy="41" fill="#006e4b" r="3.5"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between text-[10px] font-telemetry-sm text-secondary">
+<span>03:00 AM (Depot)</span>
+<span>06:00 AM</span>
+<span>09:00 AM</span>
+<span class="text-tertiary font-bold">10:38 AM (Now)</span>
+</div>
+</div>
+</div>
+<!-- Client Stakeholders Currently Viewing -->
+<div class="flex flex-col gap-2 mt-2">
+<div class="flex items-center justify-between">
+<span class="font-title-md font-semibold text-on-surface text-xs uppercase tracking-wider">Client QA Stakeholders Online</span>
+<span class="font-telemetry-sm text-[11px] text-tertiary">3 Active</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<!-- Stakeholder 1 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low text-xs">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center text-[10px]">
+                    AT
+                  </div>
+<div>
+<div class="font-title-md font-semibold text-on-surface">Dr. Aris Thorne</div>
+<div class="text-secondary text-[11px]">VP Global Quality Assurance</div>
+</div>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span>Viewing</span>
+</div>
+</div>
+<!-- Stakeholder 2 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low text-xs">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-bold flex items-center justify-center text-[10px]">
+                    SL
+                  </div>
+<div>
+<div class="font-title-md font-semibold text-on-surface">Sarah Lin</div>
+<div class="text-secondary text-[11px]">Lead Clinical Trial Logistics</div>
+</div>
+</div>
+<div class="text-secondary text-[11px] font-telemetry-sm">
+                  Active 6m ago
+                </div>
+</div>
+<!-- Stakeholder 3: FDA Auditor -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low text-xs">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary font-bold flex items-center justify-center text-[10px]">
+                    GxP
+                  </div>
+<div>
+<div class="font-title-md font-semibold text-on-surface">Inspector #8491</div>
+<div class="text-secondary text-[11px]">FDA Regulatory Observer (Read-Only)</div>
+</div>
+</div>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-semibold bg-surface-container text-secondary">GxP Lock</span>
+</div>
+</div>
+</div>
+<!-- Instant Dispatcher Direct Channel & Hospital Pass -->
+<div class="mt-2 pt-space-sm bg-surface-container-low/60 -mx-space-md -mb-space-md p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm" data-alt="Professional avatar portrait of a logistics fleet dispatcher wearing an operations headset in a control room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgB5sI8uuOCFh1JKO8N8BhLkZAvgyoqi2H3MjIS8l30xjNjSs_iGvhSNvYUpnOVL_fBYgacDbmmD2Giqb10YvX_qCXb9Uk0DCRJUt-N4gHUwyNnjn39QuOdG8_TMIZMEz9jewr4E6kQsrbdtUyhhzbQlW2zcX7aqQ68WXmTR1-t6dTGEmxR5M0pqTzHx_SIsWPxjIvK74LhWGaxF63M-aJdE4VQf17s81doTN5VfQMlIRB9zJcQHdu"/>
+<div>
+<div class="font-title-md font-semibold text-on-surface text-xs">Marcus Chen (On Duty)</div>
+<div class="text-secondary text-[11px]">Lead Cold-Chain Dispatcher</div>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-title-md text-xs hover:bg-primary-container transition-colors shadow-sm">
+                Open Client Comms
+              </button>
+</div>
+<button class="w-full py-1.5 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-secondary hover:text-on-surface font-title-md text-xs flex items-center justify-center gap-1.5 shadow-sm transition-colors mt-1">
+<span class="material-symbols-outlined text-sm text-primary">qr_code_2</span>
+<span>Issue Hospital Dock One-Time Magic Pass</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Security & Cryptographic Stamp Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed/30 flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md font-semibold text-on-surface text-xs">Cryptographic CoC Signature</span>
+<span class="font-telemetry-sm text-[11px] text-secondary truncate max-w-[240px]">
+            SHA256: 8f9b2d3c...a491e0 (21 CFR Part 11)
+          </span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Inline JavaScript for micro-interactions -->
+<script>
+  (function() {
+    // Copy Live Portal Link Micro-interaction
+    const copyBtn = document.getElementById('copyPortalLinkBtn');
+    const copyText = document.getElementById('copyLinkText');
+    if (copyBtn && copyText) {
+      copyBtn.addEventListener('click', function() {
+        const originalText = copyText.innerText;
+        navigator.clipboard?.writeText('https://biopharm.dispatch-nexus.com/portal/live?auth=bpl_live_90422')
+          .catch(() => {});
+        copyText.innerText = 'Link Copied!';
+        copyBtn.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+        setTimeout(() => {
+          copyText.innerText = originalText;
+          copyBtn.classList.remove('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+        }, 2200);
+      });
+    }
+  })();
+</script></main></div></body></html>

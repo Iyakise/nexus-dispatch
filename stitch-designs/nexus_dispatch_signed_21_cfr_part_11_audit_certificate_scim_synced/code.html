@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  "darkMode": "class",
+  "theme": {
+    "extend": {
+      "colors": {
+        "surface-container-high": "#dce9ff",
+        "on-error": "#ffffff",
+        "surface-dim": "#cbdbf5",
+        "on-surface-variant": "#464555",
+        "surface-container": "#e5eeff",
+        "primary-fixed": "#e2dfff",
+        "on-tertiary-fixed": "#002113",
+        "primary-fixed-dim": "#c3c0ff",
+        "surface-tint": "#4d44e3",
+        "on-secondary": "#ffffff",
+        "on-primary-container": "#dad7ff",
+        "primary": "#3525cd",
+        "error": "#ba1a1a",
+        "outline": "#777587",
+        "on-secondary-fixed": "#131b2e",
+        "tertiary-fixed": "#6ffbbe",
+        "on-tertiary-fixed-variant": "#005236",
+        "on-secondary-container": "#5c647a",
+        "tertiary-fixed-dim": "#4edea3",
+        "on-background": "#0b1c30",
+        "background": "#f8f9ff",
+        "on-tertiary": "#ffffff",
+        "surface-container-low": "#eff4ff",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#3f465c",
+        "inverse-primary": "#c3c0ff",
+        "surface-container-highest": "#d3e4fe",
+        "on-tertiary-container": "#67f4b7",
+        "surface": "#f8f9ff",
+        "secondary-fixed-dim": "#bec6e0",
+        "surface-bright": "#f8f9ff",
+        "inverse-surface": "#213145",
+        "surface-variant": "#d3e4fe",
+        "primary-container": "#4f46e5",
+        "secondary-container": "#dae2fd",
+        "on-primary-fixed-variant": "#3323cc",
+        "on-primary-fixed": "#0f0069",
+        "secondary-fixed": "#dae2fd",
+        "on-surface": "#0b1c30",
+        "secondary": "#565e74",
+        "tertiary-container": "#006e4b",
+        "on-primary": "#ffffff",
+        "on-error-container": "#93000a",
+        "tertiary": "#005338",
+        "outline-variant": "#c7c4d8",
+        "surface-container-lowest": "#ffffff",
+        "inverse-on-surface": "#eaf1ff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-lg": "1rem",
+        "margin": "1.5rem",
+        "space-sm": "0.5rem",
+        "space-xs": "0.25rem",
+        "gutter-lg": "1.5rem",
+        "margin-sm": "1rem",
+        "gutter": "1rem",
+        "space-md": "0.75rem",
+        "gutter-sm": "0.5rem",
+        "margin-lg": "2rem",
+        "space-xl": "1.5rem"
+      },
+      "fontFamily": {
+        "headline-lg-mobile": [
+          "IBM Plex Sans"
+        ],
+        "label-sm": [
+          "IBM Plex Sans"
+        ],
+        "headline-md": [
+          "IBM Plex Sans"
+        ],
+        "headline-lg": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-lg": [
+          "JetBrains Mono"
+        ],
+        "label-md": [
+          "IBM Plex Sans"
+        ],
+        "body-sm": [
+          "IBM Plex Sans"
+        ],
+        "body-lg": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-sm": [
+          "JetBrains Mono"
+        ],
+        "title-md": [
+          "IBM Plex Sans"
+        ],
+        "body-md": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-md": [
+          "JetBrains Mono"
+        ],
+        "display-lg": [
+          "IBM Plex Sans"
+        ],
+        "headline-sm": [
+          "IBM Plex Sans"
+        ]
+      },
+      "fontSize": {
+        "headline-lg-mobile": [
+          "22px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "label-sm": [
+          "11px",
+          {
+            "lineHeight": "14px",
+            "letterSpacing": "0.04em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-md": [
+          "20px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-lg": [
+          "28px",
+          {
+            "lineHeight": "36px",
+            "letterSpacing": "-0.015em",
+            "fontWeight": "600"
+          }
+        ],
+        "telemetry-lg": [
+          "24px",
+          {
+            "lineHeight": "32px",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "500"
+          }
+        ],
+        "label-md": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "letterSpacing": "0.02em",
+            "fontWeight": "500"
+          }
+        ],
+        "body-sm": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "400"
+          }
+        ],
+        "body-lg": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        ],
+        "telemetry-sm": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "400"
+          }
+        ],
+        "title-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "600"
+          }
+        ],
+        "body-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "400"
+          }
+        ],
+        "telemetry-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        ],
+        "display-lg": [
+          "36px",
+          {
+            "lineHeight": "44px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-sm": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "600"
+          }
+        ]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 h-14 bg-inverse-surface border-b border-secondary/30 flex items-center justify-between px-margin select-none"><div class="flex items-center gap-space-md"><img alt="Nexus Dispatch Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Udw6rXgFOs0ubB2-XHArhHip8K4eCz4rj_mJ0q4L6_a_Mbxh-t16V7ti2yjiJmiA95cuTuSpXhAogOP9zg75PWce9yR_RGlUuUQIC8cu02CpSNewBXwL7fgUMgXQ_Yr4MHATr3lzDkBxg9IWhZLlIUhTR74d-Po4WH6o5fMamenJZb41RdWFub5EKT0m8T2kYWsoTh_WG9aRqmdDzKY5A_MkSkaidj0XzdsYN_QR4HYolph3k6KV0SzMk"/><span class="font-headline-sm text-headline-sm text-inverse-on-surface tracking-tight">Nexus Dispatch</span><div class="h-4 w-px bg-secondary/40 mx-space-xs"></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface/10 hover:bg-surface/15 transition-colors cursor-pointer"><span class="font-title-md text-title-md text-inverse-on-surface">Acme Cold-Chain Logistics</span><span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-primary/30 text-primary-fixed">Enterprise</span><span class="material-symbols-outlined text-inverse-on-surface text-base">expand_more</span></div></div><div class="flex-1 max-w-xl mx-margin"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-lg pointer-events-none">search</span><input class="w-full h-9 pl-9 pr-24 bg-surface/10 rounded-lg text-body-sm font-body-sm text-inverse-on-surface placeholder:text-secondary focus:outline-none focus:ring-1 focus:ring-primary border border-secondary/20" placeholder="Search shipment ID, driver, destination..." type="text"/><div class="absolute right-2 px-1.5 py-0.5 rounded bg-surface/10 border border-secondary/30 text-[11px] font-telemetry-sm text-secondary pointer-events-none">Cmd + K</div></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-tertiary/20 border border-tertiary/40"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span><span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed">All Systems Operational • 18ms</span></div><button class="relative p-1.5 text-secondary hover:text-inverse-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-error px-1 text-[10px] font-bold text-on-error">3 Excursions</span></button><div class="h-4 w-px bg-secondary/40"></div><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-secondary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2IOnzpxINF_8DTTWEYW2Eg_Bpzknmu0mFW-6UJ3GZxEIct6FkR_SveEOd9TcNvAfIUR5JJOiV1ObsyaH2j7tS_Pdb5SUAPLWNS-38d6urb1Y5viozxv1nDWlFC5wrnnVeSI3pNI_UOT_pq7Xpm_joskNFjqQHhBHFljSLnE6yVtdF0O1KQtj8OOEnmUby-t_3CfiB2MCXGLElfK-G_ZnJyGRM1YgEP4ZlG7mNR1yWlTU5zYKmqyKz"/><div class="flex flex-col text-left"><span class="font-title-md text-title-md text-inverse-on-surface leading-none">Marcus Chen</span><span class="font-label-sm text-label-sm text-secondary leading-none mt-1">Lead Dispatcher</span></div><span class="material-symbols-outlined text-secondary text-base">arrow_drop_down</span></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-64 bg-inverse-surface border-r border-secondary/20 flex flex-col justify-between z-40"><div class="p-space-md flex-1 overflow-y-auto"><div class="px-space-sm py-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Operations</span></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm ring-1 ring-primary/50"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="cold-chain-dashboard" href="#"><div class="flex items-center gap-space-sm"><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="live-fleet-map" href="#"><div class="flex items-center gap-space-sm"><span>Live Fleet Map</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="active-shipments" href="#"><div class="flex items-center gap-space-sm"><span>Active Shipments</span></div><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-telemetry-sm bg-surface/15 text-inverse-on-surface">88</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="cold-chain-alerts" href="#"><div class="flex items-center gap-space-sm"><span>Cold-Chain Alerts</span></div><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-telemetry-sm bg-error text-on-error font-bold">3</span></a></nav><div class="px-space-sm py-space-xs mt-space-lg mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Administration</span></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm ring-1 ring-primary/50"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="client-portals" href="#"><div class="flex items-center gap-space-sm"><span>Client Portals</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="billing-tariffs" href="#"><div class="flex items-center gap-space-sm"><span>Billing &amp; Tariffs</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="system-settings" href="#"><div class="flex items-center gap-space-sm"><span>System Settings</span></div></a></nav></div><div class="p-space-md border-t border-secondary/20 bg-inverse-surface/80 flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface/5 border border-secondary/20"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-base text-tertiary-fixed-dim">verified_user</span><span class="font-telemetry-sm text-telemetry-sm text-inverse-on-surface font-medium">FDA 21 CFR Part 11</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span></div><button class="flex items-center justify-between w-full px-space-sm py-1.5 rounded-lg text-secondary hover:text-inverse-on-surface hover:bg-surface/10 transition-colors"><span class="font-label-md text-label-md font-medium">Collapse Sidebar</span><span class="material-symbols-outlined text-lg">chevron_left</span></button></div></aside><div class="pl-64"><main class="pt-14 w-full px-margin bg-background min-h-screen"><div class="flex flex-col w-full pb-margin-lg space-y-space-lg">
+<!-- Success Announcement Banner / Verification Toast -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/30 flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface">Dual-Signatory Attestation Successfully Committed &amp; Cryptographically Sealed</span>
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-ping"></span>
+            PROVISIONED
+          </span>
+</div>
+<p class="font-body-md text-body-md text-secondary">
+          Active in <strong class="text-on-surface font-title-md">Okta SCIM Directory</strong> • Validated under <strong class="text-on-surface font-title-md">21 CFR §11.100</strong> • Immutable Ledger WORM Commit Confirmed
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap self-stretch xl:self-auto">
+<button class="h-9 px-space-md rounded-lg bg-primary text-on-primary font-title-md text-title-md flex items-center gap-space-xs shadow-sm hover:opacity-95 transition-opacity" onclick="window.print()">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>Download PDF/A-1b</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md flex items-center gap-space-xs hover:bg-surface-dim transition-colors" onclick="window.print()">
+<span class="material-symbols-outlined text-lg">print</span>
+<span>Print Certificate</span>
+</button>
+<a class="h-9 px-space-md rounded-lg bg-surface-container-low text-secondary font-title-md text-title-md flex items-center gap-space-xs hover:text-on-surface transition-colors" data-path="cold-chain-alerts" href="#">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+<span>Back to Queue</span>
+</a>
+</div>
+</div>
+<!-- Certificate Metadata Telemetry Ribbon -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Certificate Reference</span>
+<div class="font-telemetry-md text-telemetry-md text-primary font-semibold mt-space-xs truncate">CERT-GxP-2026-8941-FINAL</div>
+<div class="flex items-center gap-1.5 mt-space-xs text-secondary font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-sm text-tertiary">lock</span>
+<span>WORM QLDB #0x9F42A7C</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Target Enterprise Role</span>
+<div class="font-title-md text-title-md text-on-surface mt-space-xs truncate">ROLE_DISPATCH_THERMAL_TRIAGE_L2</div>
+<div class="text-secondary font-body-sm text-body-sm mt-space-xs truncate">Lead Dispatcher Thermal Override (Tier 2+)</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Final Seal Timestamp</span>
+<div class="font-telemetry-md text-telemetry-md text-on-surface font-medium mt-space-xs" id="utc-clock">Oct 24, 2026 • 14:36:42 UTC</div>
+<div class="flex items-center gap-1.5 mt-space-xs text-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span>Sync Delta: +214ms (Atomic Clock Locked)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Ledger Verification</span>
+<div class="font-headline-sm text-headline-sm text-tertiary flex items-center gap-1 mt-space-xs">
+<span>SEALED</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">gpp_good</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm">FIPS 140-2 Level 3 Root</div>
+</div>
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed/30 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">fingerprint</span>
+</div>
+</div>
+</div>
+<!-- Main Split Layout: Certificate Document (Left 8 cols) + Governance & Propagation (Right 4 cols) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left: Authentic Official FDA 21 CFR Part 11 Dual-Signatory Certificate Document Card -->
+<div class="xl:col-span-8 bg-surface-container-lowest rounded-xl shadow-md overflow-hidden relative">
+<!-- Top Decorative Document Header Band -->
+<div class="h-2 w-full bg-gradient-to-r from-primary via-tertiary-container to-primary-container"></div>
+<div class="p-space-xl space-y-space-xl">
+<!-- Document Title & Agency Identification Header -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md pb-space-lg bg-surface-container-low -mx-space-xl -mt-space-xl p-space-xl">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm tracking-widest uppercase text-secondary font-bold">Nexus Logistics GxP Quality Assurance Compliance Certificate</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Dual-Signatory Role &amp; Actuator Entitlement</h1>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary mt-0.5">Pursuant to United States Title 21 CFR Part 11 Electronic Records &amp; Electronic Signatures</div>
+</div>
+</div>
+<!-- Official Stamp / QR Code Box -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex-shrink-0 self-end sm:self-auto">
+<!-- Simulated QR SVG -->
+<svg class="w-12 h-12 text-on-surface" fill="currentColor" viewbox="0 0 44 44">
+<rect fill="currentColor" height="16" width="16" x="0" y="0"></rect>
+<rect fill="#ffffff" height="12" width="12" x="2" y="2"></rect>
+<rect fill="currentColor" height="6" width="6" x="5" y="5"></rect>
+<rect fill="currentColor" height="16" width="16" x="28" y="0"></rect>
+<rect fill="#ffffff" height="12" width="12" x="30" y="2"></rect>
+<rect fill="currentColor" height="6" width="6" x="33" y="5"></rect>
+<rect fill="currentColor" height="16" width="16" x="0" y="28"></rect>
+<rect fill="#ffffff" height="12" width="12" x="2" y="30"></rect>
+<rect fill="currentColor" height="6" width="6" x="5" y="33"></rect>
+<rect fill="currentColor" height="4" width="4" x="20" y="4"></rect>
+<rect fill="currentColor" height="6" width="4" x="20" y="12"></rect>
+<rect fill="currentColor" height="4" width="6" x="28" y="20"></rect>
+<rect fill="currentColor" height="12" width="4" x="22" y="28"></rect>
+<rect fill="currentColor" height="4" width="8" x="30" y="30"></rect>
+<rect fill="currentColor" height="6" width="6" x="38" y="38"></rect>
+</svg>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Validation Stamp</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary font-bold">21-CFR-OK</span>
+<span class="font-label-sm text-label-sm text-outline">Scan to Verify</span>
+</div>
+</div>
+</div>
+<!-- Section 1: Provisioned Role & Scope Attestation -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold text-secondary">Section 01 • Provisioned Scope &amp; Actuator Rights</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-2 py-0.5 rounded">Cold-Chain BioHub v4.2</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Entitlement 1 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-md bg-surface-container-highest text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-lg">thermostat</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Remote Reefer Setpoint Override</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Authorized range: ±0.5°C to ±3.0°C with pre-logged deviation code. Direct Modbus &amp; Carrier Reeferlink API telemetry.</div>
+<div class="font-telemetry-sm text-telemetry-sm text-primary mt-space-xs">ENTITLEMENT_ID: REEFER_TELEMETRY_WRITE_L2</div>
+</div>
+</div>
+<!-- Entitlement 2 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-md bg-surface-container-highest text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-lg">alt_route</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Emergency Fast-Reroute Authorization</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Permitted route deviation exceeding 15 minutes transit variance for thermal avoidance or traffic congestion triage.</div>
+<div class="font-telemetry-sm text-telemetry-sm text-primary mt-space-xs">ENTITLEMENT_ID: GPS_REROUTE_FAST_DISPATCH</div>
+</div>
+</div>
+<!-- Entitlement 3 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-md bg-surface-container-highest text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-lg">lock_open</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Tamper-Evident Chain of Custody (CoC)</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Ability to remotely acknowledge cargo seal breaks, dry-ice replenishments, and thermal excursion waivers.</div>
+<div class="font-telemetry-sm text-telemetry-sm text-primary mt-space-xs">ENTITLEMENT_ID: CARGO_COC_OVERRIDE_GATE</div>
+</div>
+</div>
+<!-- Entitlement 4 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-md bg-surface-container-highest text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-lg">file_present</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Pharma QA Audit Dossier Export</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Immediate generation and client push of non-repudiated sensor telemetry reports directly to sponsor portals.</div>
+<div class="font-telemetry-sm text-telemetry-sm text-primary mt-space-xs">ENTITLEMENT_ID: REG_QA_DIRECT_EXPORT_CLIENT</div>
+</div>
+</div>
+</div>
+<!-- Geographic Bounding Card -->
+<div class="bg-surface-container-high rounded-lg p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">share_location</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface">Restricted Geographic Depots:</span>
+<span class="font-body-md text-body-md text-secondary ml-1">Boston BioHub (DEPOT-BOS-01), Cambridge Clinical (DEPOT-CAM-04), NJ Transit Corridor (DEPOT-NWK-02)</span>
+</div>
+</div>
+<span class="px-space-sm py-1 bg-surface-container-lowest text-on-surface font-telemetry-sm text-telemetry-sm rounded font-medium shadow-sm flex-shrink-0">
+              ±2.0 mi Geofence Perimeter Enforced
+            </span>
+</div>
+</div>
+<!-- Section 2: Dual Cryptographic Signatures (Side-by-Side Co-Signatures) -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold text-secondary">Section 02 • Dual Cryptographic Signatures (21 CFR §11.50)</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-base">lock</span>
+              Non-Repudiation Verified
+            </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Signatory 1: Marcus Chen -->
+<div class="bg-surface-container-low rounded-xl p-space-lg relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-11 h-11 rounded-full object-cover shadow-sm" data-alt="Close up photographic portrait of Marcus Chen, Asian male cold chain dispatcher wearing professional headset, sharp corporate lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdl75ORdg5eAyJxqwpHeO5dM5NR0u0dFrnWnApMcJdWfI6RA19JLMNC9gvX1ErH9LrC37YkVvy28LpuDuGIeWkTzQOy0Yr7y1SwuaStqgI9UPTfnepW7o_Yla2ZahfZSocr55Y53M08-pC8TshP-zQm41tXRR4Ynl8CAMNlhz8uXk0t3iUbUwvkBcIQWQPlnzMjMaf_tyATIz8i7xYMeChEJfo1h555s6BWKRefe8KSYAbzR_H8kBK"/>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Marcus Chen</div>
+<div class="font-label-sm text-label-sm text-secondary">Lead Cold-Chain Dispatcher • Initiator</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                  Verified
+                </span>
+</div>
+<div class="my-space-md space-y-space-xs bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Signing Method:</span>
+<span class="font-telemetry-sm text-on-surface font-medium">FIDO2 Hardware Token (YK-8812-B)</span>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Sign Time:</span>
+<span class="font-telemetry-sm text-on-surface">Oct 24, 2026 • 14:22:18 UTC</span>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Attestation Role:</span>
+<span class="text-on-surface font-semibold">Initiator &amp; Operational Subject</span>
+</div>
+<div class="pt-1">
+<div class="font-label-sm text-label-sm text-secondary">SHA-384 Signature Hash:</div>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary break-all select-all font-mono text-[11px] leading-tight mt-0.5 bg-surface-container-low p-1.5 rounded">
+                    e8c49bf10c78a3f8902d8471b3e94aa7899b82c6104f67e10c75469ad107c6f0490b
+                  </div>
+</div>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm pt-space-xs">
+<span>Reason: Request for Tier 2 Entitlements</span>
+<span class="text-tertiary flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm">enhanced_encryption</span>
+                  Signed
+                </span>
+</div>
+</div>
+<!-- Signatory 2: Dr. Aris Thorne (Co-Signer) -->
+<div class="bg-surface-container-high rounded-xl p-space-lg relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-11 h-11 rounded-full object-cover shadow-sm" data-alt="Photographic portrait of Dr. Aris Thorne, female senior pharmaceutical QA compliance officer, sophisticated studio lighting, white collared shirt." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXyTNzhxhOH7bAE8IqMEKlUCxzssFYXZJMmkt_-O30UwU8QY2gUG_qTwinv55DPfMYau5BsCrzquu11zvoNdfPFs-80Lbirf1Pz1dj5YmgfEgbZArfSeVr3FY3G8zNsXSWazHEL867h-GtUmMhjPu47UxqFmZdHdHifka7Zb9NxeMGpha_v2r_GQ3HkwEFgk7IptAZwJ8VGF8z_oFUFJC4MfGJSDR_V4AqB7oCdfueE-GOU5GuamJZ"/>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Dr. Aris Thorne</div>
+<div class="font-label-sm text-label-sm text-secondary">VP of QA &amp; Regulatory Compliance • GxP Officer</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                  Co-Signed
+                </span>
+</div>
+<div class="my-space-md space-y-space-xs bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Signing Method:</span>
+<span class="font-telemetry-sm text-on-surface font-medium">YubiKey 5C NFC FIPS (FIPS 140-2 L3)</span>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Sign Time:</span>
+<span class="font-telemetry-sm text-on-surface font-semibold text-primary">Just Now (14:36:42 UTC)</span>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Attestation Role:</span>
+<span class="text-on-surface font-semibold">Independent QA Authorization</span>
+</div>
+<div class="pt-1">
+<div class="font-label-sm text-label-sm text-secondary">SHA-384 Signature Hash:</div>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary break-all select-all font-mono text-[11px] leading-tight mt-0.5 bg-surface-container-low p-1.5 rounded">
+                    9e4f2b38d9c14b328f9ba91c78e820ac271dfa839f990141e976cbca9f07a61d8a
+                  </div>
+</div>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm pt-space-xs">
+<span>Reason: Approval of Custom GxP Actuator Entitlements</span>
+<span class="text-tertiary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-sm">lock_person</span>
+                  Final Seal Active
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: SCIM Directory Synchronization & Cryptographic Log -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold text-secondary">Section 03 • SCIM 2.0 Identity Directory Push Confirmation</span>
+</div>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary">RFC 7644 Compliant</span>
+</div>
+<!-- Code / Terminal Block for SCIM Push Receipt -->
+<div class="bg-inverse-surface rounded-xl p-space-lg font-telemetry-sm text-telemetry-sm text-inverse-on-surface space-y-2 overflow-x-auto shadow-inner">
+<div class="flex items-center justify-between pb-2 border-b border-secondary/20">
+<span class="text-tertiary-fixed font-bold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+                HTTPS/2 201 CREATED • SCIM Push Transaction Complete
+              </span>
+<span class="text-secondary text-[11px]">TxID: 0x9f44-88aa-10bc</span>
+</div>
+<div class="pt-1 text-secondary leading-relaxed">
+<span class="text-primary-fixed">&gt; POST</span> https://acme-pharma.okta.com/scim/v2/Roles/ROLE_DISPATCH_THERMAL_TRIAGE_L2<br/>
+<span class="text-primary-fixed">&gt; Authorization:</span> Bearer [SCIM_FIPS_TOKEN_ROTATED]<br/>
+<span class="text-tertiary-fixed">&lt; HTTP/2 201 CREATED</span> [Latency: 42ms]<br/>
+<span class="text-secondary font-mono">
+                {<br/>
+                  "schemas": ["urn:ietf:params:scim:schemas:core:2.0:Group"],<br/>
+                  "displayName": "ROLE_DISPATCH_THERMAL_TRIAGE_L2",<br/>
+                  "members": [<br/>
+                    {"value": "usr_mchen_8812", "display": "Marcus Chen", "status": "ACTIVE_VERIFIED"},<br/>
+                    {"value": "usr_erostova_4409", "display": "Elena Rostova", "status": "ACTIVE_VERIFIED"},<br/>
+                    {"value": "usr_dvance_9118", "display": "Devonte Vance", "status": "ACTIVE_VERIFIED"}<br/>
+                  ],<br/>
+                  "meta": { "resourceType": "Role", "gxpAudited": true, "wormCommit": "AWS_QLDB_COMMIT_0x9F42A7C" }<br/>
+                }
+              </span>
+</div>
+</div>
+</div>
+<!-- Section 4: Regulatory Citations Footer -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">policy</span>
+<span><strong class="text-on-surface">Statutory Compliance:</strong> 21 CFR §11.10 (Controls), §11.50 (Signatures), §11.100 (General Requirements), EU EudraLex Vol 4 Annex 11, USP &lt;1079&gt;.</span>
+</div>
+<div class="font-telemetry-sm text-telemetry-sm text-outline flex items-center gap-1 flex-shrink-0">
+<span>Doc Version: 2.1.0-VALIDATED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Sidebar / Governance, Action Panel, & Integrity Checks (Right 4 cols) -->
+<div class="xl:col-span-4 space-y-space-lg">
+<!-- Action Panel Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg space-y-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Certificate Governance</h2>
+<span class="material-symbols-outlined text-secondary">tune</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+          Dual-signatory attestation is archived in write-once-read-many (WORM) storage. Distribute verification records to external auditors and identity tiers.
+        </p>
+<div class="space-y-space-sm pt-space-xs">
+<button class="w-full h-10 px-space-md rounded-lg bg-primary text-on-primary font-title-md text-title-md flex items-center justify-center gap-space-sm shadow-sm hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>Download Signed PDF/A-1b</span>
+</button>
+<button class="w-full h-10 px-space-md rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md flex items-center justify-center gap-space-sm hover:bg-surface-dim transition-colors" onclick="this.innerHTML='&lt;span class=\'material-symbols-outlined text-lg text-tertiary\'&gt;check&lt;/span&gt; Sent to 4 Portals'; this.classList.add('bg-tertiary/15');">
+<span class="material-symbols-outlined text-lg">send_and_archive</span>
+<span>Push Certificate to Pharma Portals</span>
+</button>
+<button class="w-full h-10 px-space-md rounded-lg bg-surface-container-low text-secondary font-title-md text-title-md flex items-center justify-center gap-space-sm hover:text-on-surface transition-colors" onclick="alert('Viewing Immutable SCIM Commit 0x9F42A7C in Amazon QLDB Explorer.')">
+<span class="material-symbols-outlined text-lg">terminal</span>
+<span>View SCIM Event in System Log</span>
+</button>
+</div>
+</div>
+<!-- Identity Federation & Provisioned Principals Status Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Synchronized Principals</h3>
+<div class="font-label-sm text-label-sm text-secondary">3 Cold-Chain Operators Provisioned</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed/30 text-tertiary font-telemetry-sm text-telemetry-sm font-bold">OKTA SCIM</span>
+</div>
+<div class="space-y-space-sm divide-y-0">
+<!-- Operator 1 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-xs">MC</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Marcus Chen</div>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary">Token YK-8812-B</div>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+                Active
+              </span>
+</div>
+</div>
+<!-- Operator 2 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs">ER</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Elena Rostova</div>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary">Token YK-4409-C</div>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+                Active
+              </span>
+</div>
+</div>
+<!-- Operator 3 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-bold text-xs">DV</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Devonte Vance</div>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary">Token YK-9118-A</div>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+                Active
+              </span>
+</div>
+</div>
+</div>
+<!-- Federation Channels Status -->
+<div class="pt-space-xs space-y-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">check</span>
+              Okta Universal Directory
+            </span>
+<span class="text-tertiary font-medium">Provisioned</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">check</span>
+              AWS IAM Identity Center
+            </span>
+<span class="text-tertiary font-medium">Synchronized</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">check</span>
+              Azure AD / Entra ID Federation
+            </span>
+<span class="text-tertiary font-medium">Live Mirror</span>
+</div>
+</div>
+</div>
+<!-- Cryptographic Integrity & CloudHSM Health -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg space-y-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cryptographic Integrity</h3>
+<span class="material-symbols-outlined text-tertiary">lock_reset</span>
+</div>
+<div class="space-y-space-sm">
+<div class="bg-surface-container-low rounded-lg p-space-md space-y-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Merkle Ledger Root:</span>
+<span class="text-on-surface font-telemetry-sm font-semibold">Matched (100%)</span>
+</div>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary break-all select-all font-mono text-[11px] bg-surface-container-lowest p-1.5 rounded">
+              7c91a0d8e23f990a1b2c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5
+            </div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-md space-y-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">HSM Signing Node:</span>
+<span class="text-tertiary font-telemetry-sm font-medium">AWS CloudHSM US-East-1</span>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm pt-1">
+<span>Security Standard:</span>
+<span class="font-telemetry-sm text-on-surface font-medium">FIPS 140-2 Level 3 Hardware</span>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Key Attestation:</span>
+<span class="font-telemetry-sm text-tertiary font-medium">Valid (Next Rotation 90d)</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-tertiary/10 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-xl">format_image_left</span>
+<span class="font-body-sm text-body-sm text-tertiary font-medium">
+              Tamper-Evident Ledger sealed. Any unauthorized payload modification invalidates active reefer commands.
+            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    function updateClock() {
+      const el = document.getElementById('utc-clock');
+      if (!el) return;
+      const now = new Date();
+      const options = { 
+        month: 'short', 
+        day: '2-digit', 
+        year: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit', 
+        timeZone: 'UTC', 
+        hour12: false 
+      };
+      el.textContent = now.toLocaleString('en-US', options) + ' UTC';
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  })();
+</script></main></div></body></html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-error-container": "#93000a",
+        "tertiary": "#005338",
+        "surface-bright": "#f8f9ff",
+        "outline": "#777587",
+        "on-primary-fixed": "#0f0069",
+        "on-primary": "#ffffff",
+        "secondary-fixed": "#dae2fd",
+        "secondary-fixed-dim": "#bec6e0",
+        "surface-container-high": "#dce9ff",
+        "on-tertiary-container": "#67f4b7",
+        "on-primary-container": "#dad7ff",
+        "background": "#f8f9ff",
+        "outline-variant": "#c7c4d8",
+        "tertiary-container": "#006e4b",
+        "on-surface-variant": "#464555",
+        "error": "#ba1a1a",
+        "inverse-surface": "#213145",
+        "on-primary-fixed-variant": "#3323cc",
+        "on-secondary-container": "#5c647a",
+        "on-error": "#ffffff",
+        "on-tertiary": "#ffffff",
+        "surface-container": "#e5eeff",
+        "surface-container-low": "#eff4ff",
+        "surface": "#f8f9ff",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed-dim": "#c3c0ff",
+        "on-secondary": "#ffffff",
+        "surface-container-highest": "#d3e4fe",
+        "inverse-primary": "#c3c0ff",
+        "secondary": "#565e74",
+        "tertiary-fixed-dim": "#4edea3",
+        "primary": "#3525cd",
+        "surface-dim": "#cbdbf5",
+        "tertiary-fixed": "#6ffbbe",
+        "primary-fixed": "#e2dfff",
+        "on-secondary-fixed-variant": "#3f465c",
+        "on-secondary-fixed": "#131b2e",
+        "surface-variant": "#d3e4fe",
+        "on-tertiary-fixed": "#002113",
+        "on-surface": "#0b1c30",
+        "on-tertiary-fixed-variant": "#005236",
+        "secondary-container": "#dae2fd",
+        "error-container": "#ffdad6",
+        "primary-container": "#4f46e5",
+        "inverse-on-surface": "#eaf1ff",
+        "surface-tint": "#4d44e3",
+        "on-background": "#0b1c30"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter": "1rem",
+        "margin": "1.5rem",
+        "margin-lg": "2rem",
+        "space-xs": "0.25rem",
+        "space-xl": "1.5rem",
+        "gutter-sm": "0.5rem",
+        "space-sm": "0.5rem",
+        "gutter-lg": "1.5rem",
+        "space-md": "0.75rem",
+        "margin-sm": "1rem",
+        "space-lg": "1rem"
+      },
+      "fontFamily": {
+        "body-md": ["IBM Plex Sans"],
+        "label-md": ["IBM Plex Sans"],
+        "label-sm": ["IBM Plex Sans"],
+        "display-lg": ["IBM Plex Sans"],
+        "telemetry-md": ["JetBrains Mono"],
+        "telemetry-lg": ["JetBrains Mono"],
+        "body-lg": ["IBM Plex Sans"],
+        "headline-sm": ["IBM Plex Sans"],
+        "headline-md": ["IBM Plex Sans"],
+        "body-sm": ["IBM Plex Sans"],
+        "headline-lg": ["IBM Plex Sans"],
+        "telemetry-sm": ["JetBrains Mono"],
+        "title-md": ["IBM Plex Sans"],
+        "headline-lg-mobile": ["IBM Plex Sans"]
+      },
+      "fontSize": {
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+        "display-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "telemetry-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+        "telemetry-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.03em", "fontWeight": "500"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "telemetry-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "title-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+        "headline-lg-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 z-50 bg-inverse-surface text-inverse-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="h-14 w-full px-margin-lg flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md min-w-max"><img alt="Brand logo. - Primary color: #4f46e5
+- Font: ibmPlexSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XOY76ArsN2il89HFO7i0Ozy8Ul5z9ElCNySAdFcaKt53cPZKDPAgCWghs8J5KjK3FBPXx5hfwnUz6k_0xZaU149pZisgznGJL4CZoAq7le7HfQV8q9-sxi1BySIJiPJbIINq2TbpUGkgHlAXG7mlIAXpYs37OFdbca-u83LMQb8-bdxl_tdGWKQvzPAZ2OJ69R7vCN0AsGod4Z4O98NMxzQCcOpnZSp5L-Anv92q4lbxPD0Fy5764THsg"/><div class="flex items-center gap-space-sm pl-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-on-primary">Nexus Dispatch</span><span class="px-space-sm py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">Root HQ</span><span class="hidden xl:inline-flex px-space-sm py-0.5 rounded bg-surface-container-highest/20 text-inverse-on-surface font-label-sm text-label-sm font-medium">Global Control Plane</span></div></div><div class="hidden md:flex items-center gap-space-lg px-space-md py-1 rounded bg-inverse-surface/80 border border-outline/30"><div class="flex items-center gap-space-sm"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-fixed"></span></span><span class="font-label-md text-label-md text-inverse-on-surface font-medium">System Health: <span class="text-tertiary-fixed font-semibold">OPTIMAL</span></span></div><div class="h-3 w-px bg-outline/40"></div><div class="flex items-center gap-space-xs font-telemetry-sm text-telemetry-sm text-inverse-on-surface/80"><span class="text-tertiary-fixed font-semibold">18ms</span> latency</div><div class="h-3 w-px bg-outline/40"></div><div class="flex items-center gap-space-xs font-telemetry-sm text-telemetry-sm text-inverse-on-surface/80"><span class="material-symbols-outlined text-[14px] text-tertiary-fixed">hub</span>US-EAST-01</div><div class="h-3 w-px bg-outline/40"></div><div class="font-telemetry-sm text-telemetry-sm text-inverse-on-surface/70">2025-05-18 14:32:09 UTC</div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-inverse-surface/60 hover:bg-inverse-surface/90 text-inverse-on-surface/80 hover:text-inverse-on-surface border border-outline/30 transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="hidden sm:inline font-label-md text-label-md">Quick Jump</span><kbd class="hidden lg:inline px-1 py-0.5 rounded bg-inverse-surface font-telemetry-sm text-telemetry-sm text-inverse-on-surface/60 border border-outline/30">⌘K</kbd></button><button class="relative p-1.5 rounded-lg text-inverse-on-surface/80 hover:text-inverse-on-surface hover:bg-inverse-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-inverse-surface"></span></button><div class="h-6 w-px bg-outline/30"></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline/40" src="https://lh3.googleusercontent.com/aida/AEtjO1WN9oaj3-3vUpo1nD_k4b3fkvyfg4p24i7qtc-aqyrs5LO0T9SX6C4XWthK5uSqqv-4jlE6imDqMM7aewbIjxd29OtXcHt4MYiID6GyYfIpsvi_5uOeuT0wQkQsdDa9GvAPI7gbU5fEvw_h0xKLJNW4edzhXKAF_qvsuc-OpWRIoM6ps244OXC1QZ2TiTqLjEtJQ0VHawmBYRInjtptJMTNNcwBxpVewspK_07Fi8LrGeID8IzqXpCnLUs"/><div class="hidden lg:flex flex-col text-left"><span class="font-title-md text-title-md leading-none text-on-primary">System Superadmin</span><span class="font-label-sm text-label-sm leading-none text-tertiary-fixed mt-0.5">Root Authority</span></div></div></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-64 bg-inverse-surface text-inverse-on-surface z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto px-space-sm pt-space-md"><div class="px-space-md pb-space-sm mb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-inverse-on-surface/50 font-semibold">Sovereign Core</div><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="overview" href="#"><span>Overview</span><span class="font-telemetry-sm text-telemetry-sm px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-semibold">LIVE</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="tenant-management" href="#"><span>Tenant Management</span><span class="font-telemetry-sm text-telemetry-sm px-2 py-0.5 rounded-full bg-surface-container-highest/20 text-inverse-on-surface font-semibold">412</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="usage-and-billing" href="#"><span>Usage &amp; Billing</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg font-body-md text-body-md bg-primary-container text-on-primary font-semibold transition-colors" data-path="technical-health" href="#"><span>Technical Health</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="global-tariffs" href="#"><span>Global Tariffs</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="platform-governance" href="#"><span>Platform Governance</span></a><a class="flex items-center px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="system-settings" href="#"><span>System Settings</span></a></nav></div><div class="p-space-md border-t border-outline/20 bg-inverse-surface"><div class="mb-space-sm space-y-space-xs"><div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-inverse-on-surface/60"><span>Build</span><span class="text-inverse-on-surface font-medium">v4.12.9-Enterprise Root</span></div><div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-inverse-on-surface/60"><span>Compliance</span><span class="text-tertiary-fixed font-medium">FIPS 140-2 L3 Sovereign</span></div></div><a class="flex items-center justify-center gap-space-sm w-full py-2 px-space-md rounded-lg bg-surface-container-highest/10 hover:bg-error/20 text-inverse-on-surface hover:text-error transition-colors font-label-md text-label-md font-medium" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">power_settings_new</span><span>Sign Out of Root</span></a></div></aside><div class="pl-64"><main class="w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="p-margin-lg space-y-gutter-lg max-w-[1720px] mx-auto w-full">
+<!-- SUB-HEADER CONTEXT BAR & MAIN ACTION ROW -->
+<div class="flex flex-col gap-space-md">
+<!-- Live Edge Mesh Telemetry Ping -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest px-space-md py-space-sm rounded-lg shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary"></span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Technical Infrastructure &amp; Telematics Ingestion</span>
+<span class="text-outline-variant font-telemetry-sm">/</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+            Edge Broker Mesh: 100% Operational (EMQX / TimescaleDB Enterprise)
+          </span>
+</div>
+<div class="flex items-center gap-space-md font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-tertiary">lock</span>FIPS 140-2 Level 3 HSM Enforced</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Buffer Fill: <strong class="text-on-surface">1.8%</strong></span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>412 Federated Partitions</span>
+</div>
+</div>
+<!-- Main Headline & Command Actions -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg">
+<div class="space-y-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Global Technical Health &amp; Pipeline Telemetry</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+            Deep-dive infrastructure telemetry, distributed MQTT/CoAP broker ingestion, TimescaleDB IOPS, HSM cluster state, and sub-millisecond edge latency across 412 federated partitions.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-title-md text-title-md shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">terminal</span>
+<span>Download Diagnostics Dump (JSON)</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-title-md text-title-md shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">bolt</span>
+<span>Trigger Synthetic Canary Ping</span>
+</button>
+<div class="relative inline-flex">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-title-md text-title-md shadow-sm hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Broker Drain / Maintenance Mode</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- TOP KPI METRIC TILES -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Total Ingestion Throughput</span>
+<div class="flex items-baseline gap-2">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface font-bold">43,820</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant font-medium">msgs/sec</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed/40 text-on-tertiary-fixed-variant font-telemetry-sm text-telemetry-sm font-semibold">+6.4% peak burst</span>
+</div>
+<div class="space-y-1 pt-space-xs">
+<div class="flex justify-between items-center font-telemetry-sm text-telemetry-sm">
+<span class="text-on-surface-variant">Peak: 58,200 msg/s</span>
+<span class="text-tertiary font-medium">92% headroom</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 75.3%;"></div>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant pt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">hub</span>
+            Active Ingestion Topics: 18,412 MQTT wildcards
+          </div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">TimescaleDB Compression &amp; IOPS</span>
+<div class="flex items-baseline gap-2">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface font-bold">12,450</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant font-medium">write IOPS</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-telemetry-sm text-telemetry-sm font-semibold">94.2% ZSTD</span>
+</div>
+<div class="space-y-1 pt-space-xs">
+<div class="flex justify-between items-center font-telemetry-sm text-telemetry-sm">
+<span class="text-on-surface-variant">Read Latency: 3.2ms</span>
+<span class="text-on-surface font-medium">1.8 TB / 24h</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-1.5 rounded-full" style="width: 94.2%;"></div>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant pt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">database</span>
+            TimescaleDB Tier: Multi-Node Hypertable Cluster
+          </div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">AWS CloudHSM FIPS 140-2 L3</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-tertiary font-bold">100% Operational</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-telemetry-sm text-telemetry-sm font-semibold">Zero Drift</span>
+</div>
+<div class="space-y-1 pt-space-xs">
+<div class="flex justify-between items-center font-telemetry-sm text-telemetry-sm">
+<span class="text-on-surface-variant">Crypto Operations</span>
+<span class="text-on-surface font-medium">2,410 ops/sec</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 100%;"></div>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant pt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">shield</span>
+            HSM Clustered: 6 Nodes (US-East, EU, APAC)
+          </div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Global P99 API / Ingest Lag</span>
+<div class="flex items-baseline gap-2">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface font-bold">18.4</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant font-medium">ms</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed/40 text-on-tertiary-fixed-variant font-telemetry-sm text-telemetry-sm font-semibold">99.999% SLA</span>
+</div>
+<div class="space-y-1 pt-space-xs">
+<div class="flex justify-between items-center font-telemetry-sm text-telemetry-sm">
+<span class="text-on-surface-variant">P50: 8.2ms • P95: 14.1ms</span>
+<span class="text-tertiary font-medium">Loss: 0.00%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-1.5 rounded-full" style="width: 32%;"></div>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant pt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">alt_route</span>
+            Edge Anycast Routes: 28 POPs Active
+          </div>
+</div>
+</div>
+</div>
+<!-- MAIN SECTION 1: TWO-COLUMN TELEMETRY & HARDWARE MATRIX -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Panel: High Fidelity Graph (approx 60% / 7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Real-Time Message Broker &amp; Ingestion Telemetry</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">MQTT 5.0, CoAP BLE Gateways &amp; High-Throughput Webhook Listeners</p>
+</div>
+<!-- Protocol Tabs -->
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-lg">
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest font-label-sm text-label-sm text-on-surface font-semibold shadow-xs">All Protocols</button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">MQTT 5.0</button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">CoAP</button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Webhooks</button>
+</div>
+</div>
+<!-- Timeframe & Metric Legends -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-md font-telemetry-sm text-telemetry-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-xs bg-primary-container"></span>
+<span class="text-on-surface">MQTT Ingest Rate (msgs/s)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 bg-tertiary"></span>
+<span class="text-on-surface">API Ingestion Latency (ms)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 border-t border-dashed border-error"></span>
+<span class="text-on-surface-variant">SLA Threshold (30ms)</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded-md font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-medium">1h</span>
+<span class="px-1.5 py-0.5 hover:text-on-surface cursor-pointer">6h</span>
+<span class="px-1.5 py-0.5 hover:text-on-surface cursor-pointer">24h</span>
+<span class="px-1.5 py-0.5 hover:text-on-surface cursor-pointer">7d</span>
+</div>
+</div>
+<!-- Chart Visual (SVG Inline) -->
+<div class="relative w-full h-[260px] bg-surface-container-low/40 rounded-lg p-space-sm flex flex-col justify-end overflow-hidden">
+<!-- Canary ping marker -->
+<div class="absolute top-10 right-1/4 z-10 flex items-center gap-1.5 px-2 py-1 rounded bg-inverse-surface text-inverse-on-surface font-telemetry-sm text-telemetry-sm shadow-md">
+<span class="material-symbols-outlined text-[13px] text-tertiary-fixed">check_circle</span>
+<span>Synthetic Canary Ping #9921: <strong>14.2ms</strong> [Passed]</span>
+</div>
+<!-- SVG Vector Data Line Visualization -->
+<svg class="w-full h-48 overflow-visible" preserveaspectratio="none" viewbox="0 0 700 180">
+<defs>
+<lineargradient id="mqttGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4f46e5" stop-opacity="0.32"></stop>
+<stop offset="100%" stop-color="#4f46e5" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Threshold Line 30ms -->
+<line stroke="#ba1a1a" stroke-dasharray="4 4" stroke-opacity="0.4" stroke-width="1.5" x1="0" x2="700" y1="35" y2="35"></line>
+<!-- Subtle Background Gridlines -->
+<line stroke="#c7c4d8" stroke-dasharray="2 2" stroke-opacity="0.3" stroke-width="1" x1="0" x2="700" y1="75" y2="75"></line>
+<line stroke="#c7c4d8" stroke-dasharray="2 2" stroke-opacity="0.3" stroke-width="1" x1="0" x2="700" y1="120" y2="120"></line>
+<!-- Area Fill for Ingest Volume -->
+<path d="M0,150 Q70,120 140,135 T280,100 T420,115 T560,70 T700,90 L700,180 L0,180 Z" fill="url(#mqttGradient)"></path>
+<!-- Smooth Primary Volume Path -->
+<path d="M0,150 Q70,120 140,135 T280,100 T420,115 T560,70 T700,90" fill="none" stroke="#4f46e5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<!-- Latency Trajectory Line -->
+<path d="M0,110 Q80,115 160,95 T320,105 T480,85 T540,65 T620,70 T700,75" fill="none" stroke="#006e4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<!-- Ping Dot -->
+<circle cx="525" cy="65" fill="#6ffbbe" r="4.5" stroke="#005338" stroke-width="2"></circle>
+</svg>
+<!-- Time Axis Labels -->
+<div class="flex justify-between items-center text-on-surface-variant font-telemetry-sm text-telemetry-sm pt-2">
+<span>00:00 UTC</span>
+<span>04:00</span>
+<span>08:00</span>
+<span>12:00</span>
+<span>16:00</span>
+<span>20:00</span>
+<span class="text-tertiary font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Live: 14:32</span>
+</div>
+</div>
+</div>
+<!-- Broker Status Metrics Footnote -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-md mt-space-md bg-surface-container-low/30 p-space-sm rounded-lg">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary">EMQX Cluster Nodes</span>
+<div class="font-telemetry-md text-telemetry-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">check_circle</span>
+              8 / 8 Online
+            </div>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary">Active TCP Sockets</span>
+<div class="font-telemetry-md text-telemetry-md text-on-surface font-semibold">1,412 Reefers</div>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary">Retransmission Rate</span>
+<div class="font-telemetry-md text-telemetry-md text-tertiary font-semibold">0.012%</div>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary">Dead Letter Queue (DLQ)</span>
+<div class="font-telemetry-md text-telemetry-md text-on-surface font-semibold">0 Messages</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Edge Pods & Cloud Infrastructure Matrix (approx 40% / 5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Edge Pods &amp; Cloud Matrix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Multi-Cloud Ingestion Mesh &amp; Sovereign FIPS Hardware</p>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-telemetry-sm text-telemetry-sm text-on-surface font-medium">4 Cluster Zones</span>
+</div>
+<!-- 4 Multi-Cloud Pod Cards -->
+<div class="space-y-space-sm">
+<!-- Pod 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-title-md text-title-md text-on-surface">US-East (Virginia) • Pod #04</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed/30 text-on-tertiary-fixed font-telemetry-sm text-telemetry-sm font-semibold">12.4ms</span>
+</div>
+<div class="flex justify-between items-center font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>CPU: <strong class="text-on-surface">38%</strong> • Mem: 14.2 GB / 32 GB</span>
+<span>218 Tenants • 820 Reefers</span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">sync</span>
+              TimescaleDB: us-east-04a (Replica Synchronous)
+            </div>
+</div>
+<!-- Pod 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-title-md text-title-md text-on-surface">EU-Central (Frankfurt) • Pod #01</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed/30 text-on-tertiary-fixed font-telemetry-sm text-telemetry-sm font-semibold">18.2ms</span>
+</div>
+<div class="flex justify-between items-center font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>CPU: <strong class="text-on-surface">42%</strong> • Mem: 18.5 GB / 32 GB</span>
+<span>114 Tenants • 390 Reefers</span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">gavel</span>
+              Data Residency: Isolated EU Keyring (CloudHSM eu-central-1)
+            </div>
+</div>
+<!-- Pod 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-title-md text-title-md text-on-surface">AP-Southeast (Singapore) • Pod #02</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed/30 text-on-tertiary-fixed font-telemetry-sm text-telemetry-sm font-semibold">28.5ms</span>
+</div>
+<div class="flex justify-between items-center font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>CPU: <strong class="text-on-surface">29%</strong> • Mem: 9.8 GB / 32 GB</span>
+<span>68 Tenants • 182 Reefers</span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">satellite_alt</span>
+              Gateway: BLE Mesh Bridge + Iridium SBD Relay
+            </div>
+</div>
+<!-- Pod 4: HSM Core -->
+<div class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">key</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">CloudHSM Cryptographic Core</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-telemetry-sm text-telemetry-sm font-semibold">SEALED</span>
+</div>
+<div class="flex justify-between items-center font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>FIPS 140-2 L3 Session: 148d Uptime</span>
+<span>412 Partition Keys</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface flex items-center justify-between pt-0.5">
+<span>PKCS#11 API Latency: <strong>1.8ms</strong></span>
+<span class="text-tertiary font-semibold">0 Unauthorized Tries</span>
+</div>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-title-md transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+<span>View Detailed Cluster Topography</span>
+</button>
+</div>
+</div>
+<!-- MAIN SECTION 2: LIVE SYSTEM ERROR LOG & TELEMATICS EXCURSION TRIAGE TABLE -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<!-- Table Header & Controls -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Live Gateway Excursion &amp; Anomaly Stream</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-telemetry-sm text-telemetry-sm font-semibold">Real-Time Ingestion Log</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous telemetry auditing, cold-chain connection status, and cryptographic key attestation events.</p>
+</div>
+<!-- Filter and Search Bar -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[18px] text-on-surface-variant">search</span>
+<input class="pl-8 pr-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary w-64" placeholder="Filter by signature, tenant, or pod..." type="text"/>
+</div>
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-lg">
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-xs">All Events</button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Critical (0)</button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Warning (2)</button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Audit (148)</button>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-surface-container-low font-telemetry-sm text-telemetry-sm text-tertiary font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+            Auto-Refresh (2s)
+          </div>
+</div>
+</div>
+<!-- High-Density Telematics Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md rounded-l-lg">Timestamp</th>
+<th class="py-2.5 px-space-md">Severity</th>
+<th class="py-2.5 px-space-md">Source Node / Protocol</th>
+<th class="py-2.5 px-space-md">Tenant &amp; Reefer ID</th>
+<th class="py-2.5 px-space-md">Diagnostic Event Signature</th>
+<th class="py-2.5 px-space-md">Trace ID</th>
+<th class="py-2.5 px-space-md text-right rounded-r-lg">Resolution</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm">
+<!-- Event 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-telemetry-sm text-telemetry-sm text-on-surface font-medium whitespace-nowrap">14:31:02 UTC</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-error-container/60 text-on-error-container font-telemetry-sm text-telemetry-sm font-semibold">WARN</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium text-on-surface">Pod #04 (US-East) • MQTT Broker</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="font-medium text-on-surface">Acme Cold-Chain</div>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary">#ACM-US-8910</div>
+</td>
+<td class="py-3 px-space-md max-w-md text-on-surface-variant">
+                High burst rate on topic <code class="font-telemetry-sm text-telemetry-sm text-primary px-1 rounded bg-surface-container">tenant/acm/reefer/+/telemetry</code>. Ingest buffered (14,200 events). Auto-scaled node.
+              </td>
+<td class="py-3 px-space-md font-telemetry-sm text-telemetry-sm text-secondary whitespace-nowrap">trc-99a81-us</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+                  View Raw Payload
+                </button>
+</td>
+</tr>
+<!-- Event 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-telemetry-sm text-telemetry-sm text-on-surface font-medium whitespace-nowrap">14:28:44 UTC</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-telemetry-sm text-telemetry-sm font-semibold">AUDIT</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium text-on-surface">CloudHSM Cluster #9</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="font-medium text-on-surface">Novartis Express</div>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary">#NOV-CH-3381</div>
+</td>
+<td class="py-3 px-space-md max-w-md text-on-surface-variant">
+                FIPS 140-2 L3 session signing key rotated for automated Veeva Vault QMS ingestion manifest.
+              </td>
+<td class="py-3 px-space-md font-telemetry-sm text-telemetry-sm text-secondary whitespace-nowrap">hsm-sig-4401</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+                  Verify Cert
+                </button>
+</td>
+</tr>
+<!-- Event 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-telemetry-sm text-telemetry-sm text-on-surface font-medium whitespace-nowrap">14:24:12 UTC</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-telemetry-sm text-telemetry-sm font-semibold">INFO</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium text-on-surface">TimescaleDB Master #01</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="font-medium text-on-surface">System Core</div>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary">GLOBAL-SYS</div>
+</td>
+<td class="py-3 px-space-md max-w-md text-on-surface-variant">
+                Automated hypertable chunk compression completed for partition <code class="font-telemetry-sm text-telemetry-sm text-on-surface px-1 rounded bg-surface-container">telemetry_p2026_w20</code>. Saved 48.2 GB.
+              </td>
+<td class="py-3 px-space-md font-telemetry-sm text-telemetry-sm text-secondary whitespace-nowrap">db-comp-182</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+                  Inspect DB
+                </button>
+</td>
+</tr>
+<!-- Event 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-telemetry-sm text-telemetry-sm text-on-surface font-medium whitespace-nowrap">14:15:30 UTC</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-error-container/60 text-on-error-container font-telemetry-sm text-telemetry-sm font-semibold">WARN</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium text-on-surface">Edge Gateway Anycast</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="font-medium text-on-surface">MedTrans Courier</div>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary">#MTC-US-6612</div>
+</td>
+<td class="py-3 px-space-md max-w-md text-on-surface-variant">
+                Cellular drop in transit zone I-80 NV. Fallen back to Iridium Short Burst Data (SBD) buffer. 0 data loss.
+              </td>
+<td class="py-3 px-space-md font-telemetry-sm text-telemetry-sm text-secondary whitespace-nowrap">iri-fail-0091</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+                  Satellite Trace
+                </button>
+</td>
+</tr>
+<!-- Event 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-telemetry-sm text-telemetry-sm text-on-surface font-medium whitespace-nowrap">14:10:05 UTC</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed/40 text-on-tertiary-fixed-variant font-telemetry-sm text-telemetry-sm font-semibold">HEALTH</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium text-on-surface">Synthetic Canary Worker</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="font-medium text-on-surface">Global Mesh</div>
+<div class="font-telemetry-sm text-telemetry-sm text-secondary">ALL-POPS</div>
+</td>
+<td class="py-3 px-space-md max-w-md text-on-surface-variant">
+                Global synthetic probe roundtrip: 14.1ms P50 across all 28 edge locations. All cold-chain health checks OK.
+              </td>
+<td class="py-3 px-space-md font-telemetry-sm text-telemetry-sm text-secondary whitespace-nowrap">cnry-88910</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+                  Run Canary
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Row Metrics -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>Showing 5 of 150 events in current buffer window (Last 60 mins)</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface">Previous</button>
+<span class="px-2 py-1 rounded bg-primary-container text-on-primary font-semibold">1</span>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface">2</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface">3</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface">Next</button>
+</div>
+</div>
+</div>
+<!-- FOOTER / CRYPTOGRAPHIC AUDIT BANNER -->
+<div class="p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-[24px] text-tertiary-fixed">verified_user</span>
+<div class="space-y-0.5">
+<div class="font-title-md text-title-md font-semibold text-inverse-on-surface">Cryptographically Stamped System Telemetry</div>
+<div class="font-telemetry-sm text-telemetry-sm text-inverse-on-surface/70">
+            SHA-256: <code class="text-tertiary-fixed font-semibold">4f89d871ab02c82a170b9921f008432a67bc</code> • ISO-27001 &amp; SOC 2 Type II Certified Telemetry Plane
+          </div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm font-label-md text-label-md">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-highest/10 hover:bg-surface-container-highest/20 text-inverse-on-surface transition-colors" type="button">
+          Export Full JSON Telemetry Log
+        </button>
+<button class="px-space-md py-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed font-semibold hover:opacity-90 transition-opacity" type="button">
+          View Architecture Whitepaper
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

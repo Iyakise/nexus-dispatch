@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#c3c0ff", "outline-variant": "#c7c4d8", "inverse-on-surface": "#eaf1ff", "tertiary-fixed-dim": "#4edea3", "on-surface-variant": "#464555", "primary-container": "#4f46e5", "tertiary": "#005338", "on-tertiary-fixed": "#002113", "tertiary-container": "#006e4b", "on-tertiary": "#ffffff", "error": "#ba1a1a", "inverse-primary": "#c3c0ff", "primary": "#3525cd", "surface-bright": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-container-highest": "#d3e4fe", "surface-dim": "#cbdbf5", "background": "#f8f9ff", "on-primary-container": "#dad7ff", "surface-tint": "#4d44e3", "on-secondary-container": "#5c647a", "on-secondary-fixed": "#131b2e", "primary-fixed": "#e2dfff", "secondary": "#565e74", "on-error-container": "#93000a", "on-secondary-fixed-variant": "#3f465c", "surface-container-high": "#dce9ff", "secondary-fixed": "#dae2fd", "error-container": "#ffdad6", "on-primary-fixed-variant": "#3323cc", "on-primary-fixed": "#0f0069", "on-primary": "#ffffff", "surface-container": "#e5eeff", "tertiary-fixed": "#6ffbbe", "on-background": "#0b1c30", "surface": "#f8f9ff", "on-tertiary-fixed-variant": "#005236", "surface-container-lowest": "#ffffff", "on-surface": "#0b1c30", "on-error": "#ffffff", "on-secondary": "#ffffff", "inverse-surface": "#213145", "surface-variant": "#d3e4fe", "secondary-container": "#dae2fd", "outline": "#777587", "on-tertiary-container": "#67f4b7", "secondary-fixed-dim": "#bec6e0" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin-sm": "1rem", "space-sm": "0.5rem", "gutter-sm": "0.5rem", "space-md": "0.75rem", "space-xl": "1.5rem", "space-lg": "1rem", "margin": "1.5rem", "gutter-lg": "1.5rem", "margin-lg": "2rem", "gutter": "1rem" }, "fontFamily": { "body-md": [ "IBM Plex Sans" ], "title-md": [ "IBM Plex Sans" ], "display-lg": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-lg-mobile": [ "IBM Plex Sans" ], "headline-lg": [ "IBM Plex Sans" ], "telemetry-lg": [ "JetBrains Mono" ], "body-sm": [ "IBM Plex Sans" ], "label-sm": [ "IBM Plex Sans" ], "telemetry-md": [ "JetBrains Mono" ], "body-lg": [ "IBM Plex Sans" ], "headline-md": [ "IBM Plex Sans" ], "telemetry-sm": [ "JetBrains Mono" ], "headline-sm": [ "IBM Plex Sans" ] }, "fontSize": { "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "title-md": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "display-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg-mobile": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "telemetry-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.03em", "fontWeight": "500" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "telemetry-md": [ "14px", { "lineHeight": "20px", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "telemetry-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 inset-x-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(15,23,42,0.06)]"><div class="h-14 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Brand logo. - Primary color: #4f46e5
+- Font: ibmPlexSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XOY76ArsN2il89HFO7i0Ozy8Ul5z9ElCNySAdFcaKt53cPZKDPAgCWghs8J5KjK3FBPXx5hfwnUz6k_0xZaU149pZisgznGJL4CZoAq7le7HfQV8q9-sxi1BySIJiPJbIINq2TbpUGkgHlAXG7mlIAXpYs37OFdbca-u83LMQb8-bdxl_tdGWKQvzPAZ2OJ69R7vCN0AsGod4Z4O98NMxzQCcOpnZSp5L-Anv92q4lbxPD0Fy5764THsg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Nexus Dispatch</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-0.5">Enterprise Cloud</span></div></div><nav class="hidden md:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-title-md"><a aria-current="page" class="px-space-md py-space-xs rounded transition-colors bg-surface-container-high text-primary font-title-md" data-path="tenant-profile" href="#">Tenant Profile</a><span class="material-symbols-outlined text-outline text-sm">chevron_right</span><a class="px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-md text-body-md transition-colors" data-path="cold-chain-fleets" href="#">Fleet Telemetry</a><span class="material-symbols-outlined text-outline text-sm">chevron_right</span><a class="px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-md text-body-md transition-colors" data-path="compliance-thresholds" href="#">Compliance &amp; Rules</a><span class="material-symbols-outlined text-outline text-sm">chevron_right</span><a class="px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-md text-body-md transition-colors" data-path="dispatchers-access" href="#">Team Access</a><span class="material-symbols-outlined text-outline text-sm">chevron_right</span><a class="px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-md text-body-md transition-colors" data-path="review-activate" href="#">Activation</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="support-center" href="#"><span class="material-symbols-outlined text-base mr-1">help_outline</span>Support Desk</a><div class="h-4 w-px bg-outline-variant hidden sm:block"></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1WN9oaj3-3vUpo1nD_k4b3fkvyfg4p24i7qtc-aqyrs5LO0T9SX6C4XWthK5uSqqv-4jlE6imDqMM7aewbIjxd29OtXcHt4MYiID6GyYfIpsvi_5uOeuT0wQkQsdDa9GvAPI7gbU5fEvw_h0xKLJNW4edzhXKAF_qvsuc-OpWRIoM6ps244OXC1QZ2TiTqLjEtJQ0VHawmBYRInjtptJMTNNcwBxpVewspK_07Fi8LrGeID8IzqXpCnLUs"/></div></div></header><main class="w-full pt-14 bg-background flex-1 max-w-7xl mx-auto px-gutter py-space-xl"><div class="flex flex-col w-full">
+<!-- Progress Stepper (Step 4 Complete) -->
+<section class="w-full mb-space-xl">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/15 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Tenant Onboarding Complete</span>
+<h2 class="font-title-md text-title-md text-on-surface">Step 4 of 4 • Production Provisioning</h2>
+</div>
+</div>
+<!-- Stepper Chain -->
+<div class="w-full md:w-auto flex items-center justify-between md:justify-end gap-space-sm sm:gap-space-md">
+<!-- Step 1 -->
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center text-xs font-semibold shadow-xs">
+<span class="material-symbols-outlined text-sm">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold hidden sm:inline">1. Fundamentals</span>
+</div>
+<div class="w-6 sm:w-10 h-0.5 bg-tertiary rounded-full"></div>
+<!-- Step 2 -->
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center text-xs font-semibold shadow-xs">
+<span class="material-symbols-outlined text-sm">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold hidden sm:inline">2. Subscription</span>
+</div>
+<div class="w-6 sm:w-10 h-0.5 bg-tertiary rounded-full"></div>
+<!-- Step 3 -->
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center text-xs font-semibold shadow-xs">
+<span class="material-symbols-outlined text-sm">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold hidden sm:inline">3. Payment</span>
+</div>
+<div class="w-6 sm:w-10 h-0.5 bg-tertiary rounded-full"></div>
+<!-- Step 4 -->
+<div class="flex items-center gap-space-xs bg-tertiary-fixed/40 px-space-sm py-1 rounded-full">
+<span class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center text-xs font-semibold shadow-xs">
+<span class="material-symbols-outlined text-sm">verified</span>
+</span>
+<span class="font-label-md text-label-md text-tertiary font-bold">4. Activation</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Hero Activation Celebration Card -->
+<section class="relative w-full overflow-hidden rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl mb-space-xl">
+<!-- Ambient Cold-Chain Network Background Image -->
+<div class="absolute inset-0 opacity-25 mix-blend-screen pointer-events-none bg-cover bg-center" data-alt="Futuristic isometric 3D telematics logistics network showing glowing transparent cold chain trucks, neon digital globe, circuit tracks, temperature markers like 2C and -10C, glowing nodes in deep indigo and cyan light on midnight blue background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3fyW7vP_ydQOPt96R_58PGi97ixEiWMoziuNO0wcTzDRZBL-DzGp3MHdZpXYtwoxRgFgirm6hI6GoXaLSDC234Avzuu5rqa89h7pDgZb5pvkWLXODNvwAGFSNnFyIQbl_r1Dxkouz1uFBc-JSSn5v2JHaZX-dHrb9YhuJcYCo0dvFRLEWMedpxFLFUUBwMmUE196J3O4lNop1fYMdBUgo83P84Z0J_LmLkfv2JEHgcbh3ZHRDGYYC')"></div>
+<!-- Soft Glow Accent Blobs -->
+<div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-tertiary-fixed-dim/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 p-space-lg sm:p-space-xl md:p-margin-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-xl">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-tertiary-container text-on-tertiary-container font-label-md text-label-md mb-space-md shadow-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span>CLUSTER INSTANCE ONLINE • ZERO DRIFT DETECTED</span>
+</div>
+<h1 class="font-display-lg text-display-lg font-bold tracking-tight text-white mb-space-sm">
+          Nexus Command Initialized!
+        </h1>
+<p class="font-body-lg text-body-lg text-inverse-on-surface/85 max-w-2xl leading-relaxed">
+          Welcome aboard, <strong class="text-white font-semibold">Acme Cold-Chain Logistics</strong>. Your dedicated multi-tenant infrastructure is live, calibrated, and ready for high-precision thermal fleet telemetry.
+        </p>
+<!-- Quick Spec Pills -->
+<div class="flex flex-wrap items-center gap-space-sm mt-space-lg">
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-lowest/10 backdrop-blur-sm text-white font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-sm text-tertiary-fixed">thermostat</span>
+<span>Sensor Stream: 100 Hz</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-lowest/10 backdrop-blur-sm text-white font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-sm text-primary-fixed">security</span>
+<span>GxP Cloud: Validated</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-lowest/10 backdrop-blur-sm text-white font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-sm text-secondary-fixed">dns</span>
+<span>Telemetry Ingestion: 0.00% Loss</span>
+</div>
+</div>
+</div>
+<!-- Isometric Visual Anchor / Badge -->
+<div class="relative flex-shrink-0 flex items-center justify-center self-center lg:self-auto">
+<div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl bg-gradient-to-br from-primary-container via-primary to-inverse-surface p-1 shadow-2xl flex items-center justify-center">
+<div class="w-full h-full rounded-2xl bg-inverse-surface flex flex-col items-center justify-center text-center p-space-md relative overflow-hidden">
+<div class="absolute inset-0 bg-radial from-primary-container/30 to-transparent"></div>
+<span class="material-symbols-outlined text-5xl sm:text-6xl text-tertiary-fixed mb-space-xs relative z-10" style="font-variation-settings: 'FILL' 1;">hub</span>
+<span class="font-telemetry-md text-telemetry-md font-semibold text-white tracking-widest relative z-10">PARTITION #8910</span>
+<span class="font-label-sm text-label-sm text-inverse-on-surface/70 uppercase tracking-wider relative z-10 mt-1">Status: GxP Ready</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Two-Column Architecture Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl mb-space-xl">
+<!-- Left Column: Provisioned Instance Details Card -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg sm:p-space-xl">
+<div class="flex items-center justify-between pb-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-2xl">memory</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Provisioned Telematics Node</h2>
+</div>
+<span class="font-telemetry-sm text-telemetry-sm px-space-sm py-1 rounded bg-surface-container-high text-on-surface-variant">TLS 1.3 • HSM Enforced</span>
+</div>
+<!-- Tenant Endpoint Banner -->
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md mb-space-lg">
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider mb-0.5">Dedicated Tenant Domain</span>
+<div class="font-telemetry-md text-telemetry-md text-primary-container font-semibold truncate select-all" id="tenant-url">
+              https://acme-logistics.nexusdispatch.com
+            </div>
+</div>
+<button class="flex-shrink-0 inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-title-md text-title-md shadow-xs transition-colors cursor-pointer" id="copy-btn">
+<span class="material-symbols-outlined text-sm" id="copy-icon">content_copy</span>
+<span id="copy-text">Copy URL</span>
+</button>
+</div>
+<!-- Details Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mb-space-lg">
+<div class="p-space-md rounded-lg bg-surface-container-low/70">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Organization Partition ID</span>
+<span class="font-telemetry-md text-telemetry-md text-on-surface font-semibold">#ACM-US-8910</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low/70">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Primary Cloud Region</span>
+<span class="font-telemetry-md text-telemetry-md text-on-surface font-semibold">US-East (Virginia) • Pod #04</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low/70">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Ingestion SLA Commitment</span>
+<span class="font-telemetry-md text-telemetry-md text-tertiary font-semibold">99.995% High Availability</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low/70">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Cryptographic Keyring</span>
+<span class="font-telemetry-md text-telemetry-md text-on-surface font-semibold">FIPS 140-2 Level 3 Active</span>
+</div>
+</div>
+<!-- Initialized Telematics Modules -->
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-space-md font-semibold">
+            Active System Modules Initialized
+          </span>
+<div class="space-y-space-sm">
+<!-- Module 1 -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container-low/50 transition-colors shadow-xs">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-tertiary text-xl">sensors</span>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">IoT Telematics Broker (MQTT / CoAP)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time bi-directional telemetry ingestion pipeline online</p>
+</div>
+</div>
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-telemetry-sm text-telemetry-sm font-semibold">
+                ACTIVE
+              </span>
+</div>
+<!-- Module 2 -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container-low/50 transition-colors shadow-xs">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-tertiary text-xl">verified_user</span>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">FDA 21 CFR Part 11 Electronic Signature HSM</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Audit-trail tamper sealing with immutable chain stamping</p>
+</div>
+</div>
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-telemetry-sm text-telemetry-sm font-semibold">
+                INITIALIZED
+              </span>
+</div>
+<!-- Module 3 -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container-low/50 transition-colors shadow-xs">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-tertiary text-xl">ac_unit</span>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Thermal Excursion Engine</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Armed for 2°C - 8°C chilled, -20°C frozen, and -80°C cryogenic profiles</p>
+</div>
+</div>
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-telemetry-sm text-telemetry-sm font-semibold">
+                ARMED
+              </span>
+</div>
+<!-- Module 4 -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container-low/50 transition-colors shadow-xs">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-tertiary text-xl">badge</span>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">SCIM / Okta Enterprise Directory Sync</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated role-based dispatch &amp; QA permission mapping ready</p>
+</div>
+</div>
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-telemetry-sm text-telemetry-sm font-semibold">
+                STANDBY
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Quick Start & Direct Action -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Quick Start Operations Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg sm:p-space-xl flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between mb-space-md pb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Next Steps • First Dispatch</h3>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold uppercase">3 Quick Actions</span>
+</div>
+<!-- Sequential Task List -->
+<div class="space-y-space-md mb-space-lg">
+<!-- Action Item 1 -->
+<a class="group flex items-start gap-space-md p-space-md rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-all" data-path="cold-chain-fleets" href="#">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-title-md flex-shrink-0 mt-0.5 group-hover:bg-primary-container group-hover:text-white transition-colors">
+                1
+              </div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h4 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Connect Reefer Fleet Devices</h4>
+<span class="material-symbols-outlined text-sm text-outline-variant group-hover:text-primary transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Pair Sensitech, TempTale Ultra, Carrier Transicold, or Emerson IoT gateway data loggers.</p>
+</div>
+</a>
+<!-- Action Item 2 -->
+<a class="group flex items-start gap-space-md p-space-md rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-all" data-path="dispatchers-access" href="#">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-title-md flex-shrink-0 mt-0.5 group-hover:bg-primary-container group-hover:text-white transition-colors">
+                2
+              </div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h4 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Invite Dispatchers &amp; QA Leads</h4>
+<span class="material-symbols-outlined text-sm text-outline-variant group-hover:text-primary transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Configure 24/7 watch desk accounts, excursion escalation trees, and SMS paging rules.</p>
+</div>
+</a>
+<!-- Action Item 3 -->
+<a class="group flex items-start gap-space-md p-space-md rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-all" data-path="compliance-thresholds" href="#">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-title-md flex-shrink-0 mt-0.5 group-hover:bg-primary-container group-hover:text-white transition-colors">
+                3
+              </div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h4 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Download GxP Validation Dossier</h4>
+<span class="material-symbols-outlined text-sm text-outline-variant group-hover:text-primary transition-transform group-hover:translate-x-0.5">download</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Acquire pre-signed IQ/OQ/PQ validation evidence (PDF/A-1b) for your pharmaceutical auditors.</p>
+</div>
+</a>
+</div>
+</div>
+<!-- Primary Launch Execution CTA -->
+<div class="pt-space-md">
+<a class="w-full h-12 bg-primary-container hover:bg-primary text-white rounded-lg font-title-md text-title-md flex items-center justify-center gap-space-sm shadow-md hover:shadow-lg transition-all transform active:scale-[0.99] text-center" data-path="cold-chain-fleets" href="#">
+<span class="material-symbols-outlined text-xl">rocket_launch</span>
+<span>Go to my Live Dispatch Dashboard</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-md mt-space-md text-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary flex items-center gap-1 transition-colors" data-path="support-center" href="#">
+<span class="material-symbols-outlined text-sm">terminal</span> Download Setup Guide &amp; API Keys
+            </a>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary flex items-center gap-1 transition-colors" data-path="support-center" href="#">
+<span class="material-symbols-outlined text-sm">calendar_month</span> Schedule 30-min Technical Walkthrough
+            </a>
+</div>
+</div>
+</div>
+<!-- Telemetry Live Sensor Heartbeat Simulation Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface">Cluster Telemetry Stream</span>
+</div>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">LATENCY: 14ms</span>
+</div>
+<!-- Live Synthetic Sparkline -->
+<div class="h-16 w-full flex items-end gap-1 pt-2">
+<div class="flex-1 bg-tertiary-fixed h-3/6 rounded-xs"></div>
+<div class="flex-1 bg-tertiary-fixed h-4/6 rounded-xs"></div>
+<div class="flex-1 bg-tertiary-fixed h-3/6 rounded-xs"></div>
+<div class="flex-1 bg-tertiary-fixed h-5/6 rounded-xs"></div>
+<div class="flex-1 bg-primary-fixed-dim h-4/6 rounded-xs"></div>
+<div class="flex-1 bg-tertiary h-6/6 rounded-xs"></div>
+<div class="flex-1 bg-tertiary h-5/6 rounded-xs"></div>
+<div class="flex-1 bg-tertiary-fixed h-4/6 rounded-xs"></div>
+<div class="flex-1 bg-tertiary-fixed h-5/6 rounded-xs"></div>
+<div class="flex-1 bg-tertiary h-6/6 rounded-xs"></div>
+<div class="flex-1 bg-tertiary-fixed h-4/6 rounded-xs"></div>
+<div class="flex-1 bg-tertiary h-5/6 rounded-xs"></div>
+<div class="flex-1 bg-primary-container h-6/6 rounded-xs"></div>
+</div>
+<div class="flex justify-between items-center mt-2 font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>Buffer: Synchronized</span>
+<span>100% In-Spec Packets</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Assurance Strip -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-tertiary text-2xl">verified</span>
+<span>
+        Need immediate hardware configuration assistance? Our 24/7 Cold-Chain Response Engineering desk is on standby for Acme Cold-Chain Logistics.
+      </span>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0">
+<a class="px-space-md py-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-title-md text-title-md transition-colors" data-path="support-center" href="#">
+        Live Telematics Chat
+      </a>
+<a class="font-telemetry-sm text-telemetry-sm text-primary hover:underline font-semibold" href="tel:+18005550199">
+        +1 (800) 555-0199 [Priority Ext 4]
+      </a>
+</div>
+</div>
+<!-- Micro-interaction JS for Copy Link -->
+<script>
+    (function() {
+      const copyBtn = document.getElementById('copy-btn');
+      const copyText = document.getElementById('copy-text');
+      const copyIcon = document.getElementById('copy-icon');
+      const tenantUrl = document.getElementById('tenant-url');
+
+      if (copyBtn && tenantUrl) {
+        copyBtn.addEventListener('click', () => {
+          const textToCopy = tenantUrl.innerText.trim();
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            copyText.innerText = 'Copied!';
+            copyIcon.innerText = 'done';
+            copyBtn.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+            setTimeout(() => {
+              copyText.innerText = 'Copy URL';
+              copyIcon.innerText = 'content_copy';
+              copyBtn.classList.remove('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+            }, 2500);
+          }).catch(() => {
+            copyText.innerText = 'Failed';
+          });
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(15,23,42,0.03)] py-space-md mt-auto"><div class="max-w-7xl mx-auto px-gutter flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><div>Nexus Dispatch Platform • ISO-27001 &amp; GxP Qualified Telemetry Infrastructure</div><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors" data-path="support-center" href="#">SLA Guarantee</a><a class="hover:text-primary transition-colors" data-path="support-center" href="#">Hardware Setup Guide</a><span class="text-tertiary font-telemetry-sm text-telemetry-sm">STATUS: OPERATIONAL</span></div></div></footer></body></html>

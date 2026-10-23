@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed-variant":"#3323cc","surface-bright":"#f8f9ff","tertiary-fixed-dim":"#4edea3","on-primary-fixed":"#0f0069","surface-container-high":"#dce9ff","on-error":"#ffffff","on-tertiary-fixed":"#002113","surface-dim":"#cbdbf5","outline":"#777587","on-tertiary-container":"#67f4b7","tertiary-container":"#006e4b","primary":"#3525cd","inverse-primary":"#c3c0ff","surface-container":"#e5eeff","error-container":"#ffdad6","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#bec6e0","tertiary-fixed":"#6ffbbe","secondary-fixed":"#dae2fd","inverse-on-surface":"#eaf1ff","on-primary-container":"#dad7ff","secondary":"#565e74","on-surface":"#0b1c30","inverse-surface":"#213145","tertiary":"#005338","on-tertiary":"#ffffff","on-secondary-fixed":"#131b2e","error":"#ba1a1a","primary-container":"#4f46e5","surface-container-low":"#eff4ff","on-tertiary-fixed-variant":"#005236","on-background":"#0b1c30","on-surface-variant":"#464555","on-secondary-container":"#5c647a","surface":"#f8f9ff","on-secondary":"#ffffff","surface-tint":"#4d44e3","on-secondary-fixed-variant":"#3f465c","primary-fixed-dim":"#c3c0ff","secondary-container":"#dae2fd","background":"#f8f9ff","outline-variant":"#c7c4d8","surface-container-highest":"#d3e4fe","on-primary":"#ffffff","on-error-container":"#93000a","primary-fixed":"#e2dfff","surface-variant":"#d3e4fe"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-lg":"2rem","space-sm":"0.5rem","margin":"1.5rem","gutter-lg":"1.5rem","space-xl":"1.5rem","gutter-sm":"0.5rem","space-xs":"0.25rem","gutter":"1rem","space-md":"0.75rem","margin-sm":"1rem","space-lg":"1rem"},"fontFamily":{"headline-lg":["IBM Plex Sans"],"telemetry-md":["JetBrains Mono"],"headline-sm":["IBM Plex Sans"],"telemetry-lg":["JetBrains Mono"],"headline-md":["IBM Plex Sans"],"body-sm":["IBM Plex Sans"],"body-lg":["IBM Plex Sans"],"label-sm":["IBM Plex Sans"],"label-md":["IBM Plex Sans"],"headline-lg-mobile":["IBM Plex Sans"],"telemetry-sm":["JetBrains Mono"],"title-md":["IBM Plex Sans"],"display-lg":["IBM Plex Sans"],"body-md":["IBM Plex Sans"]},"fontSize":{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"telemetry-md":["14px",{"lineHeight":"20px","fontWeight":"500"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"telemetry-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.03em","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"telemetry-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"title-md":["14px",{"lineHeight":"20px","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-14 px-space-lg flex items-center justify-between bg-surface-container"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-headline-md">hub</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Nexus Dispatch</span><span class="font-label-sm text-label-sm text-on-surface-variant font-telemetry-sm uppercase tracking-wider">Control Plane • Core</span></div></div><span class="bg-secondary-container text-on-secondary-fixed font-telemetry-sm text-label-sm px-space-xs py-0.5 rounded">L3</span></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-sm">Core Subsystems</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary font-title-md rounded-lg shadow-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-title-md">dashboard</span><span class="font-body-md text-body-md">Overview</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="tenant-management" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-title-md">corporate_fare</span><span class="font-body-md text-body-md">Tenant Management</span></div><span class="bg-surface-container-high text-on-surface font-telemetry-sm text-label-sm px-space-sm py-0.5 rounded-full font-medium">412</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="usage-and-billing" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-title-md">receipt_long</span><span class="font-body-md text-body-md">Usage &amp; Billing</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="technical-health" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-title-md">monitor_heart</span><span class="font-body-md text-body-md">Technical Health</span></div><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-container text-on-primary font-title-md rounded-lg shadow-sm" data-path="global-tariffs" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-title-md">sell</span><span class="font-body-md text-body-md">Global Tariffs</span></div><span class="font-telemetry-sm text-label-sm text-outline">LIVE</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="platform-governance" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-title-md">security</span><span class="font-body-md text-body-md">Platform Governance</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="system-settings" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-title-md">settings</span><span class="font-body-md text-body-md">System Settings</span></div></a></nav></div><div class="p-space-md bg-surface-container flex flex-col gap-space-sm"><div class="flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-telemetry-sm text-label-sm text-outline">BUILD RELEASE</span><span class="font-telemetry-sm text-label-sm text-primary font-medium">v4.12.9-Enterprise Root</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-label-sm text-tertiary">verified_user</span><span class="font-label-sm text-label-sm text-on-surface-variant">FIPS 140-2 L3 Sovereign</span></div></div><a class="w-full flex items-center justify-center gap-space-sm py-space-sm rounded-lg bg-surface-container-high hover:bg-error-container text-on-surface hover:text-on-error-container transition-colors" data-path="sign-out-of-root" href="#"><span class="material-symbols-outlined text-title-md">logout</span><span class="font-title-md text-title-md">Sign Out of Root</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-14 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Nexus Dispatch" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XOY76ArsN2il89HFO7i0Ozy8Ul5z9ElCNySAdFcaKt53cPZKDPAgCWghs8J5KjK3FBPXx5hfwnUz6k_0xZaU149pZisgznGJL4CZoAq7le7HfQV8q9-sxi1BySIJiPJbIINq2TbpUGkgHlAXG7mlIAXpYs37OFdbca-u83LMQb8-bdxl_tdGWKQvzPAZ2OJ69R7vCN0AsGod4Z4O98NMxzQCcOpnZSp5L-Anv92q4lbxPD0Fy5764THsg"/><span class="bg-primary text-on-primary font-telemetry-sm text-label-sm font-semibold px-space-xs py-0.5 rounded tracking-wide">ROOT HQ</span><span class="font-title-md text-title-md text-on-surface font-semibold tracking-tight">Global Control Plane</span></div><div class="hidden xl:flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)]"><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-container"></span></span><span class="font-telemetry-sm text-label-sm text-tertiary font-medium">OPTIMAL</span><span class="text-outline-variant font-telemetry-sm text-label-sm">•</span><span class="font-telemetry-sm text-label-sm text-on-surface-variant">18ms Latency [US-EAST-01]</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-md py-1 rounded-lg"><span class="material-symbols-outlined text-outline text-title-md">schedule</span><span class="font-telemetry-sm text-label-sm text-on-surface font-medium">2025-05-18 14:32:09 UTC</span></div><div class="flex items-center bg-surface-container-lowest px-space-md py-1 rounded-lg shadow-[0_1px_4px_rgba(0,0,0,0.04)] gap-space-sm cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-outline text-title-md">search</span><span class="font-body-sm text-body-sm text-on-surface-variant pr-space-md">Quick Jump...</span><kbd class="bg-surface-container font-telemetry-sm text-label-sm text-outline px-1.5 py-0.5 rounded">⌘K</kbd></div><button aria-label="Notifications" class="relative p-space-xs rounded-lg hover:bg-surface-container-low text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-title-md">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface leading-tight">System Superadmin</span><span class="font-label-sm text-label-sm text-primary font-medium tracking-wide">Root Authority</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida/AEtjO1WN9oaj3-3vUpo1nD_k4b3fkvyfg4p24i7qtc-aqyrs5LO0T9SX6C4XWthK5uSqqv-4jlE6imDqMM7aewbIjxd29OtXcHt4MYiID6GyYfIpsvi_5uOeuT0wQkQsdDa9GvAPI7gbU5fEvw_h0xKLJNW4edzhXKAF_qvsuc-OpWRIoM6ps244OXC1QZ2TiTqLjEtJQ0VHawmBYRInjtptJMTNNcwBxpVewspK_07Fi8LrGeID8IzqXpCnLUs"/></div></div></header><main class="w-full pt-14 px-gutter-lg pb-space-xl bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command Context Bar -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<!-- Breadcrumb & Engine Status Line -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs text-label-sm font-label-sm">
+<span class="bg-surface-container text-primary font-telemetry-sm px-space-xs py-0.5 rounded uppercase font-semibold">FINANCIAL GOVERNANCE &amp; RATE ENGINE</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-telemetry-sm">SaaS Tiers &amp; Telematics Pricing Plane</span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center gap-1 bg-tertiary-container text-on-tertiary-container font-telemetry-sm px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+          Active Engine: Dynamic Multi-Currency (USD/EUR/CHF)
+        </span>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-telemetry-sm text-body-sm">
+<span class="material-symbols-outlined text-title-md text-tertiary">lock</span>
+<span>Ledger Enforced: 21 CFR §11 Validated</span>
+</div>
+</div>
+<!-- Title & Global Controls Section -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="flex flex-col max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Global Tariffs, Rate Cards &amp; Custom Overrides</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Configure multi-tenant SaaS packaging, cold-chain sensor ingress metering rates, GxP regulatory compliance add-on surcharges, and enterprise tenant contract overrides across 412 active accounts.
+        </p>
+</div>
+<!-- Top Action Toolbar -->
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-center">
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container-lowest text-on-surface hover:bg-surface-container text-title-md font-title-md rounded-lg shadow-sm transition-colors" id="exportTariffBtn">
+<span class="material-symbols-outlined text-title-md text-secondary">file_download</span>
+<span>Export Tariff Schedule (JSON/PDF)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container-high text-on-surface hover:bg-surface-container-highest text-title-md font-title-md rounded-lg shadow-sm transition-colors" id="simModalTrigger">
+<span class="material-symbols-outlined text-title-md text-primary">science</span>
+<span>Test Invoicing Simulator</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-primary-container text-on-primary hover:bg-primary text-title-md font-title-md rounded-lg shadow-sm transition-all shadow-primary-container/20" id="createTierBtn">
+<span class="material-symbols-outlined text-title-md">add_circle</span>
+<span>+ Create New Rate Card / Tier</span>
+</button>
+</div>
+</div>
+</div>
+<!-- KPI Overview Strip (4 Columns) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Active Base Tariff Tiers</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface">3 Plans</span>
+<span class="bg-secondary-container text-on-secondary-fixed font-telemetry-sm text-label-sm px-1.5 py-0.5 rounded font-medium">+1 Bespoke</span>
+</div>
+</div>
+<span class="p-2 bg-surface-container rounded-lg text-primary material-symbols-outlined">layers</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Default: Enterprise Cold-Chain</span>
+<span class="font-telemetry-sm font-semibold text-primary">68% Share</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Sensor Ingress Overage Rate</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface">$0.05 <span class="font-body-sm text-body-sm text-outline">/ 1k msgs</span></span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-telemetry-sm text-label-sm px-1.5 py-0.5 rounded font-medium">Auto-Metered</span>
+</div>
+</div>
+<span class="p-2 bg-surface-container rounded-lg text-tertiary material-symbols-outlined">sensors</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Buffer: 5,000 burst msgs</span>
+<span class="font-telemetry-sm text-secondary">142k billed / cyc</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Active Tenant Overrides</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface">14 Accounts</span>
+<span class="bg-surface-container-high text-on-surface font-telemetry-sm text-label-sm px-1.5 py-0.5 rounded font-medium">Audited</span>
+</div>
+</div>
+<span class="p-2 bg-surface-container rounded-lg text-secondary material-symbols-outlined">gavel</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Contracted Revenue</span>
+<span class="font-telemetry-sm font-semibold text-tertiary">$64,200 MRR</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Tariff Revision &amp; Hash</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-telemetry-lg text-telemetry-lg text-primary">v8.4.2-STABLE</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-telemetry-sm text-label-sm px-1.5 py-0.5 rounded font-medium">FIPS Signed</span>
+</div>
+</div>
+<span class="p-2 bg-surface-container rounded-lg text-primary material-symbols-outlined">verified</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-telemetry-sm truncate max-w-[140px]">SHA-256: e8f9...39ba</span>
+<span class="font-telemetry-sm text-outline">Eff: 2026-01-01</span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: Base Subscription Tiers & Rate Matrix -->
+<div class="mb-space-xl flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-6 bg-primary rounded-full"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Base Subscription Tiers &amp; Telematics Packaging</h2>
+<span class="bg-surface-container px-2 py-0.5 rounded font-telemetry-sm text-label-sm text-on-surface-variant">Standard Public Matrix</span>
+</div>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<span>Currency Basis:</span>
+<span class="bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-telemetry-sm font-semibold shadow-sm">USD ($) Equivalent</span>
+</div>
+</div>
+<!-- Tier Matrix Cards (3 columns) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-stretch">
+<!-- Tier 1: Starter Fleet -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Level 1 • Regional</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Starter Fleet</h3>
+</div>
+<span class="bg-surface-container-low text-secondary font-telemetry-sm text-label-sm px-2 py-0.5 rounded">41 Accounts (10%)</span>
+</div>
+<div class="mt-space-md pb-space-md">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-on-surface">$499</span>
+<span class="font-body-md text-body-md text-outline">/ mo base</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Foundational telematics routing for local cold-chain fleets requiring basic sensor tracking.</p>
+</div>
+<!-- Specs List -->
+<div class="flex flex-col gap-space-sm py-space-sm">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Included Reefer Capacity</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">Up to 25 Reefers</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Telemetry Ingress Cap</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">500k msgs/mo</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Overage Multiplier</span>
+<span class="font-telemetry-sm text-telemetry-sm text-error font-medium">$0.08 / 1k msgs</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">GxP Validation Ledger</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface">Standard 2-Yr Log</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Infrastructure Pod</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface">Shared Anycast Mesh</span>
+</div>
+</div>
+<!-- Feature Bullets -->
+<div class="mt-space-md flex flex-col gap-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-title-md">check_circle</span>
+<span>BLE Beacon Real-time Sync</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-title-md">check_circle</span>
+<span>Automated Dispatch SMS alerts</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-title-md">check_circle</span>
+<span>Standard 8x5 Business SLA Support</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<button class="w-full py-2 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-title-md">tune</span>
+<span>Edit Tier Matrix</span>
+</button>
+</div>
+</div>
+<!-- Tier 2: Enterprise Cold-Chain (Featured) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col justify-between relative transition-all hover:shadow-lg">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-on-primary font-telemetry-sm text-label-sm px-3 py-0.5 rounded-full uppercase tracking-wider font-semibold shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">verified</span>
+          Most Popular / Default Rate
+        </div>
+<div>
+<div class="flex items-start justify-between mt-1">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-medium">Level 2 • Pharma GxP</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Enterprise Cold-Chain</h3>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed font-telemetry-sm text-label-sm px-2 py-0.5 rounded font-semibold">280 Accounts (68%)</span>
+</div>
+<div class="mt-space-md pb-space-md">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-primary">$1,899</span>
+<span class="font-body-md text-body-md text-outline">/ mo base</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Comprehensive regulatory telemetry suite designed for certified vaccine and biologics distributors.</p>
+</div>
+<!-- Specs List -->
+<div class="flex flex-col gap-space-sm py-space-sm">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Included Reefer Capacity</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">Up to 150 Reefers</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Telemetry Ingress Cap</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">2.5M msgs/mo</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Overage Multiplier</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary font-medium">$0.05 / 1k msgs</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">GxP Validation Ledger</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary font-semibold">21 CFR Pt 11 (7-yr Lock)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Infrastructure Pod</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface font-medium">Regional Pod (US/EU)</span>
+</div>
+</div>
+<!-- Feature Bullets -->
+<div class="mt-space-md flex flex-col gap-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-title-md">check_circle</span>
+<span>Dual-Authorization QA Sign-offs</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-title-md">check_circle</span>
+<span>Automated S3 Object Lock Audit Dossiers</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-title-md">check_circle</span>
+<span>SCIM Okta &amp; Azure AD Directory Sync</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-title-md">check_circle</span>
+<span>Iridium Satellite Failover Ready</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<button class="w-full py-2 px-space-md bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md rounded-lg shadow-sm transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-title-md">tune</span>
+<span>Edit Tier Matrix</span>
+</button>
+</div>
+</div>
+<!-- Tier 3: Sovereign Carrier -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Level 3 • Dedicated</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Sovereign Carrier</h3>
+</div>
+<span class="bg-surface-container-low text-secondary font-telemetry-sm text-label-sm px-2 py-0.5 rounded">91 Accounts (22%)</span>
+</div>
+<div class="mt-space-md pb-space-md">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-on-surface">$7,200</span>
+<span class="font-body-md text-body-md text-outline">/ mo base</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Fully sovereign deployment with dedicated cloud HSM partitions, customized QMS, and zero-trust routing.</p>
+</div>
+<!-- Specs List -->
+<div class="flex flex-col gap-space-sm py-space-sm">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Included Reefer Capacity</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary font-semibold">Unlimited (Custom)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Telemetry Ingress Cap</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">10.0M msgs/mo</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Overage Multiplier</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary font-medium">$0.03 / 1k msgs</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">GxP Validation Ledger</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface font-semibold">Veeva Vault + HSM L3</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Infrastructure Pod</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface">Isolated Pod + Custom IP</span>
+</div>
+</div>
+<!-- Feature Bullets -->
+<div class="mt-space-md flex flex-col gap-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-title-md">check_circle</span>
+<span>Dedicated 99.999% SLA Guarantee</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-title-md">check_circle</span>
+<span>24/7 Priority Mission-Control Desk</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-title-md">check_circle</span>
+<span>Bespoke GxP Certificate Encryption</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<button class="w-full py-2 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-title-md">tune</span>
+<span>Edit Tier Matrix</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Telematics & Add-on Surcharges Engine -->
+<div class="mb-space-xl bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">tune</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Telematics &amp; Add-on Surcharges Engine</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Fine-tune dynamic volumetric ingress metering, satellite fallback payload pricing, and compliance micro-rates.
+        </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-body-sm font-body-sm text-outline">Ledger Status:</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-telemetry-sm text-label-sm px-2 py-0.5 rounded font-semibold">SYNCHRONIZED (5 PODS)</span>
+</div>
+</div>
+<!-- Table of Add-ons & Surcharges -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-lg">Add-on Subsystem / Service</th>
+<th class="py-3 px-space-md">Metering Type</th>
+<th class="py-3 px-space-md text-right">Standard Tariff Unit Rate</th>
+<th class="py-3 px-space-md">Inclusion Threshold</th>
+<th class="py-3 px-space-md text-center">Status</th>
+<th class="py-3 px-space-md text-right rounded-r-lg">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-md text-body-md text-on-surface">
+<!-- Item 1 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-surface-container rounded-lg text-primary">
+<span class="material-symbols-outlined text-title-md">sensors</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">High-Frequency Telemetry Ingress (MQTT/CoAP)</span>
+<span class="font-telemetry-sm text-body-sm text-outline">Sub-minute thermal &amp; humidity packets</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-telemetry-sm text-body-sm text-secondary">Per 1,000 extra frames</td>
+<td class="py-3.5 px-space-md text-right font-telemetry-md text-telemetry-md font-semibold text-on-surface">$0.0500</td>
+<td class="py-3.5 px-space-md">
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-telemetry-sm text-label-sm text-on-surface">Tier Dependant (2.5M Default)</span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-telemetry-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors">
+                Configure
+              </button>
+</td>
+</tr>
+<!-- Item 2 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-surface-container rounded-lg text-primary">
+<span class="material-symbols-outlined text-title-md">satellite_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Satellite Fallback Data (Iridium Short Burst)</span>
+<span class="font-telemetry-sm text-body-sm text-outline">Oceanic &amp; remote off-grid emergency failover</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-telemetry-sm text-body-sm text-secondary">Per KB of satellite packet</td>
+<td class="py-3.5 px-space-md text-right font-telemetry-md text-telemetry-md font-semibold text-on-surface">$0.4500</td>
+<td class="py-3.5 px-space-md">
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-telemetry-sm text-label-sm text-on-surface">0 KB (Direct Passthrough)</span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-telemetry-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors">
+                Configure
+              </button>
+</td>
+</tr>
+<!-- Item 3 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-surface-container rounded-lg text-primary">
+<span class="material-symbols-outlined text-title-md">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">GxP Cryptographic Certificate Archival</span>
+<span class="font-telemetry-sm text-body-sm text-outline">Immutable PDF/A-1b dossier + TSA RFC 3161</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-telemetry-sm text-body-sm text-secondary">Per Signed Regulatory Pack</td>
+<td class="py-3.5 px-space-md text-right font-telemetry-md text-telemetry-md font-semibold text-on-surface">$12.5000</td>
+<td class="py-3.5 px-space-md">
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-telemetry-sm text-label-sm text-on-surface">50 Packs / mo Included</span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-telemetry-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors">
+                Configure
+              </button>
+</td>
+</tr>
+<!-- Item 4 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-surface-container rounded-lg text-primary">
+<span class="material-symbols-outlined text-title-md">enhanced_encryption</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Dedicated CloudHSM Master Key Partition</span>
+<span class="font-telemetry-sm text-body-sm text-outline">FIPS 140-2 Level 3 isolated cryptographic boundary</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-telemetry-sm text-body-sm text-secondary">Per Partition / month</td>
+<td class="py-3.5 px-space-md text-right font-telemetry-md text-telemetry-md font-semibold text-on-surface">$850.0000</td>
+<td class="py-3.5 px-space-md">
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-telemetry-sm text-label-sm text-on-surface">0 (Sovereign Tier Option)</span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-telemetry-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors">
+                Configure
+              </button>
+</td>
+</tr>
+<!-- Item 5 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-surface-container rounded-lg text-primary">
+<span class="material-symbols-outlined text-title-md">webhook</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Veeva Vault QualityDocs Real-time Webhooks</span>
+<span class="font-telemetry-sm text-body-sm text-outline">Direct synchronous event streaming to pharma QMS</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-telemetry-sm text-body-sm text-secondary">Per Connected Tenant Endpoint / mo</td>
+<td class="py-3.5 px-space-md text-right font-telemetry-md text-telemetry-md font-semibold text-on-surface">$350.0000</td>
+<td class="py-3.5 px-space-md">
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-telemetry-sm text-label-sm text-on-surface">Excluded from Base Tiers</span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-telemetry-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors">
+                Configure
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- SECTION 3: Custom Tenant Rate Overrides & Master Contract Agreements -->
+<div class="mb-space-xl bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<!-- Header with Search and Category Filter -->
+<div class="flex flex-col gap-space-md mb-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">handshake</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Custom Tenant Rate Overrides &amp; Master Agreements</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Enterprise overrides tied to Master Services Agreements (MSA) and customized volumetric SLAs.
+          </p>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1 bg-surface-container-lowest text-on-surface font-title-md text-body-sm rounded shadow-sm">All (14)</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm rounded">Active (12)</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm rounded">Expiring Soon (1)</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm rounded">Review Req (1)</button>
+</div>
+</div>
+<!-- Search & Bulk Filter Input -->
+<div class="flex flex-col sm:flex-row gap-space-sm">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-title-md">search</span>
+<input class="w-full pl-10 pr-space-md py-2 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" id="tenantSearchInput" placeholder="Filter by tenant, custom tariff code, or QA sign-off executive..." type="text"/>
+</div>
+<button class="px-space-md py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm rounded-lg flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-title-md">filter_list</span>
+<span>More Filters</span>
+</button>
+</div>
+</div>
+<!-- Data Table: High-density Overrides List -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-lg">Tenant Name &amp; ID</th>
+<th class="py-3 px-space-md">Base Tier &amp; Tariff Code</th>
+<th class="py-3 px-space-md">Contract Override Details</th>
+<th class="py-3 px-space-md">Contract Term</th>
+<th class="py-3 px-space-md">QA / CFO Dual Sign-off</th>
+<th class="py-3 px-space-md text-center">Status</th>
+<th class="py-3 px-space-md text-right rounded-r-lg">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-md text-body-md text-on-surface" id="overrideTableBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Acme Cold-Chain Logistics LLC</span>
+<span class="font-telemetry-sm text-body-sm text-primary">#ACM-US-8910</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-on-surface font-medium">Enterprise Cold-Chain</span>
+<span class="font-telemetry-sm text-body-sm text-outline">TC-ACM-2026</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-tertiary font-semibold">15% Overage Discount ($0.0425/1k msgs)</span>
+<span class="font-body-sm text-on-surface-variant">Includes 300 free monthly satellite burst packets</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col font-telemetry-sm text-body-sm">
+<span>Jan 2026 – Dec 2027</span>
+<span class="text-outline">2-Yr Master Agreement</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-title-md">check_circle</span>
+<div class="flex flex-col font-body-sm">
+<span class="text-on-surface font-medium">Dr. Aris Thorne (QA)</span>
+<span class="text-outline font-telemetry-sm text-label-sm">CFO Approved (2025-11-20)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-telemetry-sm text-label-sm px-2 py-0.5 rounded font-semibold">ACTIVE</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-primary" title="Edit Override">
+<span class="material-symbols-outlined text-title-md">edit</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" title="View Rate Card">
+<span class="material-symbols-outlined text-title-md">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary" title="Audit Trail">
+<span class="material-symbols-outlined text-title-md">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">BioPharm Labs Global Inc.</span>
+<span class="font-telemetry-sm text-body-sm text-primary">#BPL-US-4102</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-on-surface font-medium">Sovereign Carrier</span>
+<span class="font-telemetry-sm text-body-sm text-outline">TC-BPL-CUSTOM-25</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-primary font-semibold">Custom Ingress Cap: 25M msgs/mo</span>
+<span class="font-body-sm text-on-surface-variant">Free Dedicated CloudHSM partition included</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col font-telemetry-sm text-body-sm">
+<span>Jun 2025 – May 2028</span>
+<span class="text-outline">3-Yr Sovereign Contract</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-title-md">check_circle</span>
+<div class="flex flex-col font-body-sm">
+<span class="text-on-surface font-medium">Elena Rostova (GxP Compliance)</span>
+<span class="text-outline font-telemetry-sm text-label-sm">Ledger Hash Validated</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-telemetry-sm text-label-sm px-2 py-0.5 rounded font-semibold">ACTIVE</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-primary" title="Edit Override">
+<span class="material-symbols-outlined text-title-md">edit</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" title="View Rate Card">
+<span class="material-symbols-outlined text-title-md">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary" title="Audit Trail">
+<span class="material-symbols-outlined text-title-md">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Novartis Global Express SA</span>
+<span class="font-telemetry-sm text-body-sm text-primary">#NOV-CH-3381</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-on-surface font-medium">Sovereign Bespoke</span>
+<span class="font-telemetry-sm text-body-sm text-outline">TC-NOV-PHARMA</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-tertiary font-semibold">Volume Waiver on Veeva Sync Webhooks</span>
+<span class="font-body-sm text-on-surface-variant">Fixed tariff: $14,500/mo flat across 12 pods</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col font-telemetry-sm text-body-sm">
+<span>Oct 2024 – Oct 2026</span>
+<span class="text-error font-medium">Expiring in 5 Months</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-title-md">check_circle</span>
+<div class="flex flex-col font-body-sm">
+<span class="text-on-surface font-medium">M. Dupond (Head of Quality)</span>
+<span class="text-outline font-telemetry-sm text-label-sm">Legal Executed</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="bg-secondary-container text-on-secondary-fixed font-telemetry-sm text-label-sm px-2 py-0.5 rounded font-semibold">LOCKED</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-primary" title="Edit Override">
+<span class="material-symbols-outlined text-title-md">edit</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" title="View Rate Card">
+<span class="material-symbols-outlined text-title-md">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary" title="Audit Trail">
+<span class="material-symbols-outlined text-title-md">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">CryoTrans Global Fleet Systems</span>
+<span class="font-telemetry-sm text-body-sm text-primary">#CTG-US-5501</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-on-surface font-medium">Enterprise Cold-Chain</span>
+<span class="font-telemetry-sm text-body-sm text-outline">TC-CTG-PENDING</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-on-surface font-semibold">Pending Flat Rate Satellite Payload</span>
+<span class="font-body-sm text-on-surface-variant">$0.20/KB override requested (55% off standard)</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col font-telemetry-sm text-body-sm">
+<span>Target: Q3 2026</span>
+<span class="text-outline">Negotiation Phase</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-title-md">pending</span>
+<div class="flex flex-col font-body-sm">
+<span class="text-secondary font-medium">Pending CFO Attestation</span>
+<span class="text-outline font-telemetry-sm text-label-sm">QA Cleared</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-telemetry-sm text-label-sm px-2 py-0.5 rounded font-semibold">IN REVIEW</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-primary" title="Edit Override">
+<span class="material-symbols-outlined text-title-md">edit</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" title="View Rate Card">
+<span class="material-symbols-outlined text-title-md">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary" title="Audit Trail">
+<span class="material-symbols-outlined text-title-md">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm mt-space-md pt-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span>Showing 4 of 14 tenant master contracts with customized rate schedules</span>
+<div class="flex items-center gap-1 font-telemetry-sm">
+<button class="px-2 py-1 rounded bg-surface-container text-outline hover:text-on-surface transition-colors">Previous</button>
+<button class="px-2 py-1 rounded bg-primary-container text-on-primary">1</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">2</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">Next</button>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Invoicing Simulator Interactive Drawer (Expandable) -->
+<div class="mb-space-xl bg-surface-container rounded-xl p-space-lg shadow-sm" id="simulatorDrawer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 bg-primary text-on-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-headline-sm">calculate</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Interactive Invoicing &amp; Burst Simulation Sandbox</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Test how real-time telemetry bursts and GxP certificate surges affect tenant billing.</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-lowest text-primary font-telemetry-sm text-label-sm px-2 py-1 rounded font-semibold shadow-sm">LIVE SIMULATOR</span>
+</div>
+</div>
+<!-- Simulator Form Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md bg-surface-container-lowest p-space-md rounded-xl">
+<!-- Sim Input 1: Tier Selection -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-outline uppercase font-semibold">Select Base Tariff</label>
+<select class="bg-surface-container-low text-on-surface font-body-sm text-body-sm p-2 rounded-lg focus:outline-none" id="simTierSelect">
+<option data-cap="500000" data-overage="0.08" value="499">Starter Fleet ($499/mo)</option>
+<option data-cap="2500000" data-overage="0.05" selected="" value="1899">Enterprise Cold-Chain ($1,899/mo)</option>
+<option data-cap="10000000" data-overage="0.03" value="7200">Sovereign Carrier ($7,200/mo)</option>
+</select>
+</div>
+<!-- Sim Input 2: Message Volume Slider -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm text-outline uppercase font-semibold">Simulated Messages</label>
+<span class="font-telemetry-sm text-label-sm text-primary font-bold" id="msgCountDisplay">3,500,000</span>
+</div>
+<input class="w-full accent-primary-container cursor-pointer mt-2" id="msgRangeInput" max="15000000" min="500000" step="250000" type="range" value="3500000"/>
+</div>
+<!-- Sim Input 3: Satellite Fallback KB -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm text-outline uppercase font-semibold">Satellite Iridium (KB)</label>
+<span class="font-telemetry-sm text-label-sm text-secondary font-bold" id="satCountDisplay">120 KB</span>
+</div>
+<input class="w-full accent-primary cursor-pointer mt-2" id="satRangeInput" max="2000" min="0" step="20" type="range" value="120"/>
+</div>
+<!-- Sim Output: Projected Monthly Total -->
+<div class="flex flex-col justify-between bg-surface-container-high p-3 rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Simulated Invoice Total</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-display-lg text-headline-lg text-primary font-bold" id="simTotalDisplay">$2,003.00</span>
+<span class="font-body-sm text-body-sm text-outline">/ mo</span>
+</div>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant truncate" id="simBreakdown">Includes $50.00 Overage + $54.00 Sat</span>
+</div>
+</div>
+</div>
+<!-- FOOTER & REGULATORY ATTESTATION BANNER -->
+<div class="bg-surface-container-high rounded-xl p-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-md max-w-4xl">
+<div class="p-2.5 bg-tertiary-container text-on-tertiary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-headline-md">verified</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">Tariff Engine Governance &amp; 21 CFR §11 Billing Integrity</h4>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-telemetry-sm text-label-sm px-1.5 py-0.5 rounded font-bold">SOVEREIGN ROOT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          All rate card alterations require dual-authorization (Finance Lead + Compliance Officer) and are cryptographically hashed into the immutable ledger. Current Active Rule Hash: <code class="bg-surface-container px-1 py-0.5 rounded font-telemetry-sm text-primary font-bold">9fa2-881c-4b32-901e</code>
+</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm self-end md:self-center">
+<button class="px-space-md py-2 bg-surface-container-lowest hover:bg-surface text-on-surface font-title-md text-body-sm rounded-lg shadow-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm text-secondary">history</span>
+<span>View Rate Change History</span>
+</button>
+<button class="px-space-md py-2 bg-tertiary-container hover:bg-tertiary text-on-tertiary font-title-md text-body-sm rounded-lg shadow-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm">file_download</span>
+<span>Download Regulatory Rate Audit</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Simulator Real-Time Computation Logic
+    const tierSelect = document.getElementById('simTierSelect');
+    const msgRange = document.getElementById('msgRangeInput');
+    const satRange = document.getElementById('satRangeInput');
+    const msgDisplay = document.getElementById('msgCountDisplay');
+    const satDisplay = document.getElementById('satCountDisplay');
+    const totalDisplay = document.getElementById('simTotalDisplay');
+    const breakdownDisplay = document.getElementById('simBreakdown');
+
+    function calculateInvoice() {
+      if (!tierSelect || !msgRange || !satRange) return;
+
+      const selectedOption = tierSelect.options[tierSelect.selectedIndex];
+      const baseFee = parseFloat(tierSelect.value);
+      const msgCap = parseFloat(selectedOption.getAttribute('data-cap'));
+      const overageRatePer1k = parseFloat(selectedOption.getAttribute('data-overage'));
+
+      const totalMsgs = parseInt(msgRange.value, 10);
+      const totalSatKB = parseInt(satRange.value, 10);
+
+      // Ingress overage
+      let overageFee = 0;
+      if (totalMsgs > msgCap) {
+        const extraMsgs = totalMsgs - msgCap;
+        overageFee = (extraMsgs / 1000) * overageRatePer1k;
+      }
+
+      // Satellite fee ($0.45 per KB)
+      const satFee = totalSatKB * 0.45;
+
+      const total = baseFee + overageFee + satFee;
+
+      msgDisplay.textContent = Number(totalMsgs).toLocaleString();
+      satDisplay.textContent = totalSatKB + ' KB';
+      totalDisplay.textContent = '$' + total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      breakdownDisplay.textContent = 'Includes $' + overageFee.toFixed(2) + ' Overage + $' + satFee.toFixed(2) + ' Sat';
+    }
+
+    if (tierSelect && msgRange && satRange) {
+      tierSelect.addEventListener('change', calculateInvoice);
+      msgRange.addEventListener('input', calculateInvoice);
+      satRange.addEventListener('input', calculateInvoice);
+      calculateInvoice();
+    }
+
+    // Tenant Filter Dynamic Search
+    const searchInput = document.getElementById('tenantSearchInput');
+    const tableBody = document.getElementById('overrideTableBody');
+
+    if (searchInput && tableBody) {
+      searchInput.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase();
+        const rows = tableBody.querySelectorAll('tr');
+        rows.forEach(row => {
+          const rowText = row.textContent.toLowerCase();
+          if (rowText.includes(query)) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // Action button micro-feedback
+    const exportBtn = document.getElementById('exportTariffBtn');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', function() {
+        const originalText = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-title-md text-tertiary">done</span> Generating JSON & PDF...';
+        setTimeout(() => {
+          this.innerHTML = originalText;
+        }, 1800);
+      });
+    }
+
+    const simTrigger = document.getElementById('simModalTrigger');
+    const simDrawer = document.getElementById('simulatorDrawer');
+    if (simTrigger && simDrawer) {
+      simTrigger.addEventListener('click', function() {
+        simDrawer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        simDrawer.classList.add('ring-2', 'ring-primary-container');
+        setTimeout(() => {
+          simDrawer.classList.remove('ring-2', 'ring-primary-container');
+        }, 1200);
+      });
+    }
+  })();
+</script></main></div></body></html>

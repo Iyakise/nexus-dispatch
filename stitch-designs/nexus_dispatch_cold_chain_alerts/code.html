@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  "darkMode": "class",
+  "theme": {
+    "extend": {
+      "colors": {
+        "secondary-container": "#dae2fd",
+        "secondary-fixed-dim": "#bec6e0",
+        "on-background": "#0b1c30",
+        "on-secondary-container": "#5c647a",
+        "on-surface": "#0b1c30",
+        "surface-bright": "#f8f9ff",
+        "surface-dim": "#cbdbf5",
+        "surface-tint": "#4d44e3",
+        "outline": "#777587",
+        "surface-container-highest": "#d3e4fe",
+        "tertiary-fixed": "#6ffbbe",
+        "primary-fixed": "#e2dfff",
+        "inverse-primary": "#c3c0ff",
+        "tertiary-container": "#006e4b",
+        "inverse-on-surface": "#eaf1ff",
+        "surface-container": "#e5eeff",
+        "secondary-fixed": "#dae2fd",
+        "surface-container-high": "#dce9ff",
+        "error": "#ba1a1a",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary-fixed": "#002113",
+        "surface-container-low": "#eff4ff",
+        "tertiary-fixed-dim": "#4edea3",
+        "background": "#f8f9ff",
+        "primary-fixed-dim": "#c3c0ff",
+        "on-tertiary": "#ffffff",
+        "inverse-surface": "#213145",
+        "on-tertiary-fixed-variant": "#005236",
+        "on-secondary-fixed": "#131b2e",
+        "surface": "#f8f9ff",
+        "secondary": "#565e74",
+        "surface-variant": "#d3e4fe",
+        "on-primary-fixed": "#0f0069",
+        "outline-variant": "#c7c4d8",
+        "primary-container": "#4f46e5",
+        "on-primary-fixed-variant": "#3323cc",
+        "on-error": "#ffffff",
+        "primary": "#3525cd",
+        "on-primary": "#ffffff",
+        "on-error-container": "#93000a",
+        "on-surface-variant": "#464555",
+        "tertiary": "#005338",
+        "error-container": "#ffdad6",
+        "on-secondary": "#ffffff",
+        "on-secondary-fixed-variant": "#3f465c",
+        "on-tertiary-container": "#67f4b7",
+        "on-primary-container": "#dad7ff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.5rem",
+        "space-lg": "1rem",
+        "gutter-lg": "1.5rem",
+        "margin": "1.5rem",
+        "space-xs": "0.25rem",
+        "space-xl": "1.5rem",
+        "gutter-sm": "0.5rem",
+        "space-md": "0.75rem",
+        "gutter": "1rem",
+        "margin-lg": "2rem",
+        "margin-sm": "1rem"
+      },
+      "fontFamily": {
+        "telemetry-lg": [
+          "JetBrains Mono"
+        ],
+        "headline-sm": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-md": [
+          "JetBrains Mono"
+        ],
+        "body-md": [
+          "IBM Plex Sans"
+        ],
+        "label-sm": [
+          "IBM Plex Sans"
+        ],
+        "headline-lg-mobile": [
+          "IBM Plex Sans"
+        ],
+        "title-md": [
+          "IBM Plex Sans"
+        ],
+        "headline-lg": [
+          "IBM Plex Sans"
+        ],
+        "headline-md": [
+          "IBM Plex Sans"
+        ],
+        "body-sm": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-sm": [
+          "JetBrains Mono"
+        ],
+        "body-lg": [
+          "IBM Plex Sans"
+        ],
+        "display-lg": [
+          "IBM Plex Sans"
+        ],
+        "label-md": [
+          "IBM Plex Sans"
+        ]
+      },
+      "fontSize": {
+        "telemetry-lg": [
+          "24px",
+          {
+            "lineHeight": "32px",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-sm": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "600"
+          }
+        ],
+        "telemetry-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        ],
+        "body-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "400"
+          }
+        ],
+        "label-sm": [
+          "11px",
+          {
+            "lineHeight": "14px",
+            "letterSpacing": "0.04em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-lg-mobile": [
+          "22px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "title-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-lg": [
+          "28px",
+          {
+            "lineHeight": "36px",
+            "letterSpacing": "-0.015em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-md": [
+          "20px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "body-sm": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "400"
+          }
+        ],
+        "telemetry-sm": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "400"
+          }
+        ],
+        "body-lg": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        ],
+        "display-lg": [
+          "36px",
+          {
+            "lineHeight": "44px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "label-md": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "letterSpacing": "0.02em",
+            "fontWeight": "500"
+          }
+        ]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 h-14 bg-inverse-surface border-b border-secondary/30 flex items-center justify-between px-margin select-none"><div class="flex items-center gap-space-md"><img alt="Nexus Dispatch Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Udw6rXgFOs0ubB2-XHArhHip8K4eCz4rj_mJ0q4L6_a_Mbxh-t16V7ti2yjiJmiA95cuTuSpXhAogOP9zg75PWce9yR_RGlUuUQIC8cu02CpSNewBXwL7fgUMgXQ_Yr4MHATr3lzDkBxg9IWhZLlIUhTR74d-Po4WH6o5fMamenJZb41RdWFub5EKT0m8T2kYWsoTh_WG9aRqmdDzKY5A_MkSkaidj0XzdsYN_QR4HYolph3k6KV0SzMk"/><span class="font-headline-sm text-headline-sm text-inverse-on-surface tracking-tight">Nexus Dispatch</span><div class="h-4 w-px bg-secondary/40 mx-space-xs"></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface/10 hover:bg-surface/15 transition-colors cursor-pointer"><span class="font-title-md text-title-md text-inverse-on-surface">Acme Cold-Chain Logistics</span><span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-primary/30 text-primary-fixed">Enterprise</span><span class="material-symbols-outlined text-inverse-on-surface text-base">expand_more</span></div></div><div class="flex-1 max-w-xl mx-margin"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-lg pointer-events-none">search</span><input class="w-full h-9 pl-9 pr-24 bg-surface/10 rounded-lg text-body-sm font-body-sm text-inverse-on-surface placeholder:text-secondary focus:outline-none focus:ring-1 focus:ring-primary border border-secondary/20" placeholder="Search shipment ID, driver, destination..." type="text"/><div class="absolute right-2 px-1.5 py-0.5 rounded bg-surface/10 border border-secondary/30 text-[11px] font-telemetry-sm text-secondary pointer-events-none">Cmd + K</div></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-tertiary/20 border border-tertiary/40"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span><span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed">All Systems Operational • 18ms</span></div><button class="relative p-1.5 text-secondary hover:text-inverse-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-error px-1 text-[10px] font-bold text-on-error">3 Excursions</span></button><div class="h-4 w-px bg-secondary/40"></div><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-secondary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2IOnzpxINF_8DTTWEYW2Eg_Bpzknmu0mFW-6UJ3GZxEIct6FkR_SveEOd9TcNvAfIUR5JJOiV1ObsyaH2j7tS_Pdb5SUAPLWNS-38d6urb1Y5viozxv1nDWlFC5wrnnVeSI3pNI_UOT_pq7Xpm_joskNFjqQHhBHFljSLnE6yVtdF0O1KQtj8OOEnmUby-t_3CfiB2MCXGLElfK-G_ZnJyGRM1YgEP4ZlG7mNR1yWlTU5zYKmqyKz"/><div class="flex flex-col text-left"><span class="font-title-md text-title-md text-inverse-on-surface leading-none">Marcus Chen</span><span class="font-label-sm text-label-sm text-secondary leading-none mt-1">Lead Dispatcher</span></div><span class="material-symbols-outlined text-secondary text-base">arrow_drop_down</span></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-64 bg-inverse-surface border-r border-secondary/20 flex flex-col justify-between z-40"><div class="p-space-md flex-1 overflow-y-auto"><div class="px-space-sm py-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Operations</span></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm ring-1 ring-primary/50"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="cold-chain-dashboard" href="#"><span>Dashboard</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="live-fleet-map" href="#"><span>Live Fleet Map</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="active-shipments" href="#"><span>Active Shipments</span><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-telemetry-sm bg-surface/15 text-inverse-on-surface">88</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="cold-chain-alerts" href="#"><span>Cold-Chain Alerts</span><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-telemetry-sm bg-error text-on-error font-bold">3</span></a></nav><div class="px-space-sm py-space-xs mt-space-lg mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Administration</span></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm ring-1 ring-primary/50"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="client-portals" href="#"><span>Client Portals</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="billing-tariffs" href="#"><span>Billing &amp; Tariffs</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="system-settings" href="#"><span>System Settings</span></a></nav></div><div class="p-space-md border-t border-secondary/20 bg-inverse-surface/80 flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface/5 border border-secondary/20"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-base text-tertiary-fixed-dim">verified_user</span><span class="font-telemetry-sm text-telemetry-sm text-inverse-on-surface font-medium">FDA 21 CFR Part 11</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span></div><button class="flex items-center justify-between w-full px-space-sm py-1.5 rounded-lg text-secondary hover:text-inverse-on-surface hover:bg-surface/10 transition-colors"><span class="font-label-md text-label-md font-medium">Collapse Sidebar</span><span class="material-symbols-outlined text-lg">chevron_left</span></button></div></aside><div class="pl-64"><main class="pt-14 w-full px-margin bg-background min-h-screen"><div class="flex flex-col w-full pb-margin-lg text-on-surface">
+<!-- Top Breadcrumb & Actions Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md py-space-md mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-secondary">
+<span class="hover:text-primary cursor-pointer transition-colors">Operations</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-on-surface font-medium">Cold-Chain Alerts &amp; Excursion Triage</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Emergency Incident &amp; Thermal Excursion Response</h1>
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-telemetry-sm text-telemetry-sm font-semibold">3 Active Excursions • Triage SLA: 04m 12s Remaining</span>
+</div>
+</div>
+</div>
+<!-- Action Bar Controls -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>Export FDA Compliance Audit Log</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-lg">cell_tower</span>
+<span>Broadcast Driver SOP Alert</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md h-9 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md shadow-md transition-all active:scale-95">
+<span class="material-symbols-outlined text-lg">alt_route</span>
+<span>Initiate Emergency Reroute Protocol</span>
+</button>
+</div>
+</div>
+<!-- Critical Incident Metric Ribbon (4 Bento-Style Stat Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Stat 1: Active Excursions -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider font-semibold">Active Critical Excursions</span>
+<div class="p-1.5 rounded-lg bg-error-container text-error">
+<span class="material-symbols-outlined text-xl">cloud_download</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-telemetry-lg text-telemetry-lg text-error font-bold">3 Critical</span>
+<span class="font-label-sm text-label-sm text-secondary">/ 88 active loads</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">2 High Temp (&gt;8.0°C), 1 Compressor Degraded.</p>
+<div class="mt-2 text-[11px] font-telemetry-sm text-error font-semibold bg-error-container/40 px-2 py-0.5 rounded w-fit">
+          Total Cargo At Risk: $1,420,000
+        </div>
+</div>
+</div>
+<!-- Stat 2: Average Triage Time -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider font-semibold">Avg Triage Response Time</span>
+<div class="p-1.5 rounded-lg bg-primary-fixed text-primary">
+<span class="material-symbols-outlined text-xl">timer</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-sm">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface font-bold">6m 40s</span>
+<span class="flex items-center font-telemetry-sm text-telemetry-sm text-tertiary font-semibold bg-tertiary-container/20 px-1.5 py-0.5 rounded">
+            -1m 15s vs 8m SLA
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Mean duration between threshold trigger and intervention.</p>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+</div>
+<!-- Stat 3: Salvage & Recovery Rate -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider font-semibold">Salvage &amp; Cargo Recovery Rate</span>
+<div class="p-1.5 rounded-lg bg-tertiary-container/20 text-tertiary">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-telemetry-lg text-telemetry-lg text-tertiary font-bold">99.4%</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Q3 Target Exceeded</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">148 of 149 excursions successfully averted this quarter.</p>
+<span class="mt-2 inline-flex font-telemetry-sm text-telemetry-sm text-secondary">1 Spoilage Incident (Compensated)</span>
+</div>
+</div>
+<!-- Stat 4: Regulatory Integrity -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider font-semibold">Regulatory Integrity Status</span>
+<div class="p-1.5 rounded-lg bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-xl">gavel</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">FDA 21 CFR §11</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary font-semibold">VALIDATED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">All telemetry immutably recorded with cryptographic signatures.</p>
+<span class="mt-2 font-telemetry-sm text-[11px] text-secondary tracking-tight block truncate">SHA-256 #89B409E... NIST Calibrated</span>
+</div>
+</div>
+</div>
+<!-- Operational Incident Workbench (Two-Column Split Layout) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Incident Stream & Queue (62% approx -> col-span-7 or 8, using xl:col-span-7) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<!-- Filter Tabs & Quick Search Tray -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-lg">
+<button class="px-space-md py-1 rounded-md text-title-md font-title-md bg-surface-container-lowest text-primary font-semibold shadow-sm">
+              All Incident Queue (3)
+            </button>
+<button class="px-space-md py-1 rounded-md text-title-md font-title-md text-secondary hover:text-on-surface transition-colors flex items-center gap-1">
+              Critical Excursions
+              <span class="px-1.5 py-0.2 rounded-full bg-error text-on-error text-[10px] font-bold">2</span>
+</button>
+<button class="px-space-md py-1 rounded-md text-title-md font-title-md text-secondary hover:text-on-surface transition-colors">
+              Sensor Faults (1)
+            </button>
+<button class="px-space-md py-1 rounded-md text-title-md font-title-md text-secondary hover:text-on-surface transition-colors">
+              Resolved Today (14)
+            </button>
+</div>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-base animate-spin text-primary">sync</span>
+<span>Live Syncing</span>
+</div>
+</div>
+<!-- Search Bar & Granular Filters -->
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-space-sm items-center">
+<div class="sm:col-span-6 relative">
+<span class="material-symbols-outlined absolute left-3 top-2 text-secondary text-lg">search</span>
+<input class="w-full h-9 pl-9 pr-space-md bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest shadow-inner" placeholder="Search Shipment ID, Driver, Route, Cargo..." type="text"/>
+</div>
+<div class="sm:col-span-3">
+<select class="w-full h-9 px-space-sm bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option>Severity: All Active</option>
+<option>P1 - Critical Out-of-Spec</option>
+<option>P2 - Warning Drift</option>
+</select>
+</div>
+<div class="sm:col-span-3">
+<select class="w-full h-9 px-space-sm bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option>Corridor: All Regions</option>
+<option>I-95 North Corridor</option>
+<option>NJ Turnpike Central</option>
+<option>PA Turnpike Metro</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Incident Queue Cards Stream -->
+<div class="space-y-space-md">
+<!-- CARD 1: Selected & Expanded Active Excursion -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-md transition-all relative overflow-hidden bg-gradient-to-r from-error-container/30 via-surface-container-lowest to-surface-container-lowest">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-error"></div>
+<!-- Header Bar of Card -->
+<div class="flex flex-wrap items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-error text-on-error font-telemetry-sm text-telemetry-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-sm animate-pulse">crisis_alert</span>
+                CRITICAL [P1]
+              </span>
+<div>
+<span class="font-telemetry-md text-telemetry-md font-bold text-on-surface">#NX-8940</span>
+<span class="font-title-md text-title-md text-on-surface-variant ml-2">• MedGene Therapeutics (High-Grade Biologics)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-telemetry-sm text-telemetry-sm text-error bg-error-container px-2 py-0.5 rounded font-semibold">
+                SLA: 04m 12s
+              </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary text-label-sm font-label-sm uppercase">Selected</span>
+</div>
+</div>
+<!-- Card Content Body -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md mt-space-md pl-space-xs">
+<!-- Driver & Rig Meta -->
+<div class="md:col-span-4 flex flex-col justify-between py-1">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-secondary text-base">person</span>
+<span class="font-title-md text-title-md text-on-surface">Devonte Vance</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">48ft Freightliner Cascadia • Reefer #12</p>
+<div class="flex items-center gap-1 text-body-sm font-body-sm text-on-surface mt-2">
+<span class="material-symbols-outlined text-sm text-primary">navigation</span>
+<span>NJ Turnpike Ex. 8A (MP 68.2)</span>
+</div>
+<p class="font-telemetry-sm text-[11px] text-secondary">GPS: 40.3211° N, -74.4510° W</p>
+</div>
+<!-- Compressor Diagnostic alert -->
+<div class="mt-3 p-space-xs rounded-lg bg-surface-container-high">
+<span class="font-label-sm text-[10px] uppercase font-bold text-error tracking-wider block">Compressor Fault</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface font-medium">Carrier Vector 8500: E-34 Aux Valve</span>
+</div>
+</div>
+<!-- Temperature Telemetry Focus -->
+<div class="md:col-span-4 p-space-md rounded-xl bg-error-container/20 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-error font-semibold tracking-wider">Current Thermal Readout</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-telemetry-lg text-[32px] leading-none text-error font-bold">+8.4°C</span>
+<span class="material-symbols-outlined text-error text-xl animate-bounce">arrow_upward</span>
+</div>
+<div class="font-telemetry-sm text-telemetry-sm text-error mt-1 font-semibold">
+                  +0.4°C ABOVE PERMISSIBLE LIMIT
+                </div>
+</div>
+<div class="mt-2 text-body-sm font-body-sm text-secondary">
+                Permissible Range: <strong class="text-on-surface font-telemetry-sm font-semibold">2.0°C – 8.0°C</strong>
+<p class="text-[11px] text-error font-medium mt-0.5">Continuous excursion for 16 mins</p>
+</div>
+</div>
+<!-- Cargo Viability & Risk -->
+<div class="md:col-span-4 flex flex-col justify-between py-1">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold tracking-wider">Payload Integrity Risk</span>
+<p class="font-title-md text-title-md text-error font-bold mt-1">14 Mins to Spoilage Point</p>
+<div class="w-full bg-surface-container h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 65%;"></div>
+</div>
+<p class="font-body-sm text-[11px] text-secondary mt-1">Excursion limit: 30m cumulative above 8.0°C.</p>
+<p class="font-title-md text-title-md text-on-surface font-semibold mt-2">Cargo Value: $420,000</p>
+</div>
+<!-- Quick Dispatch Actions -->
+<div class="flex items-center gap-space-xs mt-3">
+<button class="flex-1 py-1.5 px-space-xs rounded bg-error text-on-error font-title-md text-[12px] font-semibold hover:bg-error/90 transition-all text-center">
+                  Override Reefer
+                </button>
+<button class="flex-1 py-1.5 px-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-[12px] font-medium transition-all text-center">
+                  Patch Tech
+                </button>
+<button class="py-1.5 px-2 rounded bg-primary-container text-on-primary font-title-md text-[12px] font-medium hover:bg-primary transition-all">
+                  Reroute
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 2: Active Excursion - Blood Plasma -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex flex-wrap items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-error font-telemetry-sm text-telemetry-sm font-bold">
+                HIGH [P1]
+              </span>
+<div>
+<span class="font-telemetry-md text-telemetry-md font-bold text-on-surface">#NX-8912</span>
+<span class="font-title-md text-title-md text-secondary ml-2">• Vertex Therapeutics (Blood Plasma Fractions)</span>
+</div>
+</div>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary">Triage: 07m elapsed</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md mt-space-md pl-space-xs items-center">
+<div class="md:col-span-4">
+<p class="font-title-md text-title-md text-on-surface">Carl Washington • Reefer #21</p>
+<p class="font-body-sm text-body-sm text-secondary">I-95 South Exit 42, Milford CT</p>
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-sm">ac_unit</span>
+                Backup Dry-Ice Canister Deployed
+              </span>
+</div>
+<div class="md:col-span-4">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-telemetry-lg text-telemetry-lg text-error font-bold">+8.9°C</span>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary">(+0.9°C over limit)</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary">Duration: 8 mins • Thermal curve flattening</p>
+</div>
+<div class="md:col-span-4 flex items-center justify-end gap-space-xs">
+<button class="py-1.5 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-colors">
+                Verify Probe B
+              </button>
+<button class="py-1.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">call</span>
+                Call Driver
+              </button>
+</div>
+</div>
+</div>
+<!-- CARD 3: Sensor Fault - Lyophilized Antibodies -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex flex-wrap items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-telemetry-sm text-telemetry-sm font-bold">
+                MEDIUM [P2]
+              </span>
+<div>
+<span class="font-telemetry-md text-telemetry-md font-bold text-on-surface">#NX-8842</span>
+<span class="font-title-md text-title-md text-secondary ml-2">• BioPharma Labs (Lyophilized Antibodies)</span>
+</div>
+</div>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary">Packet Drop: 90s ago</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md mt-space-md pl-space-xs items-center">
+<div class="md:col-span-4">
+<p class="font-title-md text-title-md text-on-surface">Marcus Vance • Unit #07</p>
+<p class="font-body-sm text-body-sm text-secondary">PA Turnpike Mile 210, Carlisle PA</p>
+<span class="font-label-sm text-[11px] text-secondary font-medium mt-1 block">IoT Mesh: Retrying uplink channel</span>
+</div>
+<div class="md:col-span-4">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-telemetry-lg text-telemetry-lg text-tertiary font-bold">+4.1°C</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold bg-tertiary-container/20 px-1.5 py-0.5 rounded">
+                  SAFE (LAST KNOWN)
+                </span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary">Set Point 4.0°C • Probe status unconfirmed</p>
+</div>
+<div class="md:col-span-4 flex items-center justify-end gap-space-xs">
+<button class="py-1.5 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-colors">
+                Ping IoT Gateway
+              </button>
+<button class="py-1.5 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-colors">
+                Request Manual Log
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-time Event Log Micro-stream -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Live Triage Audit Telemetry Stream</span>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary">Buffer: 400 events/sec</span>
+</div>
+<div class="space-y-space-xs font-telemetry-sm text-telemetry-sm">
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="text-error font-semibold">[08:44:12 EST]</span>
+<span class="text-on-surface font-medium">#NX-8940: Driver Devonte Vance submitted cab manifest seal verification (PASS)</span>
+</div>
+<span class="text-secondary text-[11px]">Ack #44192</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="text-error font-semibold">[08:42:01 EST]</span>
+<span class="text-on-surface font-medium">#NX-8940: Telemetry Probe 1 logged 8.42°C (Duration counter init: T-0)</span>
+</div>
+<span class="text-secondary text-[11px]">Ack #44188</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="text-tertiary font-semibold">[08:39:40 EST]</span>
+<span class="text-on-surface font-medium">#NX-8890: Automated purge cycle finalized at Philadelphia Cold Depot (Resolved)</span>
+</div>
+<span class="text-secondary text-[11px]">Audit Recorded</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Active Incident Command & Triage Inspector (38% -> xl:col-span-5) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<!-- Incident Inspector Master Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-md flex flex-col gap-space-md">
+<!-- Inspector Header -->
+<div class="flex flex-col gap-1 pb-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-telemetry-md text-telemetry-md font-bold text-on-surface">#NX-8940 COMMAND INSPECTION</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-telemetry-sm font-semibold text-xs">RELOADED</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-error bg-error-container px-2.5 py-0.5 rounded-full animate-pulse">
+              TIME CRITICAL • STAGE 2
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Asset: MedGene Ultra-Reagents • Transit: Boston MA → Baltimore MD</span>
+</div>
+<!-- GIS Telemetry Micro-Map Card -->
+<div class="rounded-xl overflow-hidden shadow-sm relative">
+<div class="w-full h-44 bg-cover bg-center" data-location="Edison, New Jersey" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIfN0bbt5bvfQabb6LWIwC6693SrEO1zAYSNWh5dQ0Qglq2rCnmCAkjEORr4hwM1eYojZS4KX1gZe45Z396TGENMmreEbKRS_RYhgbMazViohS80spoNnbIPSX6fln3Y9_wOcjej4BRIs0TgFN7vUrlrfSqbMyMVKcrkig1IWn3usNjIJI0teD6kf0oBYct5wnLXpKXLksPSAzpwH3VUBQ1mX_ztXvyXfal0ElBkjCk6rE1i8cPXHt')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-transparent flex items-end p-space-md">
+<div class="flex items-center justify-between w-full text-inverse-on-surface">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-title-md text-title-md font-bold text-inverse-on-surface">NJ Turnpike MP 68.2</span>
+</div>
+<p class="font-body-sm text-body-sm text-inverse-on-surface/80">Nearest Validated Facility: <strong>Edison CryoHub (8.4 mi)</strong></p>
+</div>
+<div class="text-right">
+<span class="font-telemetry-md text-telemetry-md font-bold text-tertiary-fixed">11 min ETA</span>
+<span class="block text-[11px] font-label-sm text-inverse-on-surface/70">Traffic: Fluent (54 mph)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Temperature Readout Dial Panel -->
+<div class="grid grid-cols-3 gap-space-sm p-space-md rounded-xl bg-surface-container-low text-center">
+<div class="p-space-xs">
+<span class="font-label-sm text-[10px] uppercase text-secondary font-semibold">Chamber Probe A</span>
+<div class="font-telemetry-lg text-telemetry-lg text-error font-bold mt-0.5">+8.4°C</div>
+<span class="text-[11px] font-telemetry-sm text-error font-semibold">+0.4°C Excursion</span>
+</div>
+<div class="p-space-xs">
+<span class="font-label-sm text-[10px] uppercase text-secondary font-semibold">Chamber Probe B</span>
+<div class="font-telemetry-lg text-telemetry-lg text-error font-bold mt-0.5">+8.3°C</div>
+<span class="text-[11px] font-telemetry-sm text-error font-semibold">NIST Verified</span>
+</div>
+<div class="p-space-xs">
+<span class="font-label-sm text-[10px] uppercase text-secondary font-semibold">Ambient / Target</span>
+<div class="font-telemetry-lg text-telemetry-lg text-on-surface font-bold mt-0.5">24.8°C</div>
+<span class="text-[11px] font-telemetry-sm text-secondary">Target: 4.0°C</span>
+</div>
+</div>
+<!-- 60-Minute Thermal Excursion Curve SVG Chart -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface">60-Minute Thermal Curve</span>
+<span class="text-[11px] font-telemetry-sm text-secondary">(Recorded at 30s intervals)</span>
+</div>
+<div class="flex items-center gap-space-sm text-[11px] font-telemetry-sm">
+<span class="flex items-center gap-1 text-secondary"><span class="w-2 h-0.5 bg-secondary inline-block"></span> Target 4.0°</span>
+<span class="flex items-center gap-1 text-error font-semibold"><span class="w-2 h-0.5 bg-error inline-block"></span> Limit 8.0°</span>
+</div>
+</div>
+<!-- Inline Telemetry SVG Graph -->
+<div class="w-full h-32 relative mt-2">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 400 130">
+<!-- Background Grid Lines -->
+<line stroke="#f1f5f9" stroke-width="1" x1="0" x2="400" y1="20" y2="20"></line>
+<line stroke="#f1f5f9" stroke-width="1" x1="0" x2="400" y1="55" y2="55"></line>
+<line stroke="#f1f5f9" stroke-width="1" x1="0" x2="400" y1="90" y2="90"></line>
+<!-- Red Alert Critical Zone (above 8°C line at y=45) -->
+<rect fill="#ef4444" fill-opacity="0.05" height="45" width="400" x="0" y="0"></rect>
+<!-- Upper Threshold Dotted Line (8.0°C) -->
+<line stroke="#ef4444" stroke-dasharray="4 3" stroke-width="1.5" x1="0" x2="400" y1="45" y2="45"></line>
+<text fill="#ef4444" font-family="JetBrains Mono" font-size="9" font-weight="600" x="5" y="40">8.0°C CRITICAL THRESHOLD</text>
+<!-- Safe Setpoint Line (4.0°C) -->
+<line stroke="#10b981" stroke-dasharray="2 2" stroke-opacity="0.4" stroke-width="1" x1="0" x2="400" y1="100" y2="100"></line>
+<text fill="#10b981" font-family="JetBrains Mono" font-size="9" x="5" y="95">4.0°C SETPOINT</text>
+<!-- Excursion fill area -->
+<path d="M 0,102 Q 80,100 160,95 T 260,52 T 340,30 L 400,24 L 400,120 L 0,120 Z" fill="url(#tempGradient)" fill-opacity="0.15"></path>
+<!-- Telemetry Curve Path -->
+<path d="M 0,102 Q 80,100 160,95 T 260,52 T 340,30 L 400,24" stroke="#ef4444" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Breach point marker at x=280 approx -->
+<circle cx="280" cy="45" fill="#ef4444" r="4"></circle>
+<text fill="#b91c1c" font-family="IBM Plex Sans" font-size="9" font-weight="600" x="240" y="20">Breach: 16m ago</text>
+<!-- Current temperature point marker at x=400 -->
+<circle class="animate-ping" cx="396" cy="25" fill="#ef4444" r="5"></circle>
+<circle cx="396" cy="25" fill="#ffffff" r="3.5" stroke="#ef4444" stroke-width="2"></circle>
+<defs>
+<lineargradient id="tempGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ef4444" stop-opacity="0.6"></stop>
+<stop offset="100%" stop-color="#ef4444" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-between font-telemetry-sm text-[11px] text-secondary mt-1">
+<span>-60 min (07:45 AM)</span>
+<span>-30 min (08:15 AM)</span>
+<span>-16 min (Breached)</span>
+<span class="text-error font-bold">Now (+8.4°C)</span>
+</div>
+</div>
+<!-- Automated SOP Triage Checklist (Interactive workflow) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Standard Operating Protocol (SOP-402)</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary font-bold">2/4 Steps Completed</span>
+</div>
+<div class="space-y-space-xs mt-1">
+<!-- Step 1: Done -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary accent-primary" disabled="" type="checkbox"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface line-through opacity-80">1. Cab Alarm &amp; SMS Dispatch</span>
+<span class="font-telemetry-sm text-[10px] text-tertiary font-semibold">08:42 AM ACK</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary">In-cab audible alarm deployed. Driver confirmed alert receipt.</p>
+</div>
+</label>
+<!-- Step 2: Done -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary accent-primary" disabled="" type="checkbox"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface line-through opacity-80">2. Physical Perimeter &amp; Seal Verification</span>
+<span class="font-telemetry-sm text-[10px] text-tertiary font-semibold">08:44 AM PASS</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary">Driver inspected cargo bay doors; tamper seals verified intact.</p>
+</div>
+</label>
+<!-- Step 3: Pending Active Dispatcher Authorization -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-highest/60 cursor-pointer shadow-sm">
+<input class="mt-0.5 w-4 h-4 rounded text-primary accent-primary" type="checkbox"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-bold">3. Remote Micro-Controller Hard Reset</span>
+<span class="font-telemetry-sm text-[10px] text-error font-bold bg-error-container px-1 rounded">ACTION REQUIRED</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Send telematics bypass ping to purge Carrier Vector E-34 fault valve.</p>
+</div>
+</label>
+<!-- Step 4: Pending Reroute -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer">
+<input class="mt-0.5 w-4 h-4 rounded text-primary accent-primary" type="checkbox"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">4. Mobile Cryo-Service / Reroute Dispatch</span>
+<span class="font-telemetry-sm text-[10px] text-secondary">Pending Step 3</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary">Transmit electronic custody transfer to Edison Pharma Hub receiver.</p>
+</div>
+</label>
+</div>
+</div>
+<!-- Action Trigger Emergency Console -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-2.5 px-space-md rounded-lg bg-error hover:bg-error/90 text-on-error font-title-md text-title-md font-bold shadow-md transition-all active:scale-98 flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-lg">restart_alt</span>
+<span>Trigger Remote Reefer Reset &amp; Turbo-Cool</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-2 px-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md font-semibold transition-colors flex items-center justify-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-base">alt_route</span>
+<span>Reroute to Edison Hub</span>
+</button>
+<button class="py-2 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md font-semibold transition-colors flex items-center justify-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-base">support_agent</span>
+<span>Patch QA Officer</span>
+</button>
+</div>
+</div>
+<!-- Regulatory & Electronic Signature Sign-Off Box (21 CFR Part 11) -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface font-title-md text-title-md font-semibold">
+<span class="material-symbols-outlined text-primary text-base">draw</span>
+<span>21 CFR Part 11 Electronic Dispatch Authorization</span>
+</div>
+<span class="font-telemetry-sm text-[10px] text-secondary">ISO 9001 / GxP</span>
+</div>
+<div class="flex items-center gap-space-md mt-1">
+<img alt="Marcus Chen Signature Profile" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2IOnzpxINF_8DTTWEYW2Eg_Bpzknmu0mFW-6UJ3GZxEIct6FkR_SveEOd9TcNvAfIUR5JJOiV1ObsyaH2j7tS_Pdb5SUAPLWNS-38d6urb1Y5viozxv1nDWlFC5wrnnVeSI3pNI_UOT_pq7Xpm_joskNFjqQHhBHFljSLnE6yVtdF0O1KQtj8OOEnmUby-t_3CfiB2MCXGLElfK-G_ZnJyGRM1YgEP4ZlG7mNR1yWlTU5zYKmqyKz"/>
+<div class="flex flex-col flex-1">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Marcus Chen (ID: DSP-7704)</span>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary">Lead Cold-Chain Dispatcher • Shift A</span>
+</div>
+</div>
+<input class="w-full h-8 px-space-sm bg-surface-container-lowest rounded text-body-sm font-body-sm text-on-surface placeholder:text-secondary focus:outline-none shadow-sm" placeholder="Enter reason code or emergency action justification..." type="text" value="Authorized compressor reset ping after seal confirmation"/>
+<div class="flex items-center justify-between pt-1">
+<span class="font-telemetry-sm text-[10px] text-secondary">Timestamp: 2023-10-24 08:45:19 EST</span>
+<button class="px-space-md py-1 rounded bg-surface-container-lowest hover:bg-surface-container text-primary font-title-md text-title-md font-semibold transition-colors shadow-sm">
+              Sign &amp; Commit
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

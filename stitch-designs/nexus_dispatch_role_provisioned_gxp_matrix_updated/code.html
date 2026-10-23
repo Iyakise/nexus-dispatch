@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  "darkMode": "class",
+  "theme": {
+    "extend": {
+      "colors": {
+        "surface-container-high": "#dce9ff",
+        "on-error": "#ffffff",
+        "surface-dim": "#cbdbf5",
+        "on-surface-variant": "#464555",
+        "surface-container": "#e5eeff",
+        "primary-fixed": "#e2dfff",
+        "on-tertiary-fixed": "#002113",
+        "primary-fixed-dim": "#c3c0ff",
+        "surface-tint": "#4d44e3",
+        "on-secondary": "#ffffff",
+        "on-primary-container": "#dad7ff",
+        "primary": "#3525cd",
+        "error": "#ba1a1a",
+        "outline": "#777587",
+        "on-secondary-fixed": "#131b2e",
+        "tertiary-fixed": "#6ffbbe",
+        "on-tertiary-fixed-variant": "#005236",
+        "on-secondary-container": "#5c647a",
+        "tertiary-fixed-dim": "#4edea3",
+        "on-background": "#0b1c30",
+        "background": "#f8f9ff",
+        "on-tertiary": "#ffffff",
+        "surface-container-low": "#eff4ff",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#3f465c",
+        "inverse-primary": "#c3c0ff",
+        "surface-container-highest": "#d3e4fe",
+        "on-tertiary-container": "#67f4b7",
+        "surface": "#f8f9ff",
+        "secondary-fixed-dim": "#bec6e0",
+        "surface-bright": "#f8f9ff",
+        "inverse-surface": "#213145",
+        "surface-variant": "#d3e4fe",
+        "primary-container": "#4f46e5",
+        "secondary-container": "#dae2fd",
+        "on-primary-fixed-variant": "#3323cc",
+        "on-primary-fixed": "#0f0069",
+        "secondary-fixed": "#dae2fd",
+        "on-surface": "#0b1c30",
+        "secondary": "#565e74",
+        "tertiary-container": "#006e4b",
+        "on-primary": "#ffffff",
+        "on-error-container": "#93000a",
+        "tertiary": "#005338",
+        "outline-variant": "#c7c4d8",
+        "surface-container-lowest": "#ffffff",
+        "inverse-on-surface": "#eaf1ff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-lg": "1rem",
+        "margin": "1.5rem",
+        "space-sm": "0.5rem",
+        "space-xs": "0.25rem",
+        "gutter-lg": "1.5rem",
+        "margin-sm": "1rem",
+        "gutter": "1rem",
+        "space-md": "0.75rem",
+        "gutter-sm": "0.5rem",
+        "margin-lg": "2rem",
+        "space-xl": "1.5rem"
+      },
+      "fontFamily": {
+        "headline-lg-mobile": [
+          "IBM Plex Sans"
+        ],
+        "label-sm": [
+          "IBM Plex Sans"
+        ],
+        "headline-md": [
+          "IBM Plex Sans"
+        ],
+        "headline-lg": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-lg": [
+          "JetBrains Mono"
+        ],
+        "label-md": [
+          "IBM Plex Sans"
+        ],
+        "body-sm": [
+          "IBM Plex Sans"
+        ],
+        "body-lg": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-sm": [
+          "JetBrains Mono"
+        ],
+        "title-md": [
+          "IBM Plex Sans"
+        ],
+        "body-md": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-md": [
+          "JetBrains Mono"
+        ],
+        "display-lg": [
+          "IBM Plex Sans"
+        ],
+        "headline-sm": [
+          "IBM Plex Sans"
+        ]
+      },
+      "fontSize": {
+        "headline-lg-mobile": [
+          "22px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "label-sm": [
+          "11px",
+          {
+            "lineHeight": "14px",
+            "letterSpacing": "0.04em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-md": [
+          "20px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-lg": [
+          "28px",
+          {
+            "lineHeight": "36px",
+            "letterSpacing": "-0.015em",
+            "fontWeight": "600"
+          }
+        ],
+        "telemetry-lg": [
+          "24px",
+          {
+            "lineHeight": "32px",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "500"
+          }
+        ],
+        "label-md": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "letterSpacing": "0.02em",
+            "fontWeight": "500"
+          }
+        ],
+        "body-sm": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "400"
+          }
+        ],
+        "body-lg": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        ],
+        "telemetry-sm": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "400"
+          }
+        ],
+        "title-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "600"
+          }
+        ],
+        "body-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "400"
+          }
+        ],
+        "telemetry-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        ],
+        "display-lg": [
+          "36px",
+          {
+            "lineHeight": "44px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-sm": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "600"
+          }
+        ]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 h-14 bg-inverse-surface border-b border-secondary/30 flex items-center justify-between px-margin select-none"><div class="flex items-center gap-space-md"><img alt="Nexus Dispatch Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Udw6rXgFOs0ubB2-XHArhHip8K4eCz4rj_mJ0q4L6_a_Mbxh-t16V7ti2yjiJmiA95cuTuSpXhAogOP9zg75PWce9yR_RGlUuUQIC8cu02CpSNewBXwL7fgUMgXQ_Yr4MHATr3lzDkBxg9IWhZLlIUhTR74d-Po4WH6o5fMamenJZb41RdWFub5EKT0m8T2kYWsoTh_WG9aRqmdDzKY5A_MkSkaidj0XzdsYN_QR4HYolph3k6KV0SzMk"/><span class="font-headline-sm text-headline-sm text-inverse-on-surface tracking-tight">Nexus Dispatch</span><div class="h-4 w-px bg-secondary/40 mx-space-xs"></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface/10 hover:bg-surface/15 transition-colors cursor-pointer"><span class="font-title-md text-title-md text-inverse-on-surface">Acme Cold-Chain Logistics</span><span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-primary/30 text-primary-fixed">Enterprise</span><span class="material-symbols-outlined text-inverse-on-surface text-base">expand_more</span></div></div><div class="flex-1 max-w-xl mx-margin"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-lg pointer-events-none">search</span><input class="w-full h-9 pl-9 pr-24 bg-surface/10 rounded-lg text-body-sm font-body-sm text-inverse-on-surface placeholder:text-secondary focus:outline-none focus:ring-1 focus:ring-primary border border-secondary/20" placeholder="Search shipment ID, driver, destination..." type="text"/><div class="absolute right-2 px-1.5 py-0.5 rounded bg-surface/10 border border-secondary/30 text-[11px] font-telemetry-sm text-secondary pointer-events-none">Cmd + K</div></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-tertiary/20 border border-tertiary/40"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span><span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed">All Systems Operational • 18ms</span></div><button class="relative p-1.5 text-secondary hover:text-inverse-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-error px-1 text-[10px] font-bold text-on-error">3 Excursions</span></button><div class="h-4 w-px bg-secondary/40"></div><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-secondary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2IOnzpxINF_8DTTWEYW2Eg_Bpzknmu0mFW-6UJ3GZxEIct6FkR_SveEOd9TcNvAfIUR5JJOiV1ObsyaH2j7tS_Pdb5SUAPLWNS-38d6urb1Y5viozxv1nDWlFC5wrnnVeSI3pNI_UOT_pq7Xpm_joskNFjqQHhBHFljSLnE6yVtdF0O1KQtj8OOEnmUby-t_3CfiB2MCXGLElfK-G_ZnJyGRM1YgEP4ZlG7mNR1yWlTU5zYKmqyKz"/><div class="flex flex-col text-left"><span class="font-title-md text-title-md text-inverse-on-surface leading-none">Marcus Chen</span><span class="font-label-sm text-label-sm text-secondary leading-none mt-1">Lead Dispatcher</span></div><span class="material-symbols-outlined text-secondary text-base">arrow_drop_down</span></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-64 bg-inverse-surface border-r border-secondary/20 flex flex-col justify-between z-40"><div class="p-space-md flex-1 overflow-y-auto"><div class="px-space-sm py-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Operations</span></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm ring-1 ring-primary/50"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="cold-chain-dashboard" href="#"><div class="flex items-center gap-space-sm"><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="live-fleet-map" href="#"><div class="flex items-center gap-space-sm"><span>Live Fleet Map</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="active-shipments" href="#"><div class="flex items-center gap-space-sm"><span>Active Shipments</span></div><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-telemetry-sm bg-surface/15 text-inverse-on-surface">88</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="cold-chain-alerts" href="#"><div class="flex items-center gap-space-sm"><span>Cold-Chain Alerts</span></div><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-telemetry-sm bg-error text-on-error font-bold">3</span></a></nav><div class="px-space-sm py-space-xs mt-space-lg mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Administration</span></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm ring-1 ring-primary/50"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="client-portals" href="#"><div class="flex items-center gap-space-sm"><span>Client Portals</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="billing-tariffs" href="#"><div class="flex items-center gap-space-sm"><span>Billing &amp; Tariffs</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="system-settings" href="#"><div class="flex items-center gap-space-sm"><span>System Settings</span></div></a></nav></div><div class="p-space-md border-t border-secondary/20 bg-inverse-surface/80 flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface/5 border border-secondary/20"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-base text-tertiary-fixed-dim">verified_user</span><span class="font-telemetry-sm text-telemetry-sm text-inverse-on-surface font-medium">FDA 21 CFR Part 11</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span></div><button class="flex items-center justify-between w-full px-space-sm py-1.5 rounded-lg text-secondary hover:text-inverse-on-surface hover:bg-surface/10 transition-colors"><span class="font-label-md text-label-md font-medium">Collapse Sidebar</span><span class="material-symbols-outlined text-lg">chevron_left</span></button></div></aside><div class="pl-64"><main class="pt-14 w-full px-margin bg-background min-h-screen"><div class="mb-space-md p-space-sm sm:p-space-md rounded-xl bg-surface-container-lowest border border-tertiary/40 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm ring-1 ring-tertiary-fixed/30"><div class="flex items-start gap-space-sm"><div class="w-9 h-9 rounded-lg bg-tertiary-fixed/30 flex items-center justify-center shrink-0 mt-0.5"><span class="material-symbols-outlined text-tertiary text-xl">check_circle</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-2 flex-wrap"><span class="font-headline-sm text-headline-sm text-on-surface">Custom GxP Role Successfully Provisioned</span><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-[10px] bg-tertiary-fixed/30 text-tertiary font-bold tracking-tight">21 CFR §11.100 COMPLIANT</span></div><p class="font-body-sm text-body-sm text-secondary mt-0.5">Role <strong class="text-on-surface font-title-md">Senior Thermal Triage Lead [Tier 2+]</strong> <span class="font-telemetry-sm text-xs text-primary font-medium">(ROLE_DISPATCH_THERMAL_TRIAGE_L2)</span> created and queued for Okta SCIM directory sync.</p><div class="flex items-center gap-space-sm mt-1.5 flex-wrap"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-surface-container-low text-secondary border border-secondary/20"><span class="material-symbols-outlined text-xs text-tertiary">fingerprint</span> Audit Hash: #AT-8941-FINAL</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-surface-container-low text-secondary border border-secondary/20"><span class="material-symbols-outlined text-xs text-primary">lock</span> Immutable Hash Signed • Dual Signoff</span></div></div></div><div class="flex items-center gap-space-xs shrink-0 self-start md:self-center"><button class="h-8 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-title-md text-title-md transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-sm">history_edu</span><span>View Audit Log</span></button><button class="w-8 h-8 rounded-lg hover:bg-surface-container text-secondary hover:text-on-surface flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-base">close</span></button></div></div><div class="flex flex-col w-full">
+<!-- Breadcrumb & Top Bar -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between pb-space-lg gap-space-md">
+<div class="flex flex-col">
+<nav class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary mb-1">
+<span>Administration</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span>System Settings</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold">Users &amp; RBAC Permissions</span>
+</nav>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">RBAC Governance &amp; Multi-Tenant Access Control</h1>
+<span class="px-2 py-0.5 rounded-full font-telemetry-sm text-[11px] bg-tertiary-fixed/30 text-tertiary font-medium">GxP Certified</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-0.5">
+        Manage granular GxP role assignments, FDA 21 CFR Part 11 electronic signature authorities, SCIM directory synchronization, and audit permissions.
+      </p>
+</div>
+<!-- Action Bar -->
+<div class="flex items-center gap-space-sm self-start md:self-auto shrink-0">
+<button class="h-9 px-space-md flex items-center gap-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-title-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-base text-secondary">file_download</span>
+<span>Export Permission Matrix (CSV/Audit)</span>
+</button>
+<button class="h-9 px-space-md flex items-center gap-space-xs rounded-lg bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md shadow-sm transition-colors">
+<span class="material-symbols-outlined text-base">person_add</span>
+<span>Provision New Role or User</span>
+</button>
+</div>
+</div>
+<!-- Executive Security & RBAC KPI Ribbon -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Active Identities</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-telemetry-sm font-medium bg-tertiary-fixed/20 text-on-tertiary-fixed-variant">SCIM Synced 4m ago</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface font-bold">42 Users</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-sm text-tertiary">check_circle</span>
+<span>Okta SSO Enforced • 0 Unlinked Accounts</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Dual-Auth Signers (21 CFR §11)</span>
+<span class="material-symbols-outlined text-lg text-primary">verified_user</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface font-bold">8 Authorized</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-sm text-primary">key</span>
+<span class="truncate">Lead Dispatch &amp; QA with GxP Pin &amp; FIDO2</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between"><div class="flex items-start justify-between mb-2"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Role Presets Configured</span><span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm font-semibold bg-tertiary-fixed/30 text-tertiary">+1 Custom GxP Tier</span></div><div class="flex items-baseline gap-2 mb-1"><span class="font-telemetry-lg text-telemetry-lg text-on-surface font-bold">6 Active Tiers</span><span class="px-1.5 py-0.2 rounded text-[10px] font-label-sm font-semibold bg-primary-fixed text-on-primary-fixed-variant">GxP Baseline</span></div><div class="text-secondary font-telemetry-sm text-[11px] truncate">Admin (3), Lead (7), Triage (1), Tech (12), QA (6), View (14)</div></div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Session Timeout &amp; MTR Compliance</span>
+<span class="material-symbols-outlined text-lg text-secondary">timer</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface font-bold">15m Auto-Lock</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-sm text-tertiary">fingerprint</span>
+<span class="truncate">Biometric/passcode re-auth on overrides</span>
+</div>
+</div>
+</div>
+<!-- Secondary Tab Bar -->
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-xl mb-space-lg overflow-x-auto"><button class="h-8 px-space-md rounded-lg text-secondary hover:text-on-surface font-title-md text-title-md transition-colors whitespace-nowrap flex items-center gap-space-xs"><span>User Directory &amp; Role Assignments</span><span class="px-1.5 py-0.2 rounded-full font-telemetry-sm text-[11px] bg-secondary/15 text-secondary">42</span></button><button class="h-8 px-space-md rounded-lg bg-surface-container-lowest text-primary font-title-md text-title-md shadow-sm whitespace-nowrap flex items-center gap-space-xs"><span>Role Definitions &amp; Permissions Matrix</span><span class="px-1.5 py-0.2 rounded-full font-telemetry-sm text-[11px] bg-tertiary-fixed/30 text-tertiary font-bold">6 (+1)</span></button><button class="h-8 px-space-md rounded-lg text-secondary hover:text-on-surface font-title-md text-title-md transition-colors whitespace-nowrap">21 CFR Part 11 Electronic Signature Authorities</button><button class="h-8 px-space-md rounded-lg text-secondary hover:text-on-surface font-title-md text-title-md transition-colors whitespace-nowrap">SCIM &amp; Okta Attribute Mapping</button><button class="h-8 px-space-md rounded-lg text-secondary hover:text-on-surface font-title-md text-title-md transition-colors whitespace-nowrap">Access Audit Log</button></div>
+<!-- Main Split Layout (66% Left Main / 34% Right Inspector Drawer) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Directory & Permissions Matrix -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg"><div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-tertiary/30 ring-1 ring-tertiary-fixed/30"><div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-sm border-b border-secondary/20 gap-space-sm mb-space-sm"><div class="flex items-center gap-space-sm flex-wrap"><div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold text-lg"><span class="material-symbols-outlined text-xl">security</span></div><div><div class="flex items-center gap-2 flex-wrap"><h2 class="font-headline-sm text-headline-sm text-on-surface">Senior Thermal Triage Lead [Tier 2+]</h2><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-[11px] font-semibold bg-tertiary-fixed/30 text-tertiary">GxP Level 3</span><span class="px-2 py-0.5 rounded-full font-label-sm text-[11px] font-semibold bg-primary-fixed text-on-primary-fixed-variant">Custom Role</span><span class="px-2 py-0.5 rounded-full font-label-sm text-[11px] font-semibold bg-secondary-fixed text-on-secondary-fixed">Pending QA Dual-Auth (Dr. Aris Thorne)</span></div><div class="flex items-center gap-space-sm text-secondary font-label-sm text-xs mt-0.5"><span>Role ID: <code class="font-telemetry-sm text-primary">ROLE_DISPATCH_THERMAL_TRIAGE_L2</code></span><span>•</span><span>3 Facilities Scoped: Boston BioHub, Cambridge Depot, NJ Hub</span><span>•</span><span class="font-telemetry-sm text-tertiary font-medium">FIPS 140-2 Level 3 / NIST P-384</span></div></div></div><div class="flex items-center gap-space-xs"><button class="h-8 px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-title-md transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-base text-secondary">edit</span><span>Edit Permissions</span></button><button class="h-8 px-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md shadow-sm transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-base">person_add</span><span>Assign Users (0)</span></button></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs"><div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-secondary/15"><div class="flex items-center gap-1.5 text-primary mb-1"><span class="material-symbols-outlined text-base">thermostat</span><span class="font-title-md text-title-md">Remote Reefer Setpoint Override</span></div><p class="font-body-sm text-xs text-secondary">Direct temperature recalibration authority under strict biometric FIDO2 prompt &amp; GPS geofence match.</p></div><div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-secondary/15"><div class="flex items-center gap-1.5 text-tertiary mb-1"><span class="material-symbols-outlined text-base">alt_route</span><span class="font-title-md text-title-md">Emergency Fast-Reroute</span></div><p class="font-body-sm text-xs text-secondary">Reroutes triggered when predicted ETA exceeds allowable excursion margin (&gt;15m) with automatic manifest update.</p></div><div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-secondary/15"><div class="flex items-center gap-1.5 text-on-secondary-fixed mb-1"><span class="material-symbols-outlined text-base">verified</span><span class="font-title-md text-title-md">Tamper-Evident CoC Sealing</span></div><p class="font-body-sm text-xs text-secondary">Direct electronic signing rights for chain-of-custody transfer handoffs using SHA-256 integrity digest.</p></div></div></div>
+<!-- User Directory Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<!-- Search and Filter Toolbar -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm mb-space-md pb-space-sm">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-lg pointer-events-none">search</span>
+<input class="w-full h-9 pl-9 pr-4 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest" placeholder="Filter by user name, email, role, or SSO identity..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<select class="h-9 px-space-sm bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option>Role: All Tiers</option>
+<option>Tier 1: Admin &amp; QA</option>
+<option>Tier 2: Lead Dispatch</option>
+<option>Tier 3: Dispatcher</option>
+<option>Tier 4: Field Driver</option>
+</select>
+<select class="h-9 px-space-sm bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option>Electronic Signature: All</option>
+<option>Dual-Signer Authorized</option>
+<option>Primary Signer</option>
+<option>Standard Signer</option>
+<option>No Sign Authority</option>
+</select>
+<button class="h-9 px-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg text-body-sm font-title-md text-secondary hover:text-on-surface flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-base">sync_lock</span>
+<span>Bulk Re-Auth</span>
+</button>
+</div>
+</div>
+<!-- High-Density User Role Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-3 rounded-l-lg">User &amp; Credential</th>
+<th class="py-2.5 px-3">System Role</th>
+<th class="py-2.5 px-3">Department / Facility</th>
+<th class="py-2.5 px-3">21 CFR §11 Signoff Scope</th>
+<th class="py-2.5 px-3">MFA &amp; FIDO2 Status</th>
+<th class="py-2.5 px-3">Last Active</th>
+<th class="py-2.5 px-3 rounded-r-lg text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y-0">
+<!-- Row 1 (Selected Row - Marcus Chen) -->
+<tr class="bg-primary-fixed/20 hover:bg-primary-fixed/30 cursor-pointer transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-sm">
+<img alt="Marcus Chen" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V0bBqCDUhW49sLgGwEkVNBvISNGlEERLcvtoYoFYbP6zj0eLnXmCtvTNCgn0O_O4kN3AsfD3DEv-DzqS-vLb19FW5RBhCo5j308N84y9RvTjSUv-2NrNN6-xpTWZphdEbrAd4jJ5KyRT_7ejNwym9YRaW1OF_2g57vCjz2VQmMII5eNjzfFq1E8_N3zRTMgtr44OxtiSeCblKUxwlCf1jE05GAam4AE4ywN5rk1tDaDgHufXRnxcbQrr8"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Marcus Chen</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed shrink-0" title="Active Session"></span>
+</div>
+<span class="font-telemetry-sm text-[11px] text-secondary truncate">m.chen@acme-coldchain.com</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[11px] font-semibold bg-primary/10 text-primary whitespace-nowrap">
+                    Lead Dispatcher [Tier 2]
+                  </span>
+</td>
+<td class="py-3 px-3 text-secondary font-label-md text-label-md">
+                  Boston BioHub Depot / Fleet Alpha
+                </td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-telemetry-sm text-[11px] bg-tertiary-fixed/30 text-tertiary font-medium whitespace-nowrap">
+<span class="material-symbols-outlined text-[13px]">draw</span> Dual-Signer Authorized
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1 font-telemetry-sm text-[11px] text-on-surface">
+<span class="material-symbols-outlined text-sm text-tertiary">key</span>
+<span>FIDO2 Hardware Key (YubiKey 5C)</span>
+</div>
+</td>
+<td class="py-3 px-3 font-telemetry-sm text-telemetry-sm text-tertiary font-medium whitespace-nowrap">
+                  Now (Current)
+                </td>
+<td class="py-3 px-3 text-right">
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-on-surface transition-colors" title="Manage Permissions">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 (Dr. Aris Thorne) -->
+<tr class="hover:bg-surface-container-low/70 cursor-pointer transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-title-md text-title-md font-bold shrink-0">
+                      AT
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Dr. Aris Thorne</span>
+<span class="font-telemetry-sm text-[11px] text-secondary truncate">a.thorne@biopharm.com</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[11px] font-semibold bg-surface-container-high text-primary whitespace-nowrap">
+                    Quality &amp; Compliance Officer [Tier 1]
+                  </span>
+</td>
+<td class="py-3 px-3 text-secondary font-label-md text-label-md">
+                  Global QA • Basel &amp; Cambridge
+                </td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-telemetry-sm text-[11px] bg-tertiary-fixed/30 text-tertiary font-medium whitespace-nowrap">
+<span class="material-symbols-outlined text-[13px]">verified</span> Primary Signer
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1 font-telemetry-sm text-[11px] text-secondary">
+<span class="material-symbols-outlined text-sm text-tertiary">fingerprint</span>
+<span>Okta Verify Push + Bio</span>
+</div>
+</td>
+<td class="py-3 px-3 font-telemetry-sm text-telemetry-sm text-secondary whitespace-nowrap">
+                  18m ago
+                </td>
+<td class="py-3 px-3 text-right">
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 (Elena Rostova) -->
+<tr class="hover:bg-surface-container-low/70 cursor-pointer transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary font-title-md text-title-md font-bold shrink-0">
+                      ER
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Elena Rostova</span>
+<span class="font-telemetry-sm text-[11px] text-secondary truncate">e.rostova@acme-coldchain.com</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[11px] font-semibold bg-secondary-container text-on-secondary-container whitespace-nowrap">
+                    Dispatcher [Tier 3]
+                  </span>
+</td>
+<td class="py-3 px-3 text-secondary font-label-md text-label-md">
+                  I-95 Corridor Ops
+                </td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-telemetry-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-medium whitespace-nowrap">
+<span class="material-symbols-outlined text-[13px]">assignment_turned_in</span> Standard Signer
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1 font-telemetry-sm text-[11px] text-secondary">
+<span class="material-symbols-outlined text-sm text-secondary">pin</span>
+<span>Okta SMS + TOTP</span>
+</div>
+</td>
+<td class="py-3 px-3 font-telemetry-sm text-telemetry-sm text-secondary whitespace-nowrap">
+                  4m ago
+                </td>
+<td class="py-3 px-3 text-right">
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 (Inspector Sarah K. Lin) -->
+<tr class="hover:bg-surface-container-low/70 cursor-pointer transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant font-title-md text-title-md font-bold shrink-0">
+                      SL
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Inspector Sarah K. Lin</span>
+<span class="font-telemetry-sm text-[11px] text-secondary truncate">s.lin@reg-observer.org</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[11px] font-semibold bg-surface-dim text-on-surface whitespace-nowrap">
+                    Read-Only GxP Auditor
+                  </span>
+</td>
+<td class="py-3 px-3 text-secondary font-label-md text-label-md">
+                  FDA District Office / Remote
+                </td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-telemetry-sm text-[11px] bg-surface-dim text-secondary font-medium whitespace-nowrap">
+<span class="material-symbols-outlined text-[13px]">block</span> No Sign Authority
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1 font-telemetry-sm text-[11px] text-secondary">
+<span class="material-symbols-outlined text-sm text-primary">badge</span>
+<span>PIV / CAC Smartcard</span>
+</div>
+</td>
+<td class="py-3 px-3 font-telemetry-sm text-telemetry-sm text-secondary whitespace-nowrap">
+                  2h ago
+                </td>
+<td class="py-3 px-3 text-right">
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 (Devonte Vance) -->
+<tr class="hover:bg-surface-container-low/70 cursor-pointer transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed/40 flex items-center justify-center text-on-tertiary-fixed-variant font-title-md text-title-md font-bold shrink-0">
+                      DV
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Devonte Vance</span>
+<span class="font-telemetry-sm text-[11px] text-secondary truncate">d.vance@contract-fleet.com</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[11px] font-semibold bg-tertiary-fixed/30 text-tertiary whitespace-nowrap">
+                    Field Driver &amp; In-Cab Mobile
+                  </span>
+</td>
+<td class="py-3 px-3 text-secondary font-label-md text-label-md">
+                  Vehicle #NX-8940 / Unit #12
+                </td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-telemetry-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed font-medium whitespace-nowrap">
+<span class="material-symbols-outlined text-[13px]">lock</span> Custody Seal Only
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1 font-telemetry-sm text-[11px] text-secondary">
+<span class="material-symbols-outlined text-sm text-tertiary">fingerprint</span>
+<span>Mobile Biometric TouchID</span>
+</div>
+</td>
+<td class="py-3 px-3 font-telemetry-sm text-telemetry-sm text-secondary whitespace-nowrap">
+                  1m ago
+                </td>
+<td class="py-3 px-3 text-right">
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md mt-space-sm bg-surface-container-low/40 px-3 py-2 rounded-lg">
+<span class="font-telemetry-sm text-telemetry-sm text-secondary">
+            Showing <strong class="text-on-surface">1-5</strong> of <strong class="text-on-surface">42</strong> Users
+          </span>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span>Rows per page:</span>
+<select class="bg-surface-container-lowest rounded px-1.5 py-0.5 text-on-surface font-telemetry-sm text-xs focus:outline-none">
+<option>5</option>
+<option>10</option>
+<option>25</option>
+</select>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-secondary disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+<span class="font-telemetry-sm text-xs px-2 py-0.5 rounded bg-primary-container text-on-primary font-medium">1</span>
+<button class="font-telemetry-sm text-xs px-2 py-0.5 rounded hover:bg-surface-container text-secondary">2</button>
+<button class="font-telemetry-sm text-xs px-2 py-0.5 rounded hover:bg-surface-container text-secondary">3</button>
+<span class="font-telemetry-sm text-xs text-secondary">...</span>
+<button class="font-telemetry-sm text-xs px-2 py-0.5 rounded hover:bg-surface-container text-secondary">9</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Role Permission Matrix Preview Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">tune</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Security Scope &amp; Role Permission Matrix Preview</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Immutable GxP Baseline v4.12</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm"><thead><tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase"><th class="py-2.5 px-3 rounded-l-lg">Permission Scope</th><th class="py-2.5 px-3">Lead Dispatch</th><th class="py-2.5 px-3">QA Officer</th><th class="py-2.5 px-3 bg-tertiary-fixed/20 text-tertiary font-bold">Thermal Triage (Custom)</th><th class="py-2.5 px-3">Dispatcher</th><th class="py-2.5 px-3">Field Driver</th><th class="py-2.5 px-3 rounded-r-lg">GxP Auditor</th></tr></thead><tbody class="divide-y-0"><tr class="hover:bg-surface-container-low/40"><td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">Telemetry &amp; Reefer Overrides</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-primary-fixed text-on-primary-fixed-variant font-medium">Write + 2FA</span></td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-tertiary-fixed/30 text-tertiary font-medium">Approve</span></td><td class="py-2.5 px-3 bg-tertiary-fixed/10"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-primary-fixed text-primary font-semibold">Write + FIDO2</span></td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Request only</td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">In-Cab Reset</td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Read Only</td></tr><tr class="hover:bg-surface-container-low/40"><td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">21 CFR Part 11 Electronic Signing</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-tertiary-fixed/30 text-tertiary font-medium">Authorized</span></td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-tertiary-fixed/30 text-tertiary font-medium">Primary Signer</span></td><td class="py-2.5 px-3 bg-tertiary-fixed/10"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-tertiary-fixed/30 text-tertiary font-medium">Primary Signer</span></td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Witness Only</td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Custody Seal</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-surface-dim text-secondary">None</span></td></tr><tr class="hover:bg-surface-container-low/40"><td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">Master Freight Tariffs &amp; Billing</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-primary-fixed text-on-primary-fixed-variant font-medium">Write</span></td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Read Only</td><td class="py-2.5 px-3 bg-tertiary-fixed/10"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-secondary-fixed text-on-secondary-fixed">Read Only</span></td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Read Only</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-surface-dim text-secondary">Restricted</span></td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Audit Read</td></tr><tr class="hover:bg-surface-container-low/40"><td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">Client Portal &amp; Telematics Sharing</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-primary-fixed text-on-primary-fixed-variant font-medium">Full Share</span></td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-primary-fixed text-on-primary-fixed-variant font-medium">Full Share</span></td><td class="py-2.5 px-3 bg-tertiary-fixed/10"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-primary-fixed text-on-primary-fixed-variant font-medium">Authorized</span></td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Read Only</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-surface-dim text-secondary">Restricted</span></td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Export Only</td></tr><tr class="hover:bg-surface-container-low/40"><td class="py-2.5 px-3 font-title-md text-title-md text-on-surface">Scoped Facility Depots</td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">All Hubs</td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Global HQ</td><td class="py-2.5 px-3 bg-tertiary-fixed/10 font-telemetry-sm text-[11px] text-tertiary font-semibold">3 Depots</td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Regional</td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Route Cab</td><td class="py-2.5 px-3 text-secondary font-telemetry-sm text-[11px]">Audit Scopes</td></tr></tbody></table>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Inspector Drawer (Marcus Chen) -->
+<div class="xl:col-span-4 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-lg"><div class="flex items-start justify-between pb-space-sm bg-surface-container-low/30 p-space-sm rounded-lg"><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm text-on-surface">Role Provisioning Record</span><span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] font-semibold bg-tertiary-fixed/30 text-tertiary">Ledger Committed</span></div><span class="font-label-sm text-label-sm text-secondary">Senior Thermal Triage Lead [Tier 2+]</span></div><button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-on-surface"><span class="material-symbols-outlined text-base">close</span></button></div><div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-1.5"><div class="flex items-center justify-between"><span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold">Provisioning Summary</span><span class="font-telemetry-sm text-[10px] bg-tertiary-fixed/30 text-tertiary px-1.5 py-0.2 rounded font-bold">CREATED JUST NOW</span></div><span class="font-title-md text-title-md text-on-surface">ROLE_DISPATCH_THERMAL_TRIAGE_L2</span><div class="flex items-center gap-1 font-telemetry-sm text-xs text-secondary"><span class="material-symbols-outlined text-xs text-tertiary">verified</span><span>SHA-256: e8c4...8941f • Dual Signed by QA</span></div><span class="font-label-sm text-[11px] text-primary font-medium">Target Sync: Okta Universal Directory + AWS IAM</span></div><div class="flex flex-col gap-space-xs"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Configured Role Privileges</span><span class="font-telemetry-sm text-xs text-tertiary font-medium">5 Active / 0 Locked</span></div><div class="space-y-1.5 font-body-sm text-body-sm"><div class="flex items-start gap-2 p-2 rounded-lg bg-surface-container-low/60"><span class="material-symbols-outlined text-tertiary text-base shrink-0 mt-0.5">check_circle</span><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface">Remote Reefer Override</span><span class="font-label-sm text-xs text-secondary">Biometric FIDO2 re-auth prompt enabled</span></div></div><div class="flex items-start gap-2 p-2 rounded-lg bg-surface-container-low/60"><span class="material-symbols-outlined text-tertiary text-base shrink-0 mt-0.5">check_circle</span><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface">Fast Reroute Dispatch Authority</span><span class="font-label-sm text-xs text-secondary">Instant bypass on temperature excursions &gt; 15m</span></div></div><div class="flex items-start gap-2 p-2 rounded-lg bg-surface-container-low/60"><span class="material-symbols-outlined text-tertiary text-base shrink-0 mt-0.5">check_circle</span><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface">21 CFR Part 11 CoC Signing</span><span class="font-label-sm text-xs text-secondary">Primary signing capacity on cold manifests</span></div></div><div class="flex items-start gap-2 p-2 rounded-lg bg-surface-container-low/60"><span class="material-symbols-outlined text-tertiary text-base shrink-0 mt-0.5">check_circle</span><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface">Customer QA Telematics Sharing</span><span class="font-label-sm text-xs text-secondary">Direct real-time link sharing with consignees</span></div></div></div></div><div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded-xl"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-base">fingerprint</span><span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Cryptographic Ledger</span></div><span class="px-1.5 py-0.2 rounded text-[10px] font-telemetry-sm bg-tertiary-fixed/30 text-tertiary font-bold">Recorded</span></div><div class="flex flex-col gap-1 text-xs font-telemetry-sm text-secondary mb-1"><span>Provisioner: <strong class="text-on-surface font-title-md">Marcus Chen (Lead Dispatch)</strong></span><span>QA Approver: <strong class="text-on-surface font-title-md">Dr. Aris Thorne (QA Officer)</strong></span><span>Audit Hash: <span class="text-primary font-telemetry-sm">#AT-8941-FINAL</span></span></div></div><div class="flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Immediate Next Actions</span><div class="space-y-2 text-xs"><div class="flex items-start gap-2 bg-surface-container-low/40 p-2 rounded-lg"><span class="material-symbols-outlined text-sm text-primary shrink-0 mt-0.5">group_add</span><div class="flex flex-col"><span class="font-title-md text-title-md text-xs text-on-surface">Assign Dispatch Personnel</span><span class="font-label-sm text-[11px] text-secondary">Select users from Boston or NJ Hub to assume role</span></div></div><div class="flex items-start gap-2 bg-surface-container-low/40 p-2 rounded-lg"><span class="material-symbols-outlined text-sm text-tertiary shrink-0 mt-0.5">sync</span><div class="flex flex-col"><span class="font-title-md text-title-md text-xs text-on-surface">Okta SCIM Sync Queued</span><span class="font-label-sm text-[11px] text-secondary">Auto-push scheduled in 3m 45s</span></div></div></div></div><div class="flex items-center gap-space-sm pt-space-xs mt-auto"><button class="flex-1 h-9 px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-title-md transition-colors flex items-center justify-center gap-1"><span class="material-symbols-outlined text-base text-secondary">print</span><span>Export Audit Cert</span></button><button class="flex-1 h-9 px-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md transition-colors shadow-sm flex items-center justify-center gap-1"><span class="material-symbols-outlined text-base">person_add</span><span>Assign Users</span></button></div></div>
+</div>
+</div></main></div></body></html>

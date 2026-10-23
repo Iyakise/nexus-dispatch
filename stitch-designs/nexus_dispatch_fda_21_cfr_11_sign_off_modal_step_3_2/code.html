@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  "darkMode": "class",
+  "theme": {
+    "extend": {
+      "colors": {
+        "surface-container-high": "#dce9ff",
+        "on-error": "#ffffff",
+        "surface-dim": "#cbdbf5",
+        "on-surface-variant": "#464555",
+        "surface-container": "#e5eeff",
+        "primary-fixed": "#e2dfff",
+        "on-tertiary-fixed": "#002113",
+        "primary-fixed-dim": "#c3c0ff",
+        "surface-tint": "#4d44e3",
+        "on-secondary": "#ffffff",
+        "on-primary-container": "#dad7ff",
+        "primary": "#3525cd",
+        "error": "#ba1a1a",
+        "outline": "#777587",
+        "on-secondary-fixed": "#131b2e",
+        "tertiary-fixed": "#6ffbbe",
+        "on-tertiary-fixed-variant": "#005236",
+        "on-secondary-container": "#5c647a",
+        "tertiary-fixed-dim": "#4edea3",
+        "on-background": "#0b1c30",
+        "background": "#f8f9ff",
+        "on-tertiary": "#ffffff",
+        "surface-container-low": "#eff4ff",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#3f465c",
+        "inverse-primary": "#c3c0ff",
+        "surface-container-highest": "#d3e4fe",
+        "on-tertiary-container": "#67f4b7",
+        "surface": "#f8f9ff",
+        "secondary-fixed-dim": "#bec6e0",
+        "surface-bright": "#f8f9ff",
+        "inverse-surface": "#213145",
+        "surface-variant": "#d3e4fe",
+        "primary-container": "#4f46e5",
+        "secondary-container": "#dae2fd",
+        "on-primary-fixed-variant": "#3323cc",
+        "on-primary-fixed": "#0f0069",
+        "secondary-fixed": "#dae2fd",
+        "on-surface": "#0b1c30",
+        "secondary": "#565e74",
+        "tertiary-container": "#006e4b",
+        "on-primary": "#ffffff",
+        "on-error-container": "#93000a",
+        "tertiary": "#005338",
+        "outline-variant": "#c7c4d8",
+        "surface-container-lowest": "#ffffff",
+        "inverse-on-surface": "#eaf1ff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-lg": "1rem",
+        "margin": "1.5rem",
+        "space-sm": "0.5rem",
+        "space-xs": "0.25rem",
+        "gutter-lg": "1.5rem",
+        "margin-sm": "1rem",
+        "gutter": "1rem",
+        "space-md": "0.75rem",
+        "gutter-sm": "0.5rem",
+        "margin-lg": "2rem",
+        "space-xl": "1.5rem"
+      },
+      "fontFamily": {
+        "headline-lg-mobile": [
+          "IBM Plex Sans"
+        ],
+        "label-sm": [
+          "IBM Plex Sans"
+        ],
+        "headline-md": [
+          "IBM Plex Sans"
+        ],
+        "headline-lg": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-lg": [
+          "JetBrains Mono"
+        ],
+        "label-md": [
+          "IBM Plex Sans"
+        ],
+        "body-sm": [
+          "IBM Plex Sans"
+        ],
+        "body-lg": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-sm": [
+          "JetBrains Mono"
+        ],
+        "title-md": [
+          "IBM Plex Sans"
+        ],
+        "body-md": [
+          "IBM Plex Sans"
+        ],
+        "telemetry-md": [
+          "JetBrains Mono"
+        ],
+        "display-lg": [
+          "IBM Plex Sans"
+        ],
+        "headline-sm": [
+          "IBM Plex Sans"
+        ]
+      },
+      "fontSize": {
+        "headline-lg-mobile": [
+          "22px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "label-sm": [
+          "11px",
+          {
+            "lineHeight": "14px",
+            "letterSpacing": "0.04em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-md": [
+          "20px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-lg": [
+          "28px",
+          {
+            "lineHeight": "36px",
+            "letterSpacing": "-0.015em",
+            "fontWeight": "600"
+          }
+        ],
+        "telemetry-lg": [
+          "24px",
+          {
+            "lineHeight": "32px",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "500"
+          }
+        ],
+        "label-md": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "letterSpacing": "0.02em",
+            "fontWeight": "500"
+          }
+        ],
+        "body-sm": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "400"
+          }
+        ],
+        "body-lg": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        ],
+        "telemetry-sm": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "400"
+          }
+        ],
+        "title-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "600"
+          }
+        ],
+        "body-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "400"
+          }
+        ],
+        "telemetry-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        ],
+        "display-lg": [
+          "36px",
+          {
+            "lineHeight": "44px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-sm": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "600"
+          }
+        ]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 h-14 bg-inverse-surface border-b border-secondary/30 flex items-center justify-between px-margin select-none"><div class="flex items-center gap-space-md"><img alt="Nexus Dispatch Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Udw6rXgFOs0ubB2-XHArhHip8K4eCz4rj_mJ0q4L6_a_Mbxh-t16V7ti2yjiJmiA95cuTuSpXhAogOP9zg75PWce9yR_RGlUuUQIC8cu02CpSNewBXwL7fgUMgXQ_Yr4MHATr3lzDkBxg9IWhZLlIUhTR74d-Po4WH6o5fMamenJZb41RdWFub5EKT0m8T2kYWsoTh_WG9aRqmdDzKY5A_MkSkaidj0XzdsYN_QR4HYolph3k6KV0SzMk"/><span class="font-headline-sm text-headline-sm text-inverse-on-surface tracking-tight">Nexus Dispatch</span><div class="h-4 w-px bg-secondary/40 mx-space-xs"></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface/10 hover:bg-surface/15 transition-colors cursor-pointer"><span class="font-title-md text-title-md text-inverse-on-surface">Acme Cold-Chain Logistics</span><span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-primary/30 text-primary-fixed">Enterprise</span><span class="material-symbols-outlined text-inverse-on-surface text-base">expand_more</span></div></div><div class="flex-1 max-w-xl mx-margin"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-lg pointer-events-none">search</span><input class="w-full h-9 pl-9 pr-24 bg-surface/10 rounded-lg text-body-sm font-body-sm text-inverse-on-surface placeholder:text-secondary focus:outline-none focus:ring-1 focus:ring-primary border border-secondary/20" placeholder="Search shipment ID, driver, destination..." type="text"/><div class="absolute right-2 px-1.5 py-0.5 rounded bg-surface/10 border border-secondary/30 text-[11px] font-telemetry-sm text-secondary pointer-events-none">Cmd + K</div></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-tertiary/20 border border-tertiary/40"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span><span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed">All Systems Operational • 18ms</span></div><button class="relative p-1.5 text-secondary hover:text-inverse-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-error px-1 text-[10px] font-bold text-on-error">3 Excursions</span></button><div class="h-4 w-px bg-secondary/40"></div><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-secondary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2IOnzpxINF_8DTTWEYW2Eg_Bpzknmu0mFW-6UJ3GZxEIct6FkR_SveEOd9TcNvAfIUR5JJOiV1ObsyaH2j7tS_Pdb5SUAPLWNS-38d6urb1Y5viozxv1nDWlFC5wrnnVeSI3pNI_UOT_pq7Xpm_joskNFjqQHhBHFljSLnE6yVtdF0O1KQtj8OOEnmUby-t_3CfiB2MCXGLElfK-G_ZnJyGRM1YgEP4ZlG7mNR1yWlTU5zYKmqyKz"/><div class="flex flex-col text-left"><span class="font-title-md text-title-md text-inverse-on-surface leading-none">Marcus Chen</span><span class="font-label-sm text-label-sm text-secondary leading-none mt-1">Lead Dispatcher</span></div><span class="material-symbols-outlined text-secondary text-base">arrow_drop_down</span></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-64 bg-inverse-surface border-r border-secondary/20 flex flex-col justify-between z-40"><div class="p-space-md flex-1 overflow-y-auto"><div class="px-space-sm py-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Operations</span></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm ring-1 ring-primary/50"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="cold-chain-dashboard" href="#"><div class="flex items-center gap-space-sm"><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="live-fleet-map" href="#"><div class="flex items-center gap-space-sm"><span>Live Fleet Map</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="active-shipments" href="#"><div class="flex items-center gap-space-sm"><span>Active Shipments</span></div><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-telemetry-sm bg-surface/15 text-inverse-on-surface">88</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="cold-chain-alerts" href="#"><div class="flex items-center gap-space-sm"><span>Cold-Chain Alerts</span></div><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-telemetry-sm bg-error text-on-error font-bold">3</span></a></nav><div class="px-space-sm py-space-xs mt-space-lg mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Administration</span></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm ring-1 ring-primary/50"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="client-portals" href="#"><div class="flex items-center gap-space-sm"><span>Client Portals</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="billing-tariffs" href="#"><div class="flex items-center gap-space-sm"><span>Billing &amp; Tariffs</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface/10 hover:text-inverse-on-surface transition-colors font-title-md text-title-md" data-path="system-settings" href="#"><div class="flex items-center gap-space-sm"><span>System Settings</span></div></a></nav></div><div class="p-space-md border-t border-secondary/20 bg-inverse-surface/80 flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface/5 border border-secondary/20"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-base text-tertiary-fixed-dim">verified_user</span><span class="font-telemetry-sm text-telemetry-sm text-inverse-on-surface font-medium">FDA 21 CFR Part 11</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span></div><button class="flex items-center justify-between w-full px-space-sm py-1.5 rounded-lg text-secondary hover:text-inverse-on-surface hover:bg-surface/10 transition-colors"><span class="font-label-md text-label-md font-medium">Collapse Sidebar</span><span class="material-symbols-outlined text-lg">chevron_left</span></button></div></aside><div class="pl-64"><main class="pt-14 w-full px-margin bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Modal Wrapper with Glassmorphic Scrim Backdrop -->
+<div class="relative w-full flex items-center justify-center py-space-sm sm:py-space-md">
+<!-- Ambient Glow Element behind Modal for Depth -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Main Modal Dialog Container (Strictly Borderless, Layered Elevation) -->
+<div class="relative w-full max-w-[820px] bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden flex flex-col">
+<!-- Modal Header -->
+<div class="px-space-xl pt-space-lg pb-space-md bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">FDA 21 CFR §11 Sign-Off &amp; Cryptographic Authority</h1>
+<span class="px-2 py-0.5 rounded-full font-telemetry-sm text-telemetry-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+                  Regulatory Enforced • GxP Level 3
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                Configure digital signature cryptography, hardware FIDO2 / WebAuthn biometric re-authentication intervals, dual-signoff policies, and non-repudiation audit trails.
+              </p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high text-secondary hover:text-on-surface hover:bg-surface-container-highest transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- 4-Step Stepper Navigation Bar -->
+<div class="grid grid-cols-4 gap-space-xs mt-space-md pt-space-sm bg-surface-container rounded-lg p-1.5">
+<!-- Step 1: Completed -->
+<button class="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md bg-tertiary/15 text-tertiary font-title-md text-label-md transition-all">
+<span class="w-4 h-4 rounded-full bg-tertiary text-on-tertiary text-[10px] flex items-center justify-center font-telemetry-sm">✓</span>
+<span class="truncate">1. Basics &amp; Identity</span>
+</button>
+<!-- Step 2: Completed -->
+<button class="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md bg-tertiary/15 text-tertiary font-title-md text-label-md transition-all">
+<span class="w-4 h-4 rounded-full bg-tertiary text-on-tertiary text-[10px] flex items-center justify-center font-telemetry-sm">✓</span>
+<span class="truncate">2. Telematics &amp; Reefers</span>
+</button>
+<!-- Step 3: Active State -->
+<button class="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md bg-primary-container text-on-primary font-title-md text-label-md shadow-md">
+<span class="w-4 h-4 rounded-full bg-on-primary text-primary text-[10px] flex items-center justify-center font-telemetry-sm font-semibold">3</span>
+<span class="truncate font-semibold">3. §11 Digital Sign-Off</span>
+</button>
+<!-- Step 4: Upcoming -->
+<div class="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md bg-surface-container text-secondary opacity-60 font-title-md text-label-md">
+<span class="w-4 h-4 rounded-full bg-secondary/30 text-on-surface text-[10px] flex items-center justify-center font-telemetry-sm">4</span>
+<span class="truncate">4. Depot Scopes</span>
+</div>
+</div>
+</div>
+<!-- Modal Body (High Density Multi-Pane Configuration) -->
+<div class="px-space-xl py-space-lg space-y-space-lg max-h-[calc(88vh-220px)] overflow-y-auto bg-surface-container-lowest">
+<!-- Section 1: Cryptographic Key & Hashing Architecture -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-lg">vpn_key</span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Cryptographic Key &amp; Hashing Architecture</h2>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-surface-container-high text-primary font-medium">
+              FIPS 140-2 Validated
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Algorithm Selector -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">
+                Digital Signing Key Algorithm
+              </label>
+<div class="relative">
+<select class="w-full h-9 px-3 pr-8 bg-surface-container-lowest text-on-surface text-body-sm font-title-md rounded-lg shadow-sm focus:outline-none cursor-pointer appearance-none">
+<option selected="">NIST P-384 with SHA-384 HMAC (Class II/III Biologics)</option>
+<option>RSA 4096-bit SHA-512 (Extended Legacy Validation)</option>
+<option>Ed25519 High-Throughput Batch (CAN-Bus Direct)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2 text-secondary pointer-events-none text-base">expand_more</span>
+</div>
+<span class="font-label-sm text-[11px] text-secondary">Compliant with US Pharmacopeia USP &lt;1079&gt; standard.</span>
+</div>
+<!-- Hardware Security Module Binding -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">
+                Hardware Security Module (HSM) Binding
+              </label>
+<div class="h-9 px-3 bg-surface-container text-on-surface text-body-sm font-telemetry-sm rounded-lg flex items-center justify-between">
+<span class="truncate text-xs">Cloud KMS Tier 3 (Partition HSM-US-EAST-01)</span>
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse shrink-0"></span>
+</div>
+<span class="font-label-sm text-[11px] text-tertiary font-medium">Verified Active • Latency 14ms to Key Vault</span>
+</div>
+</div>
+<!-- Ephemeral Rotation -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">
+              Ephemeral Key Rotation Schedule
+            </label>
+<div class="grid grid-cols-3 gap-space-sm">
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-lowest cursor-pointer shadow-sm hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="rotation" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-md text-xs text-on-surface">30 Days</span>
+<span class="font-label-sm text-[10px] text-secondary">Ultra-Strict Bio-Defense</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-high cursor-pointer shadow-sm">
+<input checked="" class="accent-primary w-4 h-4" name="rotation" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-md text-xs text-primary font-semibold">60 Days (GxP Standard)</span>
+<span class="font-label-sm text-[10px] text-secondary">Standard Pharma Chain</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-lowest cursor-pointer shadow-sm hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="rotation" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-md text-xs text-on-surface">90 Days</span>
+<span class="font-label-sm text-[10px] text-secondary">Requires Semi-Annual QA Sign</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Dynamic Cryptographic Stamp Watermark Preview -->
+<div class="p-space-sm rounded-lg bg-inverse-surface text-inverse-on-surface font-telemetry-sm text-xs flex flex-col gap-1 shadow-inner">
+<div class="flex items-center justify-between text-[11px] text-secondary-fixed">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary-fixed">verified</span>
+                Live Audit Watermark Signature Stamp Preview
+              </span>
+<span class="font-mono text-[10px] text-tertiary-fixed font-semibold">SHA-384/P-384</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/5 rounded text-[11px] font-mono leading-relaxed break-all select-all text-tertiary-fixed-dim">
+              SIG: 9e4f2b80a1c77f014e389d42cba50089ff42e176b5...8a1c | NIST FIPS 180-4 | UTC Synchronized GPS Time: 2024-10-24T18:42:19.412Z (±2ms) | Bound User: ROLE_DISPATCH_THERMAL_TRIAGE_L2
+            </div>
+</div>
+</div>
+<!-- Section 2: Biometric & Hardware Token Re-Authentication (FIDO2 / WebAuthn) -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-lg">fingerprint</span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Biometric &amp; Hardware Token Re-Authentication</h2>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-tertiary-fixed/30 text-tertiary font-semibold">
+              WebAuthn / FIDO2 Enforced
+            </span>
+</div>
+<div class="p- space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between p-2.5">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-md bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">token</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">Primary Re-Auth Hardware Security Key</span>
+<span class="font-label-sm text-[11px] text-secondary">YubiKey 5 FIPS Series / Apple TouchID / Windows Hello Enterprise bound</span>
+</div>
+</div>
+<span class="font-telemetry-sm text-xs font-semibold text-tertiary bg-tertiary-fixed/20 px-2 py-1 rounded">Hardware Token Paired</span>
+</div>
+<!-- Interactive Threshold Toggles -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-xs font-semibold text-on-surface">Force Biometric Prompt on Every Thermal Setpoint Override</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-telemetry-sm bg-error-container text-on-error-container font-semibold">Enforced</span>
+</div>
+<span class="font-label-sm text-[11px] text-secondary">Dispatcher must touch biometric key for any reefer temperature setpoint delta exceeding ±0.5°C</span>
+</div>
+<div class="w-10 h-5 bg-primary-container rounded-full relative cursor-pointer shrink-0">
+<div class="w-4 h-4 bg-on-primary rounded-full absolute right-0.5 top-0.5 shadow-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-xs font-semibold text-on-surface">Emergency Route Diversion Authorization</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-telemetry-sm bg-error-container text-on-error-container font-semibold">Enforced</span>
+</div>
+<span class="font-label-sm text-[11px] text-secondary">Mandatory biometric verification when waypoint deviation adds greater than 15 minutes to sensitive ETA</span>
+</div>
+<div class="w-10 h-5 bg-primary-container rounded-full relative cursor-pointer shrink-0">
+<div class="w-4 h-4 bg-on-primary rounded-full absolute right-0.5 top-0.5 shadow-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex flex-col">
+<span class="font-title-md text-xs font-semibold text-on-surface">Manual Excursion Closure &amp; Sign-Off</span>
+<span class="font-label-sm text-[11px] text-secondary">Requires cryptographic signature before clearing temperature alarm flags from telemetry queue</span>
+</div>
+<div class="w-10 h-5 bg-primary-container rounded-full relative cursor-pointer shrink-0">
+<div class="w-4 h-4 bg-on-primary rounded-full absolute right-0.5 top-0.5 shadow-sm"></div>
+</div>
+</div>
+</div>
+<!-- Inactivity Revocation Range Control -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between gap-space-md">
+<div class="flex flex-col max-w-md">
+<span class="font-title-md text-xs font-semibold text-on-surface">Inactivity Signature Auto-Revocation Window</span>
+<span class="font-label-sm text-[11px] text-secondary">Dispatch console locks digital signing privileges if left untouched. 180 seconds recommended for shared command floors.</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-telemetry-md text-body-sm font-semibold text-primary px-2.5 py-1 bg-surface-container-high rounded-md">180s (3m)</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Dual-Signoff & QA Countersignature Matrix -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-lg">supervisor_account</span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Dual-Signoff &amp; QA Countersignature Matrix</h2>
+</div>
+<span class="font-telemetry-sm text-[11px] text-secondary">21 CFR §11.50 Timestamped</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Matrix Row 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="p-1 rounded bg-error-container text-on-error-container mt-0.5">
+<span class="material-symbols-outlined text-base">emergency</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-xs text-on-surface font-semibold">Thermal Excursion Duration &gt; 15 Minutes</span>
+<span class="font-label-sm text-[11px] text-secondary">Required QA Signer: <strong class="text-on-surface">Dr. Aris Thorne</strong> (Designated QA Officer)</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-error/15 text-error font-semibold whitespace-nowrap">Mandatory Dual-Sign</span>
+</div>
+<!-- Matrix Row 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="p-1 rounded bg-surface-container-high text-primary mt-0.5">
+<span class="material-symbols-outlined text-base">mode_fan</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-xs text-on-surface font-semibold">Manual Compressor Shutdown / Turbo-Cool Cycle Override</span>
+<span class="font-label-sm text-[11px] text-secondary">Required QA Signer: <strong class="text-on-surface">Fleet Maintenance Engineering Supervisor</strong></span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-surface-container-high text-primary font-semibold whitespace-nowrap">Secondary Signoff</span>
+</div>
+<!-- Matrix Row 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="p-1 rounded bg-tertiary-fixed text-on-tertiary-fixed mt-0.5">
+<span class="material-symbols-outlined text-base">ac_unit</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-xs text-on-surface font-semibold">Cryogenic LN2 Vapor Phase Seal Breach Protocol</span>
+<span class="font-label-sm text-[11px] text-secondary">Required QA Signer: <strong class="text-on-surface">Global Bio-Pharma Safety Director</strong></span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-telemetry-sm bg-tertiary/20 text-tertiary font-bold whitespace-nowrap">Dual Critical Sign</span>
+</div>
+</div>
+<!-- Warning Policy Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-base">lock</span>
+<div class="flex flex-col">
+<span class="font-title-md text-xs text-on-surface font-semibold">Allow Emergency Bypass with Escrowed SecOps Key</span>
+<span class="font-label-sm text-[11px] text-secondary">Restricted by Acme Cold-Chain Global Tenant Policy #SEC-2024-99</span>
+</div>
+</div>
+<div class="w-10 h-5 bg-surface-dim rounded-full relative cursor-not-allowed opacity-60 shrink-0">
+<div class="w-4 h-4 bg-on-primary rounded-full absolute left-0.5 top-0.5 shadow-sm"></div>
+</div>
+</div>
+</div>
+<!-- Section 4: Legal Non-Repudiation & Attestation Statement -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs">
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<input checked="" class="accent-primary w-4 h-4 mt-0.5 shrink-0 rounded" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-title-md text-xs font-semibold text-on-surface">
+                Legal Equivalence Attestation &amp; Non-Repudiation Acknowledgement
+              </span>
+<p class="font-body-sm text-[12px] text-secondary leading-snug mt-0.5">
+                I certify under penalty of regulatory sanction that all digital signatures executed through this provisioned authority profile represent legally binding equivalents of handwritten signatures pursuant to FDA 21 CFR §11.100 and EU Annex 11 guidelines.
+              </p>
+</div>
+</label>
+<div class="mt-space-xs pt-space-xs flex items-center justify-between text-[11px] font-telemetry-sm text-secondary">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">inventory_2</span>
+<span>SHA-256 Ledger Pre-Allocation:</span>
+<span class="font-mono text-on-surface font-semibold">4c91a0f8...df78</span>
+</div>
+<span class="text-tertiary font-semibold">Recorded to GxP Immutable Ledger</span>
+</div>
+</div>
+</div>
+<!-- Modal Footer Action Bar -->
+<div class="px-space-xl py-space-md bg-surface-container-low flex items-center justify-between">
+<!-- Back Action -->
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span>Back to Step 2: Telematics</span>
+</button>
+<!-- Forward & Save Actions -->
+<div class="flex items-center gap-space-sm">
+<button class="h-9 px-space-md rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container-high font-title-md text-title-md transition-colors">
+            Cancel
+          </button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-colors shadow-sm">
+            Save Step Draft
+          </button>
+<button class="h-9 px-space-lg rounded-lg bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md shadow-md transition-all flex items-center gap-1.5">
+<span>Continue to Step 4: Depot Scopes</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div><div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/60 backdrop-blur-sm overflow-y-auto" id="create-role-modal"><div class="relative w-full max-w-4xl max-h-[942px] flex flex-col bg-surface-container-lowest rounded-xl shadow-2xl border border-secondary/20 overflow-hidden my-auto"><div class="flex items-start justify-between px-space-lg py-space-md border-b border-secondary/20 bg-surface-container-low"><div class="flex flex-col gap-1"><div class="flex items-center gap-space-sm"><div class="p-1.5 rounded-lg bg-primary-container text-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-xl">security</span></div><h2 class="font-headline-sm text-headline-sm text-on-surface">Provision Custom GxP Role &amp; Authority Profile</h2><span class="px-2 py-0.5 rounded-full font-telemetry-sm text-[11px] bg-tertiary-fixed/30 text-tertiary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">verified</span> GxP Validated</span></div><p class="font-body-sm text-body-sm text-secondary">Configure role scope, FDA 21 CFR Part 11 signing privileges, multi-factor re-auth constraints, and facility depot access.</p></div><button class="p-1.5 rounded-lg hover:bg-surface-container text-secondary hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-xl">close</span></button></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-lg py-2 border-b border-secondary/20 overflow-x-auto text-xs font-title-md"><button class="h-8 px-3 rounded-lg bg-surface-container-lowest text-primary font-semibold shadow-sm whitespace-nowrap flex items-center gap-1.5 border border-primary/20"><span class="w-4 h-4 rounded-full bg-primary-container text-on-primary text-[10px] flex items-center justify-center font-telemetry-sm">1</span><span>Role Basics &amp; Identity</span></button><button class="h-8 px-3 rounded-lg text-primary hover:bg-surface-container-lowest/60 transition-colors whitespace-nowrap flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-primary/20 text-primary text-[10px] flex items-center justify-center font-telemetry-sm">2</span><span>Granular Telematics &amp; Cold-Chain</span></button><button class="h-8 px-3 rounded-lg text-secondary hover:text-on-surface transition-colors whitespace-nowrap flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-secondary/20 text-secondary text-[10px] flex items-center justify-center font-telemetry-sm">3</span><span>FDA 21 CFR §11 Sign-Off</span></button><button class="h-8 px-3 rounded-lg text-secondary hover:text-on-surface transition-colors whitespace-nowrap flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-secondary/20 text-secondary text-[10px] flex items-center justify-center font-telemetry-sm">4</span><span>Depot &amp; Geofence Scopes</span></button></div><div class="p-space-lg overflow-y-auto space-y-space-lg flex-1"><div class="grid grid-cols-1 md:grid-cols-2 gap-space-md p-space-md rounded-xl bg-surface-container-low/40 border border-secondary/20"><div><label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1">Role Name</label><input class="w-full h-9 px-3 bg-surface-container-lowest border border-secondary/30 rounded-lg text-body-sm font-title-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="Senior Thermal Triage Lead [Tier 2+]"/></div><div><label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1">Role Code / Identifier (SCIM Mapping)</label><div class="flex items-center"><input class="w-full h-9 px-3 bg-surface-container-low border border-secondary/20 rounded-lg font-telemetry-sm text-xs text-secondary focus:outline-none" readonly="" type="text" value="ROLE_DISPATCH_THERMAL_TRIAGE_L2"/></div></div><div><label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1">Clone Base Template</label><select class="w-full h-9 px-3 bg-surface-container-lowest border border-secondary/30 rounded-lg text-body-sm text-on-surface focus:outline-none cursor-pointer"><option>Lead Dispatcher [Tier 2] (Recommended)</option><option>Quality &amp; Compliance Officer [Tier 1]</option><option>Standard Dispatcher [Tier 3]</option><option>Custom Scratch Profile</option></select></div><div><label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1">Department / Business Unit</label><select class="w-full h-9 px-3 bg-surface-container-lowest border border-secondary/30 rounded-lg text-body-sm text-on-surface focus:outline-none cursor-pointer"><option>Cold-Chain Operations &amp; Clinical Trials</option><option>Global QA &amp; Regulatory Compliance</option><option>In-Cab Fleet Logistics</option><option>Third-Party Audit Observers</option></select></div></div><div class="space-y-space-md"><div class="flex items-center justify-between pb-1 border-b border-secondary/20"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">thermostat</span><span class="font-title-md text-title-md text-on-surface font-semibold">Telematics &amp; Reefer Controls</span></div><span class="font-telemetry-sm text-[11px] text-tertiary bg-tertiary-fixed/20 px-2 py-0.5 rounded">4 Activated</span></div><div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm"><div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low border border-secondary/15"><div class="flex flex-col pr-2"><span class="font-title-md text-title-md text-on-surface text-xs font-semibold">Remote Reefer Setpoint Override</span><span class="font-label-sm text-[11px] text-secondary">Requires FIDO2 PIN &amp; active geofence prompt</span></div><div class="w-8 h-4 bg-primary-container rounded-full relative cursor-pointer shrink-0 mt-1"><div class="w-3.5 h-3.5 bg-on-primary rounded-full absolute right-0.5 top-0.25 shadow-sm"></div></div></div><div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low border border-secondary/15"><div class="flex flex-col pr-2"><span class="font-title-md text-title-md text-on-surface text-xs font-semibold">Emergency Fast-Reroute Authorization</span><span class="font-label-sm text-[11px] text-secondary">Dual-Auth required for transit deviation &gt; 25mi</span></div><div class="w-8 h-4 bg-primary-container rounded-full relative cursor-pointer shrink-0 mt-1"><div class="w-3.5 h-3.5 bg-on-primary rounded-full absolute right-0.5 top-0.25 shadow-sm"></div></div></div><div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low border border-secondary/15"><div class="flex flex-col pr-2"><span class="font-title-md text-title-md text-on-surface text-xs font-semibold">Compressor Cold-Restart / Turbo-Cool</span><span class="font-label-sm text-[11px] text-secondary">Direct CAN-bus command with telemetry log</span></div><div class="w-8 h-4 bg-primary-container rounded-full relative cursor-pointer shrink-0 mt-1"><div class="w-3.5 h-3.5 bg-on-primary rounded-full absolute right-0.5 top-0.25 shadow-sm"></div></div></div><div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low border border-secondary/15"><div class="flex flex-col pr-2"><span class="font-title-md text-title-md text-on-surface text-xs font-semibold">In-Cab Driver Radio Broadcast</span><span class="font-label-sm text-[11px] text-secondary">Urgent voice/haptic alert override in cab</span></div><div class="w-8 h-4 bg-primary-container rounded-full relative cursor-pointer shrink-0 mt-1"><div class="w-3.5 h-3.5 bg-on-primary rounded-full absolute right-0.5 top-0.25 shadow-sm"></div></div></div></div></div><div class="space-y-space-md"><div class="flex items-center justify-between pb-1 border-b border-secondary/20"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">verified_user</span><span class="font-title-md text-title-md text-on-surface font-semibold">GxP Compliance &amp; 21 CFR Part 11</span></div><span class="font-telemetry-sm text-[11px] text-primary bg-primary-fixed px-2 py-0.5 rounded text-on-primary-fixed-variant font-medium">Regulatory Enforced</span></div><div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm"><div class="p-2.5 rounded-lg bg-surface-container-low border border-secondary/15 flex flex-col justify-between gap-2"><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface text-xs font-semibold">Electronic Signature Authority Level</span><span class="font-label-sm text-[11px] text-secondary mb-1.5">Defines binding legal status in audit log</span><select class="w-full h-8 px-2 bg-surface-container-lowest border border-secondary/30 rounded text-xs font-title-md text-on-surface focus:outline-none"><option>Primary Signer (Class II Medical/Biologics)</option><option>Dual-Signer Authorized</option><option>Witness Signer Only</option></select></div></div><div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low border border-secondary/15"><div class="flex flex-col pr-2"><span class="font-title-md text-title-md text-on-surface text-xs font-semibold">Excursion Mitigation Countersignature</span><span class="font-label-sm text-[11px] text-secondary">Mandatory co-sign for thermal variance &gt; 15 min</span></div><div class="w-8 h-4 bg-primary-container rounded-full relative cursor-pointer shrink-0 mt-1"><div class="w-3.5 h-3.5 bg-on-primary rounded-full absolute right-0.5 top-0.25 shadow-sm"></div></div></div><div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low border border-secondary/15"><div class="flex flex-col pr-2"><span class="font-title-md text-title-md text-on-surface text-xs font-semibold">Tamper-Evident CoC Ledger Sealing</span><span class="font-label-sm text-[11px] text-secondary">SHA-256 batch cryptographic seal generator</span></div><div class="w-8 h-4 bg-primary-container rounded-full relative cursor-pointer shrink-0 mt-1"><div class="w-3.5 h-3.5 bg-on-primary rounded-full absolute right-0.5 top-0.25 shadow-sm"></div></div></div><div class="flex items-start justify-between p-2.5 rounded-lg bg-surface-container-low/50 border border-secondary/15 opacity-60"><div class="flex flex-col pr-2"><div class="flex items-center gap-1"><span class="font-title-md text-title-md text-secondary text-xs font-semibold">Audit Log Purge / Export Rights</span><span class="material-symbols-outlined text-xs text-secondary">lock</span></div><span class="font-label-sm text-[11px] text-secondary">Restricted strictly to Tenant Global SecOps Tier</span></div><div class="w-8 h-4 bg-surface-dim rounded-full relative cursor-not-allowed shrink-0 mt-1"><div class="w-3.5 h-3.5 bg-on-primary rounded-full absolute left-0.5 top-0.25 shadow-sm"></div></div></div></div></div><div class="space-y-space-md"><div class="flex items-center justify-between pb-1 border-b border-secondary/20"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">share</span><span class="font-title-md text-title-md text-on-surface font-semibold">Tariffs &amp; Customer Portals</span></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm"><div class="p-2.5 rounded-lg bg-surface-container-low border border-secondary/15"><div class="flex items-center justify-between mb-1"><span class="font-title-md text-xs text-on-surface font-semibold">Freight Tariffs</span><span class="px-1.5 py-0.2 rounded text-[10px] font-telemetry-sm bg-surface-container-high text-secondary">Read Only</span></div><p class="font-label-sm text-[11px] text-secondary">View-only rights for fuel &amp; cryogenic surcharges</p></div><div class="p-2.5 rounded-lg bg-surface-container-low border border-secondary/15"><div class="flex items-center justify-between mb-1"><span class="font-title-md text-xs text-on-surface font-semibold">Portal CoC Sharing</span><span class="px-1.5 py-0.2 rounded text-[10px] font-telemetry-sm bg-tertiary-fixed/30 text-tertiary font-medium">Authorized</span></div><p class="font-label-sm text-[11px] text-secondary">Publish real-time telemetry dossiers to client portals</p></div><div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-secondary/15 opacity-60"><div class="flex items-center justify-between mb-1"><span class="font-title-md text-xs text-secondary font-semibold">Surcharge Override</span><span class="px-1.5 py-0.2 rounded text-[10px] font-telemetry-sm bg-surface-dim text-secondary flex items-center gap-0.5"><span class="material-symbols-outlined text-[10px]">lock</span> Restricted</span></div><p class="font-label-sm text-[11px] text-secondary">Pricing changes restricted to Finance Admins</p></div></div></div><div class="p-space-md rounded-xl bg-tertiary-fixed/10 border border-tertiary/30 flex items-start gap-space-sm"><span class="material-symbols-outlined text-tertiary text-xl shrink-0 mt-0.5">gavel</span><div class="flex flex-col gap-0.5"><div class="flex items-center gap-2"><span class="font-title-md text-title-md text-on-surface font-semibold">Requires Dual-Authorization &amp; Okta SCIM Sync</span><span class="px-1.5 py-0.2 rounded text-[10px] font-telemetry-sm bg-tertiary-fixed/40 text-on-tertiary-fixed-variant font-bold">Pending Signoff</span></div><p class="font-body-sm text-body-sm text-secondary">Submitting this new custom role requires co-signature from a designated QA Compliance Officer (<strong class="text-on-surface">Dr. Aris Thorne</strong>) before activating in Okta SCIM directory. Target SCIM Sync: Automatic propagation to Okta SSO upon approval.</p></div></div></div><div class="flex items-center justify-between px-space-lg py-space-md border-t border-secondary/20 bg-surface-container-low"><div class="flex items-center gap-2 text-xs font-telemetry-sm text-secondary"><span class="material-symbols-outlined text-sm text-tertiary">shield</span><span>21 CFR §11.100 Audit Trail Hash Assigned</span></div><div class="flex items-center gap-space-sm"><button class="h-9 px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container text-secondary hover:text-on-surface font-title-md text-title-md transition-colors border border-secondary/30">Cancel</button><button class="h-9 px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-title-md text-title-md transition-colors border border-secondary/30 shadow-sm">Save as Draft</button><button class="h-9 px-space-md rounded-lg bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md transition-colors shadow-sm flex items-center gap-1.5"><span class="material-symbols-outlined text-base">draw</span><span>Submit for GxP QA Approval &amp; Provision</span></button></div></div></div></div></body></html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-error-container": "#93000a",
+        "tertiary": "#005338",
+        "surface-bright": "#f8f9ff",
+        "outline": "#777587",
+        "on-primary-fixed": "#0f0069",
+        "on-primary": "#ffffff",
+        "secondary-fixed": "#dae2fd",
+        "secondary-fixed-dim": "#bec6e0",
+        "surface-container-high": "#dce9ff",
+        "on-tertiary-container": "#67f4b7",
+        "on-primary-container": "#dad7ff",
+        "background": "#f8f9ff",
+        "outline-variant": "#c7c4d8",
+        "tertiary-container": "#006e4b",
+        "on-surface-variant": "#464555",
+        "error": "#ba1a1a",
+        "inverse-surface": "#213145",
+        "on-primary-fixed-variant": "#3323cc",
+        "on-secondary-container": "#5c647a",
+        "on-error": "#ffffff",
+        "on-tertiary": "#ffffff",
+        "surface-container": "#e5eeff",
+        "surface-container-low": "#eff4ff",
+        "surface": "#f8f9ff",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed-dim": "#c3c0ff",
+        "on-secondary": "#ffffff",
+        "surface-container-highest": "#d3e4fe",
+        "inverse-primary": "#c3c0ff",
+        "secondary": "#565e74",
+        "tertiary-fixed-dim": "#4edea3",
+        "primary": "#3525cd",
+        "surface-dim": "#cbdbf5",
+        "tertiary-fixed": "#6ffbbe",
+        "primary-fixed": "#e2dfff",
+        "on-secondary-fixed-variant": "#3f465c",
+        "on-secondary-fixed": "#131b2e",
+        "surface-variant": "#d3e4fe",
+        "on-tertiary-fixed": "#002113",
+        "on-surface": "#0b1c30",
+        "on-tertiary-fixed-variant": "#005236",
+        "secondary-container": "#dae2fd",
+        "error-container": "#ffdad6",
+        "primary-container": "#4f46e5",
+        "inverse-on-surface": "#eaf1ff",
+        "surface-tint": "#4d44e3",
+        "on-background": "#0b1c30"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter": "1rem",
+        "margin": "1.5rem",
+        "margin-lg": "2rem",
+        "space-xs": "0.25rem",
+        "space-xl": "1.5rem",
+        "gutter-sm": "0.5rem",
+        "space-sm": "0.5rem",
+        "gutter-lg": "1.5rem",
+        "space-md": "0.75rem",
+        "margin-sm": "1rem",
+        "space-lg": "1rem"
+      },
+      "fontFamily": {
+        "body-md": ["IBM Plex Sans"],
+        "label-md": ["IBM Plex Sans"],
+        "label-sm": ["IBM Plex Sans"],
+        "display-lg": ["IBM Plex Sans"],
+        "telemetry-md": ["JetBrains Mono"],
+        "telemetry-lg": ["JetBrains Mono"],
+        "body-lg": ["IBM Plex Sans"],
+        "headline-sm": ["IBM Plex Sans"],
+        "headline-md": ["IBM Plex Sans"],
+        "body-sm": ["IBM Plex Sans"],
+        "headline-lg": ["IBM Plex Sans"],
+        "telemetry-sm": ["JetBrains Mono"],
+        "title-md": ["IBM Plex Sans"],
+        "headline-lg-mobile": ["IBM Plex Sans"]
+      },
+      "fontSize": {
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+        "display-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "telemetry-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+        "telemetry-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.03em", "fontWeight": "500"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "telemetry-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "title-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+        "headline-lg-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 z-50 bg-inverse-surface text-inverse-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="h-14 w-full px-margin-lg flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md min-w-max"><img alt="Brand logo. - Primary color: #4f46e5
+- Font: ibmPlexSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XOY76ArsN2il89HFO7i0Ozy8Ul5z9ElCNySAdFcaKt53cPZKDPAgCWghs8J5KjK3FBPXx5hfwnUz6k_0xZaU149pZisgznGJL4CZoAq7le7HfQV8q9-sxi1BySIJiPJbIINq2TbpUGkgHlAXG7mlIAXpYs37OFdbca-u83LMQb8-bdxl_tdGWKQvzPAZ2OJ69R7vCN0AsGod4Z4O98NMxzQCcOpnZSp5L-Anv92q4lbxPD0Fy5764THsg"/><div class="flex items-center gap-space-sm pl-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-on-primary">Nexus Dispatch</span><span class="px-space-sm py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">Root HQ</span><span class="hidden xl:inline-flex px-space-sm py-0.5 rounded bg-surface-container-highest/20 text-inverse-on-surface font-label-sm text-label-sm font-medium">Global Control Plane</span></div></div><div class="hidden md:flex items-center gap-space-lg px-space-md py-1 rounded bg-inverse-surface/80 border border-outline/30"><div class="flex items-center gap-space-sm"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-fixed"></span></span><span class="font-label-md text-label-md text-inverse-on-surface font-medium">System Health: <span class="text-tertiary-fixed font-semibold">OPTIMAL</span></span></div><div class="h-3 w-px bg-outline/40"></div><div class="flex items-center gap-space-xs font-telemetry-sm text-telemetry-sm text-inverse-on-surface/80"><span class="text-tertiary-fixed font-semibold">18ms</span> latency</div><div class="h-3 w-px bg-outline/40"></div><div class="flex items-center gap-space-xs font-telemetry-sm text-telemetry-sm text-inverse-on-surface/80"><span class="material-symbols-outlined text-[14px] text-tertiary-fixed">hub</span>US-EAST-01</div><div class="h-3 w-px bg-outline/40"></div><div class="font-telemetry-sm text-telemetry-sm text-inverse-on-surface/70">2025-05-18 14:32:09 UTC</div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-inverse-surface/60 hover:bg-inverse-surface/90 text-inverse-on-surface/80 hover:text-inverse-on-surface border border-outline/30 transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="hidden sm:inline font-label-md text-label-md">Quick Jump</span><kbd class="hidden lg:inline px-1 py-0.5 rounded bg-inverse-surface font-telemetry-sm text-telemetry-sm text-inverse-on-surface/60 border border-outline/30">⌘K</kbd></button><button class="relative p-1.5 rounded-lg text-inverse-on-surface/80 hover:text-inverse-on-surface hover:bg-inverse-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-inverse-surface"></span></button><div class="h-6 w-px bg-outline/30"></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline/40" src="https://lh3.googleusercontent.com/aida/AEtjO1WN9oaj3-3vUpo1nD_k4b3fkvyfg4p24i7qtc-aqyrs5LO0T9SX6C4XWthK5uSqqv-4jlE6imDqMM7aewbIjxd29OtXcHt4MYiID6GyYfIpsvi_5uOeuT0wQkQsdDa9GvAPI7gbU5fEvw_h0xKLJNW4edzhXKAF_qvsuc-OpWRIoM6ps244OXC1QZ2TiTqLjEtJQ0VHawmBYRInjtptJMTNNcwBxpVewspK_07Fi8LrGeID8IzqXpCnLUs"/><div class="hidden lg:flex flex-col text-left"><span class="font-title-md text-title-md leading-none text-on-primary">System Superadmin</span><span class="font-label-sm text-label-sm leading-none text-tertiary-fixed mt-0.5">Root Authority</span></div></div></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-64 bg-inverse-surface text-inverse-on-surface z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto px-space-sm pt-space-md"><div class="px-space-md pb-space-sm mb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-inverse-on-surface/50 font-semibold">Sovereign Core</div><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="overview" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Overview</span></div><span class="font-telemetry-sm text-telemetry-sm px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-semibold">LIVE</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="tenant-management" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">domain</span><span>Tenant Management</span></div><span class="font-telemetry-sm text-telemetry-sm px-2 py-0.5 rounded-full bg-surface-container-highest/20 text-inverse-on-surface font-semibold">412</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="usage-and-billing" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span>Usage &amp; Billing</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="technical-health" href="#"><span class="material-symbols-outlined text-[20px]">dns</span><span>Technical Health</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="global-tariffs" href="#"><span class="material-symbols-outlined text-[20px]">price_change</span><span>Global Tariffs</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="platform-governance" href="#"><span class="material-symbols-outlined text-[20px]">shield</span><span>Platform Governance</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-inverse-on-surface transition-colors" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>System Settings</span></a></nav></div><div class="p-space-md border-t border-outline/20 bg-inverse-surface"><div class="mb-space-sm space-y-space-xs"><div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-inverse-on-surface/60"><span>Build</span><span class="text-inverse-on-surface font-medium">v4.12.9-Enterprise Root</span></div><div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-inverse-on-surface/60"><span>Compliance</span><span class="text-tertiary-fixed font-medium">FIPS 140-2 L3 Sovereign</span></div></div><a class="flex items-center justify-center gap-space-sm w-full py-2 px-space-md rounded-lg bg-surface-container-highest/10 hover:bg-error/20 text-inverse-on-surface hover:text-error transition-colors font-label-md text-label-md font-medium" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">power_settings_new</span><span>Sign Out of Root</span></a></div></aside><div class="pl-64"><main class="w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<script>
+    (function() {
+      const navLinks = document.querySelectorAll('aside nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'usage-and-billing') {
+          link.className = 'flex items-center gap-space-md px-space-md py-2.5 rounded-lg font-body-md text-body-md bg-primary-container text-on-primary font-semibold shadow-sm transition-colors';
+        } else {
+          link.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+        }
+      });
+    })();
+  </script>
+<div class="px-margin-lg py-margin flex flex-col gap-space-xl">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-telemetry-sm text-telemetry-sm uppercase tracking-widest text-primary font-semibold">Revenue Operations &amp; Telemetry Metering</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-medium">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+            Auto-Invoicing Engine: Active (Stripe &amp; Net-30 GxP ACH)
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Global Usage, Billing &amp; Tariff Operations</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          SaaS subscription recurring revenue, automated reefer sensor stream overage metering, multi-tenant billing cycles, and enterprise accounts receivable across 412 active tenants.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm self-start xl:self-center">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md font-medium shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">download</span>
+<span>Export Ledger</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md font-medium shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">tune</span>
+<span>Manual Credit</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors font-label-md text-label-md font-semibold shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+<span>Run Billing Reconcile</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-lg">
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Monthly Recurring Revenue</span>
+<span class="material-symbols-outlined text-[20px] text-primary p-1.5 rounded-lg bg-secondary-container">payments</span>
+</div>
+<div class="my-space-md flex flex-col gap-0.5">
+<div class="font-telemetry-lg text-telemetry-lg text-on-surface font-semibold tracking-tight">$184,500<span class="text-label-md font-body-md text-on-surface-variant font-normal">/mo</span></div>
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center text-tertiary font-telemetry-sm text-telemetry-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>+4.8%
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs last billing cycle</span>
+</div>
+</div>
+<div class="pt-space-sm bg-surface-container-low px-space-sm py-1 rounded-md flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">ARR Run-rate: $2,214,000</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary font-medium">100% On-Track</span>
+</div>
+</div>
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Sensor Stream Overage</span>
+<span class="material-symbols-outlined text-[20px] text-primary p-1.5 rounded-lg bg-secondary-container">sensors</span>
+</div>
+<div class="my-space-md flex flex-col gap-0.5">
+<div class="font-telemetry-lg text-telemetry-lg text-on-surface font-semibold tracking-tight">142,890 <span class="text-label-md font-body-md text-on-surface-variant font-normal">events</span></div>
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center text-primary font-telemetry-sm text-telemetry-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">bolt</span>+$7,144.50
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">billed excess this cycle</span>
+</div>
+</div>
+<div class="pt-space-sm bg-surface-container-low px-space-sm py-1 rounded-md flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">Bursting Tenants</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface font-medium">18 of 412 active</span>
+</div>
+</div>
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Invoiced &amp; Collected (L30D)</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary p-1.5 rounded-lg bg-surface-container">verified</span>
+</div>
+<div class="my-space-md flex flex-col gap-0.5">
+<div class="font-telemetry-lg text-telemetry-lg text-on-surface font-semibold tracking-tight">$192,420<span class="text-label-md font-body-md text-on-surface-variant font-normal">.00</span></div>
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center text-tertiary font-telemetry-sm text-telemetry-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>98.7%
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">settlement success rate</span>
+</div>
+</div>
+<div class="pt-space-sm bg-error-container/40 px-space-sm py-1 rounded-md flex items-center justify-between text-on-error-container">
+<span class="font-label-sm text-label-sm font-medium">Outstanding Overdue</span>
+<span class="font-telemetry-sm text-telemetry-sm font-semibold">$2,490.00 (2 accts)</span>
+</div>
+</div>
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Avg. Revenue Per Tenant</span>
+<span class="material-symbols-outlined text-[20px] text-primary p-1.5 rounded-lg bg-secondary-container">account_balance_wallet</span>
+</div>
+<div class="my-space-md flex flex-col gap-0.5">
+<div class="font-telemetry-lg text-telemetry-lg text-on-surface font-semibold tracking-tight">$447<span class="text-label-md font-body-md text-on-surface-variant font-normal">.81/mo</span></div>
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center text-tertiary font-telemetry-sm text-telemetry-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">north_east</span>+14.2%
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">net expansion index</span>
+</div>
+</div>
+<div class="pt-space-sm bg-surface-container-low px-space-sm py-1 rounded-md flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">Sovereign Tier ARPU</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary font-semibold">$6,450/mo</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-7 flex flex-col justify-between bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Revenue Growth &amp; Tariff Breakdown</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Recurring subscription baseline vs telematics overage bursts (12 Months)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="h-2 w-2 rounded-sm bg-primary"></span>Base MRR
+            </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="h-2 w-2 rounded-sm bg-tertiary-fixed-dim"></span>Sensor Burst
+            </span>
+</div>
+</div>
+<div class="w-full h-56 relative my-space-sm flex items-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 540 180">
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="3 3" x1="0" x2="540" y1="30" y2="30"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="3 3" x1="0" x2="540" y1="80" y2="80"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="3 3" x1="0" x2="540" y1="130" y2="130"></line>
+<rect fill="#4F46E5" height="75" opacity="0.85" rx="3" width="22" x="20" y="85"></rect>
+<rect fill="#005338" height="15" opacity="0.9" rx="2" width="22" x="20" y="70"></rect>
+<rect fill="#4F46E5" height="80" opacity="0.85" rx="3" width="22" x="65" y="80"></rect>
+<rect fill="#005338" height="12" opacity="0.9" rx="2" width="22" x="65" y="68"></rect>
+<rect fill="#4F46E5" height="85" opacity="0.85" rx="3" width="22" x="110" y="75"></rect>
+<rect fill="#005338" height="17" opacity="0.9" rx="2" width="22" x="110" y="58"></rect>
+<rect fill="#4F46E5" height="90" opacity="0.85" rx="3" width="22" x="155" y="70"></rect>
+<rect fill="#005338" height="18" opacity="0.9" rx="2" width="22" x="155" y="52"></rect>
+<rect fill="#4F46E5" height="98" opacity="0.85" rx="3" width="22" x="200" y="62"></rect>
+<rect fill="#005338" height="18" opacity="0.9" rx="2" width="22" x="200" y="44"></rect>
+<rect fill="#4F46E5" height="105" opacity="0.85" rx="3" width="22" x="245" y="55"></rect>
+<rect fill="#005338" height="23" opacity="0.9" rx="2" width="22" x="245" y="32"></rect>
+<rect fill="#4F46E5" height="108" opacity="0.85" rx="3" width="22" x="290" y="52"></rect>
+<rect fill="#005338" height="16" opacity="0.9" rx="2" width="22" x="290" y="36"></rect>
+<rect fill="#4F46E5" height="112" opacity="0.85" rx="3" width="22" x="335" y="48"></rect>
+<rect fill="#005338" height="20" opacity="0.9" rx="2" width="22" x="335" y="28"></rect>
+<rect fill="#4F46E5" height="118" opacity="0.85" rx="3" width="22" x="380" y="42"></rect>
+<rect fill="#005338" height="20" opacity="0.9" rx="2" width="22" x="380" y="22"></rect>
+<rect fill="#4F46E5" height="124" opacity="0.85" rx="3" width="22" x="425" y="36"></rect>
+<rect fill="#005338" height="20" opacity="0.9" rx="2" width="22" x="425" y="16"></rect>
+<rect fill="#4F46E5" height="130" opacity="0.85" rx="3" width="22" x="470" y="30"></rect>
+<rect fill="#005338" height="20" opacity="0.9" rx="2" width="22" x="470" y="10"></rect>
+<rect fill="#4F46E5" height="135" rx="3" width="22" x="515" y="25"></rect>
+<rect fill="#005338" height="20" rx="2" width="22" x="515" y="5"></rect>
+<path d="M 31 70 L 76 68 L 121 58 L 166 52 L 211 44 L 256 32 L 301 36 L 346 28 L 391 22 L 436 16 L 481 10 L 526 5" fill="none" stroke="#6ffbbe" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<div class="grid grid-cols-12 text-center font-telemetry-sm text-telemetry-sm text-on-surface-variant pt-space-xs">
+<span>JUN</span><span>JUL</span><span>AUG</span><span>SEP</span><span>OCT</span><span>NOV</span><span>DEC</span><span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span class="text-primary font-semibold">MAY</span>
+</div>
+<div class="mt-space-md pt-space-md bg-surface-container-low p-space-md rounded-lg flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Plan Distribution:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/60 text-on-surface font-telemetry-sm text-telemetry-sm">Enterprise Cold-Chain: <strong>68%</strong></span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/60 text-on-surface font-telemetry-sm text-telemetry-sm">Sovereign Carrier: <strong>22%</strong></span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/60 text-on-surface font-telemetry-sm text-telemetry-sm">Starter Fleet: <strong>10%</strong></span>
+</div>
+<div class="flex items-center gap-space-md font-telemetry-sm text-telemetry-sm">
+<span class="text-on-surface-variant">Net Expansion: <strong class="text-tertiary font-semibold">+14.2%</strong></span>
+<span class="text-on-surface-variant">Churn: <strong class="text-on-surface font-semibold">0.02%</strong></span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Telemetry Metering &amp; Quotas</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Live streaming sensor ingress &amp; overage billing threshold</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-tertiary animate-pulse">sensors</span>
+</div>
+<div class="my-space-xs p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Ingestion Pipeline Burn Rate</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary font-semibold">37.4k / 42.8k msg/sec (87%)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 87.3%"></div>
+</div>
+</div>
+<div class="space-y-space-sm my-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Acme Cold-Chain Logistics</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">150/150 allocated reefers • 14,200 excess webhook calls</span>
+</div>
+<div class="text-right">
+<span class="inline-flex px-2 py-0.5 rounded bg-primary-container text-on-primary font-telemetry-sm text-telemetry-sm font-semibold">+$142.00 burst</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Cycle Day 24</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">BioPharm Labs Global</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">138/150 active cold containers • 99.4% payload rate</span>
+</div>
+<div class="text-right">
+<span class="inline-flex px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary font-telemetry-sm text-telemetry-sm font-medium">$0.00 overage</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Within Quota</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Novartis Global Express</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">120/120 ultra-cold units • Dedicated pod cluster</span>
+</div>
+<div class="text-right">
+<span class="inline-flex px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary font-telemetry-sm text-telemetry-sm font-medium">Sovereign Tier</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Flat Rate Quota</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-error-container/30 hover:bg-error-container/50 transition-colors flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">MedTrans Courier Express</span>
+<span class="font-telemetry-sm text-telemetry-sm text-error font-medium">Auto-charge declined (ACH R01 Insufficient)</span>
+</div>
+<div class="text-right">
+<span class="inline-flex px-2 py-0.5 rounded bg-error text-on-error font-telemetry-sm text-telemetry-sm font-semibold">$499.00 Past Due 14D</span>
+<div class="font-label-sm text-label-sm text-error font-medium">Retry in 18h</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Global Tariff Rule: $0.01 per 100 extra telematics payloads</span>
+<a class="text-primary hover:underline font-medium" href="#">Configure Rules</a>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm flex flex-col">
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Multi-Tenant Billing &amp; Invoicing Ledger</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Detailed subscription cadence, telemetry overage settlements, and payment health across 412 partitions.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2 text-[18px] text-on-surface-variant">search</span>
+<input class="pl-9 pr-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/60 font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-sm w-64" placeholder="Search tenant, ID, or invoice..." type="text"/>
+</div>
+<select class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md focus:outline-none shadow-sm cursor-pointer">
+<option>All Statuses (412)</option>
+<option>Paid / Current (407)</option>
+<option>Pending Cycle (3)</option>
+<option>Delinquent / Retrying (2)</option>
+</select>
+<select class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md focus:outline-none shadow-sm cursor-pointer">
+<option>All Cadences</option>
+<option>Annual Advance GxP</option>
+<option>Monthly Recurring</option>
+</select>
+</div>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead class="bg-surface-container-low font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">
+<tr>
+<th class="py-3 px-space-lg" scope="col">Organization &amp; Tenant ID</th>
+<th class="py-3 px-space-md" scope="col">Plan &amp; Cadence</th>
+<th class="py-3 px-space-md text-right" scope="col">Invoiced Amount</th>
+<th class="py-3 px-space-md" scope="col">Payment Channel</th>
+<th class="py-3 px-space-md" scope="col">Current Cycle</th>
+<th class="py-3 px-space-md" scope="col">Status</th>
+<th class="py-3 px-space-lg text-right" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-between justify-center text-primary font-bold text-xs">AC</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-snug">Acme Cold-Chain Logistics LLC</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">#ACM-US-8910 • Virginia, USA</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Enterprise Cold-Chain</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">Annual Advance ($22,788/yr)</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-md text-telemetry-md font-semibold text-on-surface">$4,850.00</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary">+$142.00 overage</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5 font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">credit_card</span>
+<span>Stripe Visa •••• 4242</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col font-telemetry-sm text-telemetry-sm">
+<span class="text-on-surface">May 01, 2026</span>
+<span class="text-on-surface-variant">Next: Jun 01, 2026</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>PAID / SUCCESS
+                </span>
+</td>
+<td class="py-3 px-space-lg text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Simulate Charge" type="button">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Apply Discount" type="button">
+<span class="material-symbols-outlined text-[18px]">price_change</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-low/30">
+<td class="py-3 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-between justify-center text-on-surface font-bold text-xs">BP</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-snug">BioPharm Labs Global Inc.</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">#BPL-US-4102 • Boston, USA</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Enterprise Cold-Chain</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">Monthly Recurring ($1,899/mo)</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-md text-telemetry-md font-semibold text-on-surface">$1,899.00</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary font-medium">Included quota</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5 font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">account_balance</span>
+<span>Chase ACH Direct (Net-15)</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col font-telemetry-sm text-telemetry-sm">
+<span class="text-on-surface">May 01, 2026</span>
+<span class="text-on-surface-variant">Next: Jun 01, 2026</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>AUTO-RENEWING
+                </span>
+</td>
+<td class="py-3 px-space-lg text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Simulate Charge" type="button">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Apply Discount" type="button">
+<span class="material-symbols-outlined text-[18px]">price_change</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-between justify-center text-primary font-bold text-xs">NV</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-snug">Novartis Global Express</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">#NOV-CH-3381 • Basel, Switzerland</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Sovereign Carrier Custom</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">Monthly Dedicated ($7,200/mo)</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-md text-telemetry-md font-semibold text-on-surface">$7,200.00</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">FIPS Dedicated Node</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5 font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">description</span>
+<span>Corporate Wire Net-30 GxP</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col font-telemetry-sm text-telemetry-sm">
+<span class="text-on-surface">Apr 28, 2026</span>
+<span class="text-on-surface-variant">Next: May 28, 2026</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>PAID / SUCCESS
+                </span>
+</td>
+<td class="py-3 px-space-lg text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Simulate Charge" type="button">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Apply Discount" type="button">
+<span class="material-symbols-outlined text-[18px]">price_change</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-low/30">
+<td class="py-3 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-between justify-center text-on-surface font-bold text-xs">NP</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-snug">NordicPharma Cargo ApS</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">#NPC-EU-1094 • Copenhagen, Denmark</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Enterprise Cold-Chain</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">Annual Advance ($22,788/yr)</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-md text-telemetry-md font-semibold text-on-surface">$1,899.00</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">EU Reverse VAT 0%</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5 font-telemetry-sm text-telemetry-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">account_balance</span>
+<span>SEPA B2B Direct Debit</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col font-telemetry-sm text-telemetry-sm">
+<span class="text-on-surface">May 01, 2026</span>
+<span class="text-on-surface-variant">Next: Jun 01, 2026</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>PAID / SUCCESS
+                </span>
+</td>
+<td class="py-3 px-space-lg text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Simulate Charge" type="button">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Apply Discount" type="button">
+<span class="material-symbols-outlined text-[18px]">price_change</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-error-container/20 transition-colors bg-error-container/10">
+<td class="py-3 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error text-on-error flex items-center justify-between justify-center font-bold text-xs">MT</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-snug">MedTrans Courier Express</span>
+<span class="font-telemetry-sm text-telemetry-sm text-error font-medium">#MTC-US-6612 • Illinois, USA</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Starter Fleet</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">Monthly Recurring ($499/mo)</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-md text-telemetry-md font-semibold text-error">$499.00</span>
+<span class="font-telemetry-sm text-telemetry-sm text-error font-semibold">14 Days Past Due</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5 font-telemetry-sm text-telemetry-sm text-error">
+<span class="material-symbols-outlined text-[16px]">credit_card_off</span>
+<span>MasterCard •••• 9012 (Failed)</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col font-telemetry-sm text-telemetry-sm">
+<span class="text-error font-semibold">Apr 15, 2026</span>
+<span class="text-on-surface-variant">2nd Retry in 18h</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-on-error"></span>DELINQUENT
+                </span>
+</td>
+<td class="py-3 px-space-lg text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-1.5 rounded bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-colors font-medium" title="Retry Charge Now" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Issue Warning" type="button">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm rounded-b-xl">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing 5 of 412 active tenants (Page 1 of 83)</span>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface-variant text-label-md font-label-md disabled:opacity-50" disabled="" type="button">Previous</button>
+<span class="px-3 py-1 rounded bg-primary text-on-primary font-telemetry-sm text-telemetry-sm font-semibold">1</span>
+<button class="px-3 py-1 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-telemetry-sm text-telemetry-sm" type="button">2</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-telemetry-sm text-telemetry-sm" type="button">3</button>
+<span class="px-2 text-on-surface-variant">...</span>
+<button class="px-3 py-1 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-telemetry-sm text-telemetry-sm" type="button">83</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface text-label-md font-label-md" type="button">Next</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="p-2 rounded-lg bg-surface-container-highest text-primary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Tax &amp; GxP Invoicing Compliance Enforced</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">US Sales Tax Exempt verified • EU VAT Reverse Charge applied on 42 EU partitions • 21 CFR §11 cryptographic receipt hash embedded.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant px-2.5 py-1 rounded bg-surface-container-lowest">SHA256: e8f9...39ba</span>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface transition-colors font-label-md text-label-md font-medium shadow-sm" type="button">
+          Audit Certificate
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

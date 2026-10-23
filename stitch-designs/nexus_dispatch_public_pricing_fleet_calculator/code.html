@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed":"#6ffbbe","tertiary-container":"#006e4b","secondary-fixed":"#dae2fd","on-error-container":"#93000a","on-surface":"#0b1c30","on-secondary":"#ffffff","surface-container-high":"#dce9ff","on-primary-fixed":"#0f0069","on-secondary-fixed":"#131b2e","on-error":"#ffffff","on-primary":"#ffffff","tertiary":"#005338","inverse-primary":"#c3c0ff","secondary":"#565e74","secondary-container":"#dae2fd","on-tertiary-container":"#67f4b7","inverse-on-surface":"#eaf1ff","on-tertiary-fixed":"#002113","on-primary-container":"#dad7ff","surface-variant":"#d3e4fe","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#3f465c","outline-variant":"#c7c4d8","surface-tint":"#4d44e3","on-background":"#0b1c30","background":"#f8f9ff","error-container":"#ffdad6","on-primary-fixed-variant":"#3323cc","inverse-surface":"#213145","surface-container-lowest":"#ffffff","on-secondary-container":"#5c647a","error":"#ba1a1a","primary":"#3525cd","primary-container":"#4f46e5","surface-dim":"#cbdbf5","secondary-fixed-dim":"#bec6e0","surface-container":"#e5eeff","surface-container-highest":"#d3e4fe","on-surface-variant":"#464555","on-tertiary-fixed-variant":"#005236","outline":"#777587","primary-fixed-dim":"#c3c0ff","surface-bright":"#f8f9ff","primary-fixed":"#e2dfff","tertiary-fixed-dim":"#4edea3","surface-container-low":"#eff4ff","surface":"#f8f9ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","space-lg":"1rem","margin-sm":"1rem","gutter-sm":"0.5rem","margin":"1.5rem","gutter":"1rem","space-xl":"1.5rem","gutter-lg":"1.5rem","margin-lg":"2rem","space-md":"0.75rem","space-sm":"0.5rem"},fontFamily:{"telemetry-sm":["JetBrains Mono"],"label-md":["IBM Plex Sans"],"body-lg":["IBM Plex Sans"],"telemetry-md":["JetBrains Mono"],"body-md":["IBM Plex Sans"],"label-sm":["IBM Plex Sans"],"headline-sm":["IBM Plex Sans"],"display-lg":["IBM Plex Sans"],"headline-lg":["IBM Plex Sans"],"telemetry-lg":["JetBrains Mono"],"headline-lg-mobile":["IBM Plex Sans"],"headline-md":["IBM Plex Sans"],"body-sm":["IBM Plex Sans"],"title-md":["IBM Plex Sans"]},fontSize:{"telemetry-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"telemetry-md":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"telemetry-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.03em","fontWeight":"500"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"title-md":["14px",{"lineHeight":"20px","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-margin lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Brand logo. - Primary color: #4f46e5
+- Font: ibmPlexSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XOY76ArsN2il89HFO7i0Ozy8Ul5z9ElCNySAdFcaKt53cPZKDPAgCWghs8J5KjK3FBPXx5hfwnUz6k_0xZaU149pZisgznGJL4CZoAq7le7HfQV8q9-sxi1BySIJiPJbIINq2TbpUGkgHlAXG7mlIAXpYs37OFdbca-u83LMQb8-bdxl_tdGWKQvzPAZ2OJ69R7vCN0AsGod4Z4O98NMxzQCcOpnZSp5L-Anv92q4lbxPD0Fy5764THsg"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">Nexus Dispatch</span></div><nav class="hidden lg:flex items-center gap-gutter" data-active-classes="bg-primary-container text-on-primary font-title-md rounded-lg"><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="solutions" href="#">Solutions</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="login" href="#">Log In</a><a class="inline-flex items-center justify-center px-space-lg py-space-sm rounded-lg bg-primary-container text-on-primary font-title-md text-title-md shadow-[0_1px_4px_rgba(79,70,229,0.25)] hover:bg-primary transition-all" data-path="free-trial" href="#">Start 14-Day Free Trial</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Decorative Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[350px] bg-gradient-to-b from-primary-fixed/40 via-surface-container/60 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<!-- Section 1: Hero & Billing Cadence Toggle -->
+<section class="max-w-7xl mx-auto px-margin lg:px-margin-lg pt-margin-lg pb-space-xl text-center">
+<!-- Badge Pill -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm tracking-wider uppercase mb-space-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Transparent Fleet Pricing • No Hidden Setup Fees</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display-lg text-display-lg text-on-surface max-w-3xl mx-auto tracking-tight">
+        Predictable Pricing for Fleets of All Sizes
+      </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-space-sm mb-space-xl">
+        No surprise telemetry surcharges. Scale effortlessly as your cold-chain payload volume grows with real-time, FDA-compliant dispatch monitoring.
+      </p>
+<!-- Billing Toggle Pill Control -->
+<div class="inline-flex items-center justify-center p-1 rounded-xl bg-surface-container border border-outline-variant/30 shadow-inner">
+<button class="px-space-lg py-space-xs rounded-lg font-title-md text-title-md transition-all text-on-surface-variant hover:text-on-surface" id="monthlyToggleBtn" onclick="setBillingCadence('monthly')">
+          Monthly Billing
+        </button>
+<button class="relative flex items-center gap-space-xs px-space-lg py-space-xs rounded-lg bg-primary-container text-on-primary font-title-md text-title-md shadow-md transition-all" id="annualToggleBtn" onclick="setBillingCadence('annual')">
+<span>Annual Billing</span>
+<span class="px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold uppercase tracking-tight">Save 20%</span>
+</button>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-space-sm">
+<span class="text-tertiary font-bold">✓ 2 Months Free</span> applied automatically on annual billing terms.
+      </p>
+</section>
+<!-- Section 2: Tiered Pricing Cards (3-Column Grid) -->
+<section class="max-w-7xl mx-auto px-margin lg:px-margin-lg pb-margin-lg">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter lg:gap-gutter-lg items-stretch">
+<!-- CARD 1: Starter Fleet -->
+<div class="flex flex-col justify-between p-space-xl rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Entry Operations</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-telemetry-sm">SLA: 99.9%</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Starter Fleet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant min-h-[36px]">
+              Ideal for small regional couriers, local produce, and fresh food distribution routes.
+            </p>
+<!-- Price Block -->
+<div class="mt-space-lg mb-space-md pt-space-md border-t border-surface-container">
+<div class="flex items-baseline gap-1">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-on-surface starterPriceDisplay">$119</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ month</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant cadenceSubtext">Billed annually ($1,428/yr)</p>
+</div>
+<!-- Vehicle Allocation Tag -->
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-lg">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">local_shipping</span>
+<span>Up to 10 vehicles included</span>
+</div>
+<p class="font-telemetry-sm text-telemetry-sm text-on-surface-variant mt-0.5">$12/mo per additional reefer vehicle</p>
+</div>
+<!-- Features List -->
+<div class="space-y-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Live GPS &amp; real-time speed tracking (30s refresh)</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Standard temperature excursion alerts (SMS &amp; Email)</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Standard dispatch ticket support (8×5 Mon-Fri)</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>30-day continuous telematics telemetry retention</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Driver mobile companion app (iOS &amp; Android)</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="pt-space-xl mt-space-lg">
+<a class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-lg rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-all" data-path="free-trial" href="#">
+<span>Start 14-Day Free Trial</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center mt-space-xs">No credit card required</p>
+</div>
+</div>
+<!-- CARD 2: Pro Cold-Chain [FEATURED] -->
+<div class="relative flex flex-col justify-between p-space-xl rounded-xl bg-surface-container-lowest shadow-xl ring-2 ring-primary-container">
+<!-- Floating Highlight Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-space-md py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-bold uppercase tracking-wider shadow-md">
+            Recommended for Pharma &amp; Reefer Fleets
+          </div>
+<div>
+<div class="flex items-center justify-between mb-space-sm pt-2">
+<span class="px-2.5 py-1 rounded bg-secondary-container font-label-sm text-label-sm text-on-secondary-fixed-variant font-bold uppercase tracking-wider">Cold-Chain Grade</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-bold font-telemetry-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                FDA 21 CFR §11
+              </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1 flex items-center gap-space-xs">
+<span>Pro Cold-Chain</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant min-h-[36px]">
+              Engineered for mid-sized pharmaceutical, biologics, vaccine, and clinical cold-chain logistics.
+            </p>
+<!-- Price Block -->
+<div class="mt-space-lg mb-space-md pt-space-md border-t border-surface-container">
+<div class="flex items-baseline gap-1">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-primary-container proPriceDisplay">$319</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ month</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant cadenceSubtext">Billed annually ($3,828/yr)</p>
+</div>
+<!-- Vehicle Allocation Tag -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 mb-space-lg">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">ac_unit</span>
+<span>Up to 35 reefer vehicles included</span>
+</div>
+<p class="font-telemetry-sm text-telemetry-sm text-on-surface-variant mt-0.5">$9/mo per additional reefer vehicle</p>
+</div>
+<!-- Features List -->
+<div class="space-y-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="flex items-start gap-space-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">task_alt</span>
+<span>Everything in Starter Fleet, plus:</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Continuous 6-hour thermal &amp; relative humidity sparkline profiles</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>NIST-traceable calibration flags with ±0.2°C thermal precision</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Whitelabeled customer tracking portals (custom domain &amp; branding)</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>ePOD chain-of-custody signatures with photo capture &amp; geo-stamps</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Automated Stripe dynamic tariff &amp; demurrage freight billing</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>1-year immutable audit log retention for clinical validation</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="pt-space-xl mt-space-lg">
+<a class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-lg rounded-lg bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md shadow-md transition-all" data-path="free-trial" href="#">
+<span>Start 14-Day Free Trial</span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</a>
+<p class="font-label-sm text-label-sm text-tertiary text-center mt-space-xs font-semibold">Immediate access • Full cold-chain feature suite</p>
+</div>
+</div>
+<!-- CARD 3: Enterprise Sovereign -->
+<div class="flex flex-col justify-between p-space-xl rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-1 rounded bg-inverse-surface font-label-sm text-label-sm text-inverse-on-surface font-semibold uppercase tracking-wider">Mission-Critical</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-telemetry-sm">99.999% SLA</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Enterprise Sovereign</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant min-h-[36px]">
+              For national distributors, global pharma manufacturers, and high-security government contracts.
+            </p>
+<!-- Price Block -->
+<div class="mt-space-lg mb-space-md pt-space-md border-t border-surface-container">
+<div class="flex items-baseline gap-1">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-on-surface entPriceDisplay">$719</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ month starting</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant cadenceSubtext">Billed annually or custom invoice</p>
+</div>
+<!-- Vehicle Allocation Tag -->
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-lg">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">hub</span>
+<span>Unlimited fleet vehicles &amp; reefers</span>
+</div>
+<p class="font-telemetry-sm text-telemetry-sm text-on-surface-variant mt-0.5">Tiered volume discounts based on telemetry ingress</p>
+</div>
+<!-- Features List -->
+<div class="space-y-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="flex items-start gap-space-xs font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-on-surface shrink-0">task_alt</span>
+<span>All Pro Cold-Chain capabilities, plus:</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Dedicated single-tenant database instance &amp; HSM encryption</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Veeva Vault QMS &amp; SAP TMS bidirectional enterprise connectors</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Iridium satellite fallback telemetry for remote off-grid routes</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>99.999% SLA with explicit financial penalty backing</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>24/7/365 command dispatch phone desk + Dedicated Technical Account Manager</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="pt-space-xl mt-space-lg">
+<a class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-lg rounded-lg bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-title-md text-title-md transition-all" data-path="contact" href="#">
+<span>Contact Enterprise Sales</span>
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</a>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center mt-space-xs">Custom procurement, BAA &amp; MSAs</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Interactive Usage Calculator Widget -->
+<section class="max-w-7xl mx-auto px-margin lg:px-margin-lg py-margin-lg">
+<div class="p-space-lg lg:p-margin-lg rounded-2xl bg-surface-container-low shadow-sm">
+<div class="max-w-3xl mb-space-xl">
+<div class="inline-flex items-center gap-space-xs px-2.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold uppercase mb-space-xs">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+            Interactive Cost Forecaster
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Custom Fleet Usage Calculator</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Slide to estimate your exact operational fee based on active reefer vehicle count and delivery volume throughput.
+          </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-gutter-lg items-start">
+<!-- Sliders Left Panel -->
+<div class="lg:col-span-7 space-y-space-xl p-space-lg rounded-xl bg-surface-container-lowest">
+<!-- Slider 1: Active Fleet Vehicles -->
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<label class="font-title-md text-title-md text-on-surface" for="vehicleSlider">Active Fleet Reefer Vehicles</label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Includes telematics SIM, GPS tracker &amp; dual temp probes</p>
+</div>
+<div class="px-space-md py-1 rounded bg-surface-container font-telemetry-md text-telemetry-md font-bold text-primary" id="vehicleCountBadge">
+                  24 vehicles
+                </div>
+</div>
+<input class="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-primary-container" id="vehicleSlider" max="150" min="1" oninput="calculateEstimate()" type="range" value="24"/>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mt-1">
+<span>1 vehicle</span>
+<span>50 vehicles</span>
+<span>100 vehicles</span>
+<span>150+ fleet</span>
+</div>
+</div>
+<!-- Slider 2: Monthly Completed Deliveries -->
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<label class="font-title-md text-title-md text-on-surface" for="deliverySlider">Monthly Completed Deliveries</label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ePOD signature, route archive &amp; automated shipper alerts</p>
+</div>
+<div class="px-space-md py-1 rounded bg-surface-container font-telemetry-md text-telemetry-md font-bold text-primary" id="deliveryCountBadge">
+                  4,800 orders
+                </div>
+</div>
+<input class="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-primary-container" id="deliverySlider" max="40000" min="500" oninput="calculateEstimate()" step="100" type="range" value="4800"/>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mt-1">
+<span>500 orders</span>
+<span>15,000 orders</span>
+<span>40,000+ orders</span>
+</div>
+</div>
+<!-- Cold Chain Feature Toggles -->
+<div class="pt-space-md border-t border-surface-container">
+<span class="font-title-md text-title-md text-on-surface block mb-space-sm">Select Specialized Ingress Requirements:</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<label class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-primary-container" id="checkNist" onchange="calculateEstimate()" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">NIST Calibrated Probe Logs</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary-container" id="checkSat" onchange="calculateEstimate()" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Iridium Satellite Telemetry Fallback</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Dynamic Calculation Summary Card (Right Column) -->
+<div class="lg:col-span-5 p-space-lg rounded-xl bg-inverse-surface text-inverse-on-surface shadow-md">
+<div class="flex items-center justify-between pb-space-md border-b border-surface-variant/20">
+<div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold uppercase tracking-wider">Suggested Tier</span>
+<h4 class="font-headline-sm text-headline-sm text-on-primary" id="calcRecommendedTier">Pro Cold-Chain Tier</h4>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed text-[28px]">verified_user</span>
+</div>
+<!-- Cost Line Items -->
+<div class="py-space-md space-y-space-sm font-body-sm text-body-sm text-inverse-on-surface">
+<div class="flex items-center justify-between">
+<span class="text-surface-variant">Base Platform Fee:</span>
+<span class="font-telemetry-md text-telemetry-md" id="calcBaseFee">$319.00</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-surface-variant">Fleet Vehicle Ingress Add-on:</span>
+<span class="font-telemetry-md text-telemetry-md" id="calcVehicleFee">$0.00</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-surface-variant">Satellite / High-Cadence Telemetry:</span>
+<span class="font-telemetry-md text-telemetry-md" id="calcSatFee">$0.00</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-surface-variant">ePOD Transaction Ingress:</span>
+<span class="font-telemetry-md text-tertiary-fixed font-semibold" id="calcDispatchFee">Included Free</span>
+</div>
+</div>
+<!-- Big Estimated Total -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest/10 backdrop-blur my-space-sm">
+<div class="flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-surface-variant uppercase tracking-wider">Estimated Cost</span>
+<div class="text-right">
+<span class="font-telemetry-lg text-telemetry-lg font-bold text-on-primary" id="calcTotalCost">$319</span>
+<span class="font-label-sm text-label-sm text-surface-variant" id="calcCadenceLabel">/ month</span>
+</div>
+</div>
+<div class="mt-space-xs pt-space-xs border-t border-surface-variant/20 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-surface-variant">Unit Efficiency Metric:</span>
+<span class="font-telemetry-sm text-tertiary-fixed font-bold" id="calcUnitMetric">$0.07 per delivery</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="space-y-space-xs pt-space-sm">
+<a class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-lg rounded-lg bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md shadow transition-all" data-path="free-trial" href="#">
+<span>Deploy This Configuration</span>
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+</a>
+<a class="w-full flex items-center justify-center gap-space-xs py-space-xs px-space-md rounded-lg text-surface-variant hover:text-on-primary font-label-md text-label-md transition-colors" data-path="contact" href="#">
+<span class="material-symbols-outlined text-[16px]">headset_mic</span>
+<span>Speak with an Infrastructure Specialist</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Comprehensive Feature Comparison Matrix -->
+<section class="max-w-7xl mx-auto px-margin lg:px-margin-lg py-margin-lg">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold uppercase">Feature Matrix</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-space-xs">Compare Every Platform Capability</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Detailed breakdown of telemetry granularity, compliance protocols, and integration standards across tiers.
+        </p>
+</div>
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface border-b border-surface-container">
+<th class="p-space-md font-title-md text-title-md w-2/5">Capabilities &amp; Specifications</th>
+<th class="p-space-md font-title-md text-title-md w-1/5 text-center">Starter Fleet</th>
+<th class="p-space-md font-title-md text-title-md w-1/5 text-center bg-primary-container/10 text-primary">Pro Cold-Chain</th>
+<th class="p-space-md font-title-md text-title-md w-1/5 text-center">Enterprise Sovereign</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Category: Telematics & Tracking -->
+<tr class="bg-surface-container-high/40">
+<td class="p-space-sm px-space-md font-label-md text-label-md font-bold uppercase tracking-wider text-primary" colspan="4">
+                1. Core Telematics &amp; Fleet Logistics
+              </td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">GPS Location Refresh Interval</td>
+<td class="p-space-md text-center font-telemetry-sm">30 Seconds</td>
+<td class="p-space-md text-center font-telemetry-sm bg-primary-container/5 font-semibold text-primary">5 Seconds</td>
+<td class="p-space-md text-center font-telemetry-sm font-semibold">1 Second Real-time</td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">Reefer Compartment Temperature Logging</td>
+<td class="p-space-md text-center font-telemetry-sm">15-min intervals</td>
+<td class="p-space-md text-center font-telemetry-sm bg-primary-container/5 font-semibold text-primary">Continuous (60s)</td>
+<td class="p-space-md text-center font-telemetry-sm font-semibold">Continuous Sub-Second</td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">Iridium Satellite Network Fallback</td>
+<td class="p-space-md text-center text-on-surface-variant">—</td>
+<td class="p-space-md text-center bg-primary-container/5 text-on-surface-variant font-label-sm">Optional Add-on</td>
+<td class="p-space-md text-center"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">Historical Breadcrumb Route Replay</td>
+<td class="p-space-md text-center font-telemetry-sm">30 Days</td>
+<td class="p-space-md text-center font-telemetry-sm bg-primary-container/5 font-semibold text-primary">365 Days</td>
+<td class="p-space-md text-center font-telemetry-sm font-semibold">Unlimited (7 Years)</td>
+</tr>
+<!-- Category: Cold-Chain & Compliance -->
+<tr class="bg-surface-container-high/40">
+<td class="p-space-sm px-space-md font-label-md text-label-md font-bold uppercase tracking-wider text-primary" colspan="4">
+                2. Cold-Chain Compliance &amp; Validation
+              </td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">FDA 21 CFR Part 11 Electronic Records</td>
+<td class="p-space-md text-center text-on-surface-variant">—</td>
+<td class="p-space-md text-center bg-primary-container/5"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+<td class="p-space-md text-center"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">NIST Traceable Calibration Certificate Storage</td>
+<td class="p-space-md text-center text-on-surface-variant">—</td>
+<td class="p-space-md text-center bg-primary-container/5"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+<td class="p-space-md text-center"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">Automated Excursion Protocol &amp; Driver Warnings</td>
+<td class="p-space-md text-center font-label-sm">SMS / Email</td>
+<td class="p-space-md text-center bg-primary-container/5 font-label-sm font-semibold text-primary">In-Cab Audible &amp; Push</td>
+<td class="p-space-md text-center font-label-sm font-semibold">Automated Command Escalation</td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">Veeva Vault QMS Direct Export</td>
+<td class="p-space-md text-center text-on-surface-variant">—</td>
+<td class="p-space-md text-center bg-primary-container/5 text-on-surface-variant font-label-sm">CSV/PDF only</td>
+<td class="p-space-md text-center"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+</tr>
+<!-- Category: Customer Portal & Billing -->
+<tr class="bg-surface-container-high/40">
+<td class="p-space-sm px-space-md font-label-md text-label-md font-bold uppercase tracking-wider text-primary" colspan="4">
+                3. Customer Experience &amp; Invoicing
+              </td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">Whitelabel Custom Domain for Consignees</td>
+<td class="p-space-md text-center text-on-surface-variant">—</td>
+<td class="p-space-md text-center bg-primary-container/5"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+<td class="p-space-md text-center"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">Proof of Delivery (Dual E-Sign &amp; Temp Stamp)</td>
+<td class="p-space-md text-center font-label-sm">Basic signature</td>
+<td class="p-space-md text-center bg-primary-container/5"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+<td class="p-space-md text-center"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">Dynamic Reefer Surcharge &amp; Fuel Tariff Billing</td>
+<td class="p-space-md text-center text-on-surface-variant">—</td>
+<td class="p-space-md text-center bg-primary-container/5"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+<td class="p-space-md text-center"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+</tr>
+<!-- Category: Security & Infrastructure -->
+<tr class="bg-surface-container-high/40">
+<td class="p-space-sm px-space-md font-label-md text-label-md font-bold uppercase tracking-wider text-primary" colspan="4">
+                4. Security, SLA &amp; Support
+              </td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">Single Sign-On (SAML, Okta SCIM)</td>
+<td class="p-space-md text-center text-on-surface-variant">—</td>
+<td class="p-space-md text-center bg-primary-container/5 text-on-surface-variant font-label-sm">Add-on ($50/mo)</td>
+<td class="p-space-md text-center"><span class="material-symbols-outlined text-tertiary">check_circle</span></td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">Guaranteed Service Level Agreement (SLA)</td>
+<td class="p-space-md text-center font-telemetry-sm">99.9%</td>
+<td class="p-space-md text-center font-telemetry-sm bg-primary-container/5 font-semibold text-primary">99.95%</td>
+<td class="p-space-md text-center font-telemetry-sm font-semibold">99.999% Financed</td>
+</tr>
+<tr>
+<td class="p-space-md font-medium">Support Operations Level</td>
+<td class="p-space-md text-center font-label-sm">Email (8×5)</td>
+<td class="p-space-md text-center bg-primary-container/5 font-label-sm font-semibold text-primary">Priority Chat &amp; Phone (24×7)</td>
+<td class="p-space-md text-center font-label-sm font-semibold">Dedicated TAM + NOC Hotline</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section 5: Enterprise FAQ & Security Assurance Badges -->
+<section class="max-w-4xl mx-auto px-margin lg:px-margin-lg py-margin-lg">
+<div class="text-center mb-space-xl">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold uppercase">Frequently Asked Questions</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-space-xs">Clear Answers for Dispatch &amp; Compliance Leads</h2>
+</div>
+<div class="space-y-space-md" id="faqAccordion">
+<!-- FAQ 1 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-title-md text-title-md text-on-surface" onclick="toggleFaq(1)">
+<span>Can we add more reefer vehicles or sensor tags mid-billing cycle?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="faqIcon1">expand_more</span>
+</button>
+<div class="hidden mt-space-sm pt-space-sm border-t border-surface-container font-body-sm text-body-sm text-on-surface-variant" id="faqAnswer1">
+            Yes, seamlessly. When you plug a new Nexus Telemetry Gateway or sync an authorized BLE probe, our ingress engine automatically provisions the asset. Additions are billed pro-rata for the remaining days of your monthly or annual billing period.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-title-md text-title-md text-on-surface" onclick="toggleFaq(2)">
+<span>Is FDA 21 CFR Part 11 validation paperwork included with Pro Cold-Chain?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="faqIcon2">expand_more</span>
+</button>
+<div class="hidden mt-space-sm pt-space-sm border-t border-surface-container font-body-sm text-body-sm text-on-surface-variant" id="faqAnswer2">
+            Pro and Enterprise tiers include pre-executed IQ/OQ (Installation and Operational Qualification) packages, cryptographic Merkle audit trail verification, and cryptographic e-signature workflows compliant with FDA Title 21 CFR §11 mandates.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-title-md text-title-md text-on-surface" onclick="toggleFaq(3)">
+<span>What hardware sensors and reefer telematics units are compatible?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="faqIcon3">expand_more</span>
+</button>
+<div class="hidden mt-space-sm pt-space-sm border-t border-surface-container font-body-sm text-body-sm text-on-surface-variant" id="faqAnswer3">
+            Nexus Dispatch features pre-built telematics drivers for Thermo King TracKing, Carrier Transicold eSolutions, Geotab, Samsara, CalAmp, and proprietary BLE temperature/humidity dataloggers via our standardized CAN-bus edge controller.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-title-md text-title-md text-on-surface" onclick="toggleFaq(4)">
+<span>How does the 14-day free trial work for operational fleets?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="faqIcon4">expand_more</span>
+</button>
+<div class="hidden mt-space-sm pt-space-sm border-t border-surface-container font-body-sm text-body-sm text-on-surface-variant" id="faqAnswer4">
+            You receive instant access to full Pro Cold-Chain functionality. Connect up to 5 live vehicles via software integrations or request an expedited plug-and-play OBD-II/CAN-bus eval kit delivered overnight. No payment card is required to begin.
+          </div>
+</div>
+</div>
+<!-- Trust Assurance Badges -->
+<div class="mt-margin-lg pt-space-xl border-t border-surface-container">
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center uppercase tracking-wider mb-space-md">
+          Compliant with rigorous clinical and pharmaceutical standards
+        </p>
+<div class="flex flex-wrap items-center justify-center gap-space-lg text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span>SOC 2 Type II Certified</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-primary text-[20px]">medical_services</span>
+<span>FDA 21 CFR Part 11</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+<span>ISO / IEC 27001</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-primary text-[20px]">security</span>
+<span>HIPAA BAA Ready</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: High-Contrast Slate CTA Banner -->
+<section class="max-w-7xl mx-auto px-margin lg:px-margin-lg py-margin-lg mb-margin-lg">
+<div class="relative overflow-hidden rounded-2xl bg-inverse-surface text-inverse-on-surface p-space-xl lg:p-margin-lg shadow-xl">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl">
+<div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-variant/20 text-tertiary-fixed font-label-sm text-label-sm font-semibold uppercase mb-space-md">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-ping"></span>
+            Zero Implementation Bottleneck
+          </div>
+<h2 class="font-display-lg text-display-lg text-on-primary tracking-tight">
+            Start Your 14-Day Free Fleet Trial Today
+          </h2>
+<p class="font-body-lg text-body-lg text-surface-variant mt-space-sm mb-space-lg max-w-xl">
+            Experience continuous temperature vigilance, automated ePODs, and dispatch intelligence without modifying existing hardware.
+          </p>
+<form class="flex flex-col sm:flex-row items-stretch gap-space-sm max-w-md" onsubmit="event.preventDefault(); alert('Trial registration initialized for: ' + this.email.value);">
+<input class="px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container flex-1 shadow-sm" name="email" placeholder="dispatcher@pharmafleet.com" required="" type="email"/>
+<button class="inline-flex items-center justify-center px-space-lg py-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md whitespace-nowrap shadow-md transition-all" type="submit">
+<span>Activate Fleet</span>
+<span class="material-symbols-outlined text-[18px] ml-1">arrow_forward</span>
+</button>
+</form>
+<p class="font-label-sm text-label-sm text-surface-variant mt-space-sm">
+            No credit card required • Instant API key provisioning • SOC 2 compliant
+          </p>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  let currentCadence = 'annual';
+
+  function setBillingCadence(cadence) {
+    currentCadence = cadence;
+    const monthlyBtn = document.getElementById('monthlyToggleBtn');
+    const annualBtn = document.getElementById('annualToggleBtn');
+    
+    if (cadence === 'monthly') {
+      monthlyBtn.className = "px-space-lg py-space-xs rounded-lg bg-primary-container text-on-primary font-title-md text-title-md shadow-md transition-all";
+      annualBtn.className = "relative flex items-center gap-space-xs px-space-lg py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface font-title-md text-title-md transition-all";
+      
+      document.querySelector('.starterPriceDisplay').textContent = "$149";
+      document.querySelector('.proPriceDisplay').textContent = "$399";
+      document.querySelector('.entPriceDisplay').textContent = "$899";
+      
+      document.querySelectorAll('.cadenceSubtext').forEach(el => {
+        el.textContent = "Billed monthly (flexible cancellation)";
+      });
+    } else {
+      annualBtn.className = "relative flex items-center gap-space-xs px-space-lg py-space-xs rounded-lg bg-primary-container text-on-primary font-title-md text-title-md shadow-md transition-all";
+      monthlyBtn.className = "px-space-lg py-space-xs rounded-lg font-title-md text-title-md transition-all text-on-surface-variant hover:text-on-surface";
+      
+      document.querySelector('.starterPriceDisplay').textContent = "$119";
+      document.querySelector('.proPriceDisplay').textContent = "$319";
+      document.querySelector('.entPriceDisplay').textContent = "$719";
+      
+      const subtexts = [
+        "Billed annually ($1,428/yr)",
+        "Billed annually ($3,828/yr)",
+        "Billed annually or custom invoice"
+      ];
+      document.querySelectorAll('.cadenceSubtext').forEach((el, index) => {
+        el.textContent = subtexts[index] || "Billed annually";
+      });
+    }
+    calculateEstimate();
+  }
+
+  function calculateEstimate() {
+    const vehicles = parseInt(document.getElementById('vehicleSlider').value, 10);
+    const deliveries = parseInt(document.getElementById('deliverySlider').value, 10);
+    const nistChecked = document.getElementById('checkNist').checked;
+    const satChecked = document.getElementById('checkSat').checked;
+
+    document.getElementById('vehicleCountBadge').textContent = vehicles + (vehicles === 1 ? " vehicle" : " vehicles");
+    document.getElementById('deliveryCountBadge').textContent = deliveries.toLocaleString() + " orders";
+
+    let tier = "Starter Fleet";
+    let baseRateMonthly = 149;
+    let baseRateAnnual = 119;
+    let vehicleIncluded = 10;
+    let addVehicleFee = 12;
+
+    if (vehicles > 35 || satChecked) {
+      tier = "Enterprise Sovereign";
+      baseRateMonthly = 899;
+      baseRateAnnual = 719;
+      vehicleIncluded = 50;
+      addVehicleFee = 6;
+    } else if (vehicles > 10 || nistChecked || deliveries > 3000) {
+      tier = "Pro Cold-Chain";
+      baseRateMonthly = 399;
+      baseRateAnnual = 319;
+      vehicleIncluded = 35;
+      addVehicleFee = 9;
+    }
+
+    const isAnnual = currentCadence === 'annual';
+    const baseFee = isAnnual ? baseRateAnnual : baseRateMonthly;
+    
+    let extraVehicles = Math.max(0, vehicles - vehicleIncluded);
+    let extraVehicleCost = extraVehicles * (isAnnual ? Math.round(addVehicleFee * 0.8) : addVehicleFee);
+    let satelliteCost = satChecked ? (vehicles * 8) : 0;
+    
+    let totalMonthly = baseFee + extraVehicleCost + satelliteCost;
+    let costPerDelivery = (totalMonthly / deliveries).toFixed(2);
+
+    document.getElementById('calcRecommendedTier').textContent = tier;
+    document.getElementById('calcBaseFee').textContent = "$" + baseFee.toFixed(2);
+    document.getElementById('calcVehicleFee').textContent = extraVehicleCost > 0 ? "$" + extraVehicleCost.toFixed(2) : "$0.00 (Included)";
+    document.getElementById('calcSatFee').textContent = satelliteCost > 0 ? "$" + satelliteCost.toFixed(2) : "$0.00";
+    document.getElementById('calcTotalCost').textContent = "$" + totalMonthly;
+    document.getElementById('calcCadenceLabel').textContent = isAnnual ? "/ mo (annual terms)" : "/ month";
+    document.getElementById('calcUnitMetric').textContent = "$" + costPerDelivery + " per delivery";
+  }
+
+  function toggleFaq(index) {
+    const answer = document.getElementById('faqAnswer' + index);
+    const icon = document.getElementById('faqIcon' + index);
+    if (answer.classList.contains('hidden')) {
+      answer.classList.remove('hidden');
+      icon.classList.add('rotate-180');
+    } else {
+      answer.classList.add('hidden');
+      icon.classList.remove('rotate-180');
+    }
+  }
+
+  // Initial Calculation Run
+  calculateEstimate();
+</script></main><footer class="w-full bg-surface-container-low"><div class="max-w-7xl mx-auto px-margin lg:px-margin-lg pt-margin-lg pb-margin"><div class="grid grid-cols-2 md:grid-cols-4 gap-margin-lg mb-margin-lg"><div><h4 class="font-title-md text-title-md text-on-surface mb-space-lg tracking-wider uppercase">Product</h4><ul class="space-y-space-sm font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="features" href="#">Features</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="live-map" href="#">Live Map</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="alerts" href="#">Alerts</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="tariffs" href="#">Tariffs</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="integrations" href="#">Integrations</a></li></ul></div><div><h4 class="font-title-md text-title-md text-on-surface mb-space-lg tracking-wider uppercase">Solutions</h4><ul class="space-y-space-sm font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="pharma-biologics" href="#">Pharma &amp; Biologics</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="food-beverage" href="#">Food &amp; Beverage</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="3pl-carriers" href="#">3PL Carriers</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="fleet-operators" href="#">Fleet Operators</a></li></ul></div><div><h4 class="font-title-md text-title-md text-on-surface mb-space-lg tracking-wider uppercase">Trust &amp; Compliance</h4><ul class="space-y-space-sm font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="compliance" href="#">SOC 2 Type II</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="compliance" href="#">FDA 21 CFR §11</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="compliance" href="#">ISO 27001</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="status" href="#">Status Page</a></li></ul></div><div><h4 class="font-title-md text-title-md text-on-surface mb-space-lg tracking-wider uppercase">Company</h4><ul class="space-y-space-sm font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="about-us" href="#">About</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="careers" href="#">Careers</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="press" href="#">Press</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="contact" href="#">Contact</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-on-surface-variant"><p>© 2026 Nexus Dispatch Inc. All rights reserved.</p><div class="flex items-center gap-gutter"><a class="hover:text-on-surface transition-colors" data-path="privacy" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="terms" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" data-path="security" href="#">Security Disclosures</a></div></div></div></footer></body></html>
